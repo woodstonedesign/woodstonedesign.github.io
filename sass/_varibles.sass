@@ -1,0 +1,56 @@
+@charset "UTF-8"
+@import url(https://fonts.googleapis.com/css?family=Inconsolata)
+$font-style: 16px 'Inconsolata',"微軟正黑體","helvetica", "Arial", "Heiti TC",  "Microsoft JhengHei", sans-serif
+$bg:'../images/'
+$primary-color: #F95E80 /*pink*/
+$secondary-color: #9f466e
+$link-font-color: $primary-color
+$linkhover-font-color: #49BF9D /*Green*/
+$secondcolor: #f15a24 /*Orange*/
+
+
+@mixin gradient()
+	background-color: $primary-color
+	/* IE9, iOS 3.2+ */
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIHN0b3AtY29sb3I9IiM3YjNmNzUiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iI2MyNGQ2NyIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+)
+	background-image: -webkit-gradient(linear, 0% 0%, 100% 100%,color-stop(0, rgb(123, 63, 117)),color-stop(1, rgb(194, 77, 103)))
+	/* Android 2.3 */
+	background-image: -webkit-repeating-linear-gradient(top left,rgb(123, 63, 117) 0%,rgb(194, 77, 103) 100%)
+	/* IE10+ */
+	background-image: repeating-linear-gradient(to bottom right,rgb(123, 63, 117) 0%,rgb(194, 77, 103) 100%)
+	background-image: -ms-repeating-linear-gradient(top left,rgb(123, 63, 117) 0%,rgb(194, 77, 103) 100%)
+
+@mixin circle($size)
+	width: $size
+	height: $size
+
+
+/*Animations and keyframes*/
+@mixin keyframes($animation-name)
+	@-webkit-keyframes #{$animation-name}
+		@content
+	
+	@-moz-keyframes #{$animation-name}
+		@content
+	
+	@-ms-keyframes #{$animation-name}
+		@content
+
+	@-o-keyframes #{$animation-name}
+		@content
+
+	@keyframes #{$animation-name}
+		@content
+
+@mixin animation($str)
+	-webkit-animation: #{$str}
+	-moz-animation: #{$str}
+	-ms-animation: #{$str}
+	-o-animation: #{$str}
+	animation: #{$str}   
+
+/*Cross browser opacity*/
+@mixin opacity($opacity)
+	opacity: $opacity
+	$opacity-ie: $opacity * 100
+	filter: alpha(opacity=$opacity-ie)//IE8

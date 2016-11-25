@@ -1,0 +1,674 @@
+@charset "UTF-8"
+@import compass/css3 
+@import compass/reset
+@import _varibles.sass
+@import _bootstrap.scss
+@import 'https://fonts.googleapis.com/css?family=Tangerine'
+@import 'https://fonts.googleapis.com/css?family=Niconne'
+
+body
+	font-family: "Helvetica Neue","微軟正黑體","helvetica", "Arial", "Heiti TC",  "Microsoft JhengHei", sans-serif !important 
+
+
+/*******************  Gotop  ************************/
+#gotop
+	background: url(#{$bg}gototop.png)
+	display: none
+	position: fixed
+	right: 42px
+	bottom: 42px
+	padding: 24px
+	cursor: pointer
+	z-index: 999
+	&:hover
+		background: url(#{$bg}gototop.png)
+	&:active
+		background: url(#{$bg}gototop.png)
+
+.mouse
+	position: absolute
+	width: 22px
+	height: 42px
+	bottom: 40px
+	left: 50%
+	margin-left: -12px
+	+border-radius(15px)
+	border: 2px solid #fff
+	+animation(intro 1s)
+	z-index: 99
+
+.scroll
+	display: block
+	width: 3px
+	height: 3px
+	margin: 6px auto
+	+border-radius(4px)
+	background: #fff
+	+animation(Move 1s infinite)
+
+@include keyframes(Move)
+	0%
+		opacity: 0
+		+transform(translateY(-15px))
+	100% 
+		opacity: 1
+		+transform(translateY(20px))
+
+
+/*******************  Custom scrollbar  ************************/
+
+::-webkit-scrollbar
+	width: 10px
+	height: 10px
+
+::-webkit-scrollbar-button
+	width: 0
+	height: 0
+
+::-webkit-scrollbar-thumb
+	background: #C5C4C4
+	border: 0px none #fff
+	border-radius: 60px
+	behavior: url(css/PIE.htc)
+
+::-webkit-scrollbar-thumb:hover
+	background: #B4B4B4
+
+::-webkit-scrollbar-track
+	background: $primary-color
+	border: 0px none #fff
+	border-radius: 0
+	behavior: url(css/PIE.htc)
+
+
+/*******************  Header  ************************/
+header
+	position: absolute
+	margin-top: 40px
+	width: 100%
+	z-index: 9
+	.navbar-default .navbar-brand
+		color: #fff
+		font-size: 38px
+		&:hover, &:focus
+			color: $primary-color
+	#navbar
+		li
+			a
+				color: #fff
+				font-size: 16px
+				font-weight: 300
+				background-color: transparent
+				span
+					position: relative
+					padding-bottom: 2px
+					&:before
+						content: ""
+						background: $primary-color
+						width: 100%
+						height: 2px
+						position: absolute
+						left: 0
+						bottom: 0
+						visibility: hidden
+						@include transition(all 0.3s ease-in-out 0s)
+						@include transform(scaleX(0))
+				&:hover
+					span:before
+						visibility: visible
+						@include transform(scaleX(1))
+	.navbar-brand
+		font-family: 'Niconne', cursive,"微軟正黑體"
+		float: left
+		display: block
+		padding-left: 0
+		color: #fff
+		span
+			font-weight: normal
+			font-size: 16px
+			padding-left: 5px
+
+	&.navbar-fixed-top 
+		position: fixed!important
+		background: rgba(29,29,29, .9)
+		-webkit-box-shadow: 0 0 9px 0 rgba(0,0,0,.1)
+		-moz-box-shadow: 0 0 9px 0 rgba(0,0,0,.1)
+		-ms-box-shadow: 0 0 9px 0 rgba(0,0,0,.1)
+		box-shadow: 0 0 9px 0 rgba(0,0,0,.1)
+		margin-top: 0
+		top: 0
+		#navbar
+			li 
+				a
+					color: rgba(255,255,255,.5)
+					@include transition(.3s)
+					&:hover 
+						color: $primary-color
+				&.active
+					a
+						background: transparent
+						background: none
+						color: $primary-color
+						span
+							&:before
+								visibility: visible
+								-webkit-transform: scaleX(1)
+								transform: scaleX(1)
+								background-color: $primary-color
+	.navbar-default
+		border: transparent
+		background: transparent
+		@include border-radius(0px)
+		@media screen and (max-width: $screen-sm)
+			margin-top: 0
+			padding-right: 0
+			padding-left: 0
+		.brand-slogan
+			margin: 28px 0 0 15px
+			float: left
+			letter-spacing: 2px
+			color: #adadad
+			em
+				color: $primary-color
+				font-style: normal
+		a
+			@include transition(.0s)
+
+// Menu bar Animate
+.header-animated 
+	-webkit-animation-duration: .5s
+	animation-duration: .5s
+	-webkit-animation-fill-mode: both
+	animation-fill-mode: both
+
+// Burger Menu
+.menu-toggle
+	width: 30px
+	height: 30px
+	position: absolute
+	top: 7px
+	right: 17px
+	cursor: pointer
+	display: none
+	&.on
+		.one 
+			@include transform(rotate(45deg) translate(7px, 7px))
+		.two
+			opacity: 0
+		.three
+			@include transform (rotate(-45deg) translate(7px, -7px))
+
+.one,.two,.three
+	width: 100%
+	height: 4px
+	background: #c24d67
+	margin: 6px auto
+	backface-visibility: hidden
+	@include transition-duration(0.3s)
+	+border-radius(2px)
+
+
+
+/*******************  Home  ************************/
+#home
+	width: 100%
+	height: 100vh
+	background-size: cover
+	background-attachment: fixed
+	position: relative
+	overflow: hidden
+
+.gradient
+	background: rgba(0,0,0,.2)
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	z-index: 2
+	opacity: .9
+	&:after
+		content: ""
+		width: 100%
+		height: 100vh
+		background: url(../images/bg_plus.png)
+		z-index: 9
+		position: absolute
+
+
+.text-wrap
+	display: table
+	width: 100%
+	height: 100vh
+	position: relative
+	z-index: 4
+
+.text-inner
+	display: table-cell
+	vertical-align: middle
+	text-align: center
+	padding-top: 70px
+	h1
+		font-size: 50px
+		color: #fff
+		margin: 0 0 20px 0
+		+text-shadow(2px 1px rgba(0,0,0,.8))
+	h2
+		font-family: 'Niconne', cursive
+		font-size: 32px
+		line-height: 38px
+		color: #fff
+		+text-shadow(1px 1px rgba(0,0,0,.3))
+		margin: 0
+
+
+// Services
+section
+	padding-bottom: 100px
+
+.section-heading
+	margin: 50px 0 100px
+	width: 100%
+	text-align: center
+	h2
+		font-size: 50px
+		font-weight: bold
+	&:after
+		content: ""
+		position: absolute
+		display: block
+		width: 80px
+		height: 2px
+		background: #c24d67
+		left: 50%
+		margin-left: -40px
+		bottom: 0
+    
+#services 
+	.row
+		text-align: center
+		padding: 0 5px
+	p
+		text-align: center
+		padding: 0 8%
+
+
+.pink-gradient
+	background: #ebebe8
+
+/*******************  Project Item  ************************/
+#projects 
+	overflow: hidden
+	.section-heading
+		margin: 100px 0
+	.col-md-2,.col-md-3
+		padding: 0
+
+section#projects,section#app
+	padding-bottom: 0
+
+.project-item
+	display: block
+	position: relative
+	width: 100%
+	top: 0
+	background: #fff
+	overflow: hidden
+	z-index: 9
+	@include transition(.3s)
+	&:before
+		position: absolute
+		top: 10px
+		bottom: 10px
+		left: 10px
+		right: 10px
+		bottom: 100%
+		content: ''
+		background-color: rgba(194,77,103, 0.9)
+		-webkit-transition: all 0.25s ease
+		transition: all 0.25s ease
+		-webkit-transition-delay: 0.25s
+		transition-delay: 0.25s
+	img
+		z-index: 8
+		opacity: 1
+		@include transition(.3s)
+	.text 
+		opacity: 0
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		z-index: 1
+		align-items: center
+		display: flex
+		flex-direction: column
+		justify-content: center
+		h2, span
+			text-decoration: none!important
+		h2
+			font-size: 18px
+			color: #fff
+			margin: 0
+		span 
+			color: lighten(#fff, 70%)
+			font-size: 12px
+			font-weight: 400
+	&:hover, &:focus
+		-webkit-box-shadow: 7px 14px 42px 3px rgba(0, 0, 0, 0.4)
+		-moz-box-shadow: 7px 14px 42px 3px rgba(0, 0, 0, 0.4)
+		-ms-box-shadow: 7px 14px 42px 3px rgba(0, 0, 0, 0.4)
+		-o-box-shadow: 7px 14px 42px 3px rgba(0, 0, 0, 0.4)
+		box-shadow: 7px 14px 42px 3px rgba(0, 0, 0, 0.4)
+		text-decoration: none
+		top: -10px
+		h2, span
+			text-decoration: none!important
+	&:hover:before
+		bottom: 10px
+		-webkit-transition-delay: 0s
+		transition-delay: 0s
+	&:hover .text
+		opacity: 1
+
+.img-responsive
+	width: 100%
+
+.content
+	display: none
+	h2
+		margin-bottom: 0
+	p
+		margin: 0
+		&:nth-child(2)
+			margin-bottom: 15px
+	a
+		color: #7E7E7E
+	.row
+		margin: 40px 0 60px
+
+.cover
+	height: 195px
+	overflow: hidden
+	img
+		width: 100%
+
+.circle
+	width: 100px
+	height: 100px
+	border-radius: 50%
+	float: right
+	border: 0.2rem solid #404040
+	text-align: center
+	margin-right: 5%
+	transition-duration: .6s
+	transition-delay: .3s
+	display: inline-block
+	padding: 10px
+	font-size: 10px
+	margin-top: 20px
+	i
+		font-size: 35px
+		color: #717071
+
+.icon-rwd
+	background: url(../images/rwd-symbol.svg) no-repeat
+	background-size: 100%
+	width: 40px
+	height: 35px
+	display: block
+	margin: 9px auto 4px
+
+.icon-monitor,.icon-mobile,.icon-apple,.icon-android
+	color: #7E7E7E
+	padding-right: 2px
+
+
+/*******************  Dailyui  ************************/
+#dailyui
+	.section-heading
+		margin: 100px 0 50px
+	.project-item
+		margin-bottom: 30px
+		
+button.more
+	border: 2px solid #c24d67
+	color: #c24d67
+
+/*******************  About  ************************/
+#about
+	position: relative
+	background: url(../images/sectiob-bg.jpg)
+	background-size: cover
+	background-attachment: fixed
+	color: #fff
+	.container
+		position: relative
+		z-index: 9
+	.gradient
+		background: rgba(44,45,48, 1)
+		&:after
+			background: none
+	.circle
+		float: left
+		p
+			color: #979797
+
+.description
+	margin-top: -75px
+	margin-bottom: 50px
+	text-align: center
+
+
+/*******************  Contact  ************************/
+input[type="text"], input[type="password"], input[type="email"], select, textarea
+	-moz-appearance: none
+	-webkit-appearance: none
+	-ms-appearance: none
+	appearance: none
+	background: #f7f7f7
+	border-radius: 0.35em
+	border: solid 2px transparent
+	color: inherit
+	display: block
+	outline: 0
+	padding: 0 0.75em
+	text-decoration: none
+	width: 100%
+	margin-bottom: 10px
+
+input[type="text"]:invalid, input[type="password"]:invalid, input[type="email"]:invalid, select:invalid, textarea:invalid
+	box-shadow: none
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, select:focus, textarea:focus
+	border-color: $primary-color
+
+
+input[type="text"], input[type="password"], input[type="email"], select 
+	height: 2.75em
+
+textarea 
+	padding: 0.75em
+
+/*******************  Button  ************************/
+input[type="submit"], input[type="reset"], input[type="button"], .button,button
+	-moz-appearance: none
+	-webkit-appearance: none
+	-ms-appearance: none
+	appearance: none
+	@include transition(background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out)
+	background-color: transparent
+	border-radius: 0.35em
+	border: solid 3px #efefef
+	color: #787878 !important
+	cursor: pointer
+	display: inline-block
+	font-weight: 400
+	height: 3.15em
+	height: calc(2.75em + 6px)
+	line-height: 2.75em
+	min-width: 10em
+	padding: 0 1.5em
+	text-align: center
+	text-decoration: none
+	white-space: nowrap
+
+input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover, .button:hover,button:hover
+	border-color: $primary-color
+	color: $primary-color !important
+
+input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:active, .button:active,button:hover
+	border-color: $primary-color
+	color: $primary-color !important
+
+/*******************  footer  ************************/
+.footer
+	text-align: right
+	font-size: 14px
+	color: #ccc
+	margin-top: -30px
+	a,i
+		color: #c24d67
+
+/*******************  Responsive  ************************/
+@media screen and (max-width: 780px)
+	body 
+		overflow-x: hidden
+	header
+		background: transparent
+		color: #fff
+		.navbar-default .navbar-brand
+			width: 100%
+			text-align: center
+		&.navbar-fixed-top
+			background: rgba(29,29,29,.9)
+	.navbar-header
+		float: none
+	.navbar-nav > li 
+		padding: 0 6px
+	.navbar-right
+		margin-right: 0
+	.on #navbar
+		display: block
+	#home
+		background-position: -175px center
+	.text-inner h1
+		font-size: 45px
+		margin: 0 0 10px 0
+	section
+		.container
+			width: 100%
+			padding-left: 0
+			padding-right: 0
+	section#about,section#contact
+		.container
+			padding-left: 15px
+			padding-right: 15px
+	.section-heading
+		margin: 50px 0
+		h2
+			font-size: 30px
+			font-weight: bold
+			line-height: 2
+	.content .row 
+		margin: 0px 0 60px
+
+	.circle
+		float: none
+		margin-right: -16px
+		background: #F7F6F6
+	#about
+		.section-heading
+			margin: 50px 0 50px
+		.circle
+			margin: 0 5% 0 
+			background: transparent
+			float: none
+			display: block
+		.col-sm-12
+			height: 120px
+	.description
+		margin-top: -30px
+	#projects 
+		.description
+			margin-top: -75px
+		.section-heading
+			margin: 50px 0 80px
+	#app .col-sm-4
+		padding: 0
+	#dailyui 
+		.col-sm-6
+			padding: 0
+		.project-item
+			margin-bottom: 0
+		button.more
+			margin-top: 30px
+	.footer
+		text-align: center
+		margin-top: 30px
+	input[type="submit"], input[type="reset"], input[type="button"], .button, button
+		min-width: 100%
+
+
+@media screen and (max-width: 480px)
+	header
+		background: rgba(50, 56, 62, 0.9)
+		margin-top: 0
+		-moz-box-shadow: 0 0 9px 0 rgba(0,0,0,.1)
+		-ms-box-shadow: 0 0 9px 0 rgba(0,0,0,.1)
+		box-shadow: 0 0 9px 0 rgba(0,0,0,.1)
+		&.navbar-fixed-top
+			background: rgba(50,56,62,.9)
+		#navbar
+			li
+				a 
+					color: #fff!important
+					@include transition(.3s)
+					&:hover
+						color: $primary-color!important
+					span
+						&:before
+							background: transparent!important
+					&.active
+						a
+							background: transparent
+							background: none
+							color: $primary-color!important
+							span 
+								&:before
+									visibility: visible
+									@include transform(scaleX(1))
+		.navbar-default .navbar-brand
+			width: auto
+			text-align: left
+			font-size: 30px
+	section
+		padding-bottom: 0
+	.cover img
+		margin-top: -7%
+	#navbar
+		display: none
+	.menu-toggle
+		display: block
+	.on #navbar
+		display: block
+	#gotop
+		right: 13px
+		bottom: 25px
+	#services p
+		padding: 0px 15% 20px
+	#projects .col-md-2, #projects .col-md-3,#app .col-sm-4,#dailyui .col-sm-6
+		padding: 0 15px
+	#dailyui 
+		.section-heading
+			margin: 50px 0
+		.project-item
+			margin-bottom: 0
+	#about
+		.circle
+			float: left
+		p
+			margin: 0 0 25px
+	button.more
+		margin-bottom: 30px

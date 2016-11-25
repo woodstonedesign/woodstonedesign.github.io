@@ -1,0 +1,7 @@
+
+.icon-monitor:before { content: '\e800'; } /* '' */
+.icon-mobile:before { content: '\e801'; } /* '' */
+.icon-apple:before { content: '\e805'; } /* '' */
+.icon-android:before { content: '\e806'; } /* '' */
+.icon-feather:before { content: '\e807'; } /* '' */
+.icon-codeopen:before { content: '\f1cb'; } /* '' */

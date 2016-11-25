@@ -55,20 +55,20 @@
 		        </div>
 		        <div id="navbar">
 		          <ul class="nav navbar-nav navbar-right">
-		            <li><a href="#home"><span>Home</span></a></li>
-		            <li><a href="#services"><span>Services</span></a></li>
-		            <li><a href="#projects"><span>Web Design</span></a></li>
-		            <li><a href="#app"><span>App Design</span></a></li>
-		            <li><a href="#dailyui"><span>UI Design</span></a></li>
-		            <li><a href="#about"><span>About</span></a></li>
-		            <li><a href="#contact" ><span>Contact</span></a></li>
+		            <li class="active"><a href="#" data-nav-section="home"><span>Home</span></a></li>
+		            <li><a href="#services" data-nav-section="services"><span>Services</span></a></li>
+		            <li><a href="#projects" data-nav-section="projects"><span>Web Design</span></a></li>
+		            <li><a href="#app" data-nav-section="app"><span>App Design</span></a></li>
+		            <li><a href="#dailyui" data-nav-section="app"><span>UI Design</span></a></li>
+		            <li><a href="#about" data-nav-section="about"><span>About</span></a></li>
+		            <li><a href="#contact" data-nav-section="contact"><span>Contact</span></a></li>
 		          </ul>
 		        </div>
 		    </nav>
 		  </div>
    </header>
 
-   <section id="home" style="background-image: url(images/bg-banner.jpg);" data-stellar-background-ratio="0.5">
+   <section id="home" data-section="home" style="background-image: url(images/bg-banner.jpg);" data-stellar-background-ratio="0.5">
 		<div class="gradient"></div>
 		<div class="container">
 			<div class="text-wrap">
@@ -86,7 +86,7 @@
 		<a href="#services" data-nav-section="services"><div class="mouse"><div class="scroll"></div></div></a>
 	</section>
 
-	<section id="services">
+	<section id="services" data-section="services">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 section-heading">
@@ -114,7 +114,7 @@
 		</div>
 	</section>
 
-	<section id="projects" class="pink-gradient">
+	<section id="projects" class="pink-gradient" data-section="projects">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 section-heading text-center">
@@ -810,7 +810,10 @@
 	<!-- jQuery Easing -->
 	<script src="js/jquery.easing.1.3.js"></script>
 	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>	
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/wow.min.js"></script>	
 	<!-- Fancybox -->
     <script src="js/fancybox/jquery.fancybox.js?v=2.1.5"></script>
     <!-- Fancybox -->
