@@ -1,5 +1,5 @@
 User-agent: *
 Disallow: /assets/
 
-Sitemap: https://karentsai2016.github.io/sitemap.xml
+Sitemap: https://woodstonedesign.github.io/sitemap.xml
 

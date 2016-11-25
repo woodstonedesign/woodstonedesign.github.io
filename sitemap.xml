@@ -7,15 +7,18 @@
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
-  <loc>https://karentsai2016.github.io/</loc>
-  <lastmod>2016-07-17T15:47:01+00:00</lastmod>
+  <loc>https://woodstonedesign.github.io/</loc>
+  <lastmod>2016-11-25T07:20:35+00:00</lastmod>
   <changefreq>always</changefreq>
-  <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://karentsai2016.github.io/index.html</loc>
-  <lastmod>2016-07-17T15:47:01+00:00</lastmod>
+  <loc>https://woodstonedesign.github.io/index.html</loc>
+  <lastmod>2016-11-25T07:20:35+00:00</lastmod>
   <changefreq>always</changefreq>
-  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://woodstonedesign.github.io/dailyui/index.html</loc>
+  <lastmod>2016-11-25T07:20:35+00:00</lastmod>
+  <changefreq>always</changefreq>
 </url>
 </urlset>
