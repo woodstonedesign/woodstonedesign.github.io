@@ -16,17 +16,15 @@
 融入使用者經驗設計思維，提供友善易懂的操作介面，帶給使用者良好的體驗。" />
     <meta property="og:title" content="WoodStone Design X 木石設計 | Web Design X App Design X User Experience" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://woodstonedesign.github.io" />
-    <meta property="og:image" content="https://woodstonedesign.github.io/images/fbcover.jpg" />
+    <meta property="og:url" content="https://karentsai2016.github.io" />
+    <meta property="og:image" content="https://karentsai2016.github.io/images/fbcover.jpg" />
     <meta property="og:site_name" content="WoodStone Design X 木石設計 | Web Design X App Design X User Experience" />
     <!-- Favicons -->
-    <link rel="apple-touch-icon" href="https://woodstonedesign.github.io/images/images/Icon.png">
-    <link rel="apple-touch-icon" sizes="72×72" href="https://woodstonedesign.github.io/images/images/Icon-72.png">
-    <link rel="apple-touch-icon" sizes="114×114" href="https://woodstonedesign.github.io/images/images/Icon@2x.png">
-
-    <link rel="bookmark" href="https://woodstonedesign.github.io/images/faviconw.ico" />
-    <link rel="icon" href="https://woodstonedesign.github.io/images/faviconw.ico" type="image/x-icon" />
-	<link rel="shortcut icon" href="https://woodstonedesign.github.io/images/faviconw.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/Icon.png">
+    <link rel="apple-touch-icon" sizes="72×72" href="images/Icon-72.png">
+    <link rel="apple-touch-icon" sizes="114×114" href="images/Icon@2.png">
+    <link rel="shortcut icon" href="images/faviconw.ico" />
+    <link rel="bookmark" href="images/faviconw.ico" />
     <!-- Style -->
 	<link rel="stylesheet" href="css/style.css">
 	<!-- Animate -->
@@ -57,20 +55,20 @@
 		        </div>
 		        <div id="navbar">
 		          <ul class="nav navbar-nav navbar-right">
-		            <li><a href="#home"><span>Home</span></a></li>
-		            <li><a href="#services"><span>Services</span></a></li>
-		            <li><a href="#projects"><span>Web Design</span></a></li>
-		            <li><a href="#app"><span>App Design</span></a></li>
-		            <li><a href="#dailyui"><span>UI Design</span></a></li>
-		            <li><a href="#about"><span>About</span></a></li>
-		            <li><a href="#contact" ><span>Contact</span></a></li>
+		            <li class="active"><a href="#" data-nav-section="home"><span>Home</span></a></li>
+		            <li><a href="#services" data-nav-section="services"><span>Services</span></a></li>
+		            <li><a href="#projects" data-nav-section="projects"><span>Web Design</span></a></li>
+		            <li><a href="#app" data-nav-section="app"><span>App Design</span></a></li>
+		            <li><a href="#dailyui" data-nav-section="app"><span>UI Design</span></a></li>
+		            <li><a href="#about" data-nav-section="about"><span>About</span></a></li>
+		            <li><a href="#contact" data-nav-section="contact"><span>Contact</span></a></li>
 		          </ul>
 		        </div>
 		    </nav>
 		  </div>
    </header>
 
-   <section id="home" style="background-image: url(images/bg-banner.jpg);" data-stellar-background-ratio="0.5">
+   <section id="home" data-section="home" style="background-image: url(images/bg-banner.jpg);" data-stellar-background-ratio="0.5">
 		<div class="gradient"></div>
 		<div class="container">
 			<div class="text-wrap">
@@ -88,7 +86,7 @@
 		<a href="#services" data-nav-section="services"><div class="mouse"><div class="scroll"></div></div></a>
 	</section>
 
-	<section id="services">
+	<section id="services" data-section="services">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 section-heading">
@@ -116,7 +114,7 @@
 		</div>
 	</section>
 
-	<section id="projects" class="pink-gradient">
+	<section id="projects" class="pink-gradient" data-section="projects">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 section-heading text-center">
@@ -792,7 +790,7 @@
                             <textarea id="input_message" rows="4" cols="50" name="comment" maxlength="300" id="message" placeholder="請填寫您想詢問的問題或是製作需求" required></textarea>
                         </div>
                          <div class="col-md-12"><input type="submit" id="submit" value="送出訊息" />
-                        <input type="hidden" name="_next" value="https://woodstonedesign.github.io/thanks.html" />
+                        <input type="hidden" name="_next" value="https://karentsai2016.github.io/thanks.html" />
                         <input type="hidden" name="_cc" value="pobo210397@gmail.com" /></div>
                     </form>
 	            </div>
@@ -812,29 +810,50 @@
 	<!-- jQuery Easing -->
 	<script src="js/jquery.easing.1.3.js"></script>
 	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>	
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/wow.min.js"></script>	
 	<!-- Fancybox -->
     <script src="js/fancybox/jquery.fancybox.js?v=2.1.5"></script>
     <!-- Fancybox -->
     <script src="js/main.js"></script>
     <!-- Google Analytics -->
     <script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-	  ga('create', 'UA-27418976-8', 'auto');
-	  ga('send', 'pageview');
-
-	</script>
+    ga('create', 'UA-27418976-7', 'auto');
+    ga('send', 'pageview');
+    </script>
+    <!-- Facebook Like -->
+    <div id="fb-root"></div>
+    <script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.6";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "Organization",
-        "url": "http://woodstonedesign.github.io",
-        "logo": "http://woodstonedesign.github.io/images/Icon@2.png"
+        "url": "http://karentsai2016.github.io",
+        "logo": "http://karentsai2016.github.io/images/Icon@2.png"
     }
     </script>
 
