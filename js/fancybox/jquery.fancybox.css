@@ -188,8 +188,8 @@
 	overflow: hidden;
 	display: none;
 	z-index: 8010;
-	/*background: #ebebe8;*/
-	background: url(../../images/bg-fixed.jpg);
+	background: rgba(30,30,30,0.9);
+	/*background: url(../../images/bg-fixed.jpg);*/
 }
 
 .fancybox-overlay-fixed {
