@@ -44,6 +44,8 @@
 
 <body>
 	<div id="gotop" class="animated bounceInUp"></div>
+<div itemscope itemtype="http://schema.org/Product">
+
    <header>
    		<div class="container">
 		    <nav class="navbar-default">
@@ -53,15 +55,15 @@
 					    <div class="two"></div>
 					    <div class="three"></div>
 					</div>
-		         <a class="navbar-brand" href="index.html"><div class="logo"></div>WoodStone<span>木石設計</span></a> 
+		         <a class="navbar-brand" href="https://woodstonedesign.github.io" itemprop="url"><div class="logo"></div>WoodStone<span itemprop="brand">木石設計</span></a> 
 		        </div>
 		        <div id="navbar">
 		          <ul class="nav navbar-nav navbar-right">
 		            <li class="active"><a href="#" data-nav-section="home"><span>Home</span></a></li>
 		            <li><a href="#services" data-nav-section="services"><span>Services</span></a></li>
-		            <li><a href="#projects" data-nav-section="projects"><span>Web Design</span></a></li>
-		            <li><a href="#app" data-nav-section="app"><span>App Design</span></a></li>
-		            <li><a href="#dailyui" data-nav-section="app"><span>UI Design</span></a></li>
+		            <li><a href="#projects" data-nav-section="projects"><span itemprop="name">Web Design</span></a></li>
+		            <li><a href="#app" data-nav-section="app"><span itemprop="name">App Design</span></a></li>
+		            <li><a href="#dailyui" data-nav-section="app"><span itemprop="name">UI Design</span></a></li>
 		            <li><a href="#about" data-nav-section="about"><span>About</span></a></li>
 		            <li><a href="#contact" data-nav-section="contact"><span>Contact</span></a></li>
 		          </ul>
@@ -69,6 +71,8 @@
 		    </nav>
 		  </div>
    </header>
+
+
 
    <section id="home" data-section="home" style="background-image: url(images/bg-banner.jpg);" data-stellar-background-ratio="0.5">
 		<div class="gradient"></div>
@@ -78,8 +82,8 @@
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0">
 							<img src="images/logo-white-128.png" height="100" width="100" alt="WoodStone Design木石設計" class="wow bounceIn" data-wow-delay=".5s" style="margin-bottom:10px">
-							<h1 class="wow fadeInDown" data-wow-delay=".5s">Web Design Ｘ APP Design</h1>
-							<h2 class="wow fadeInUp" data-wow-delay=".5s">WoodStone Design</h2> 
+							<h1 class="wow fadeInDown" data-wow-delay=".5s" itemprop="name">Web Design Ｘ APP Design</h1>
+							<h2 class="wow fadeInUp" data-wow-delay=".5s"  itemprop="brand">WoodStone Design</h2> 
 						</div>
 					</div>
 				</div>
@@ -99,18 +103,18 @@
 			<div class="row">
 				<div class="col-sm-4 col-xs-12 wow fadeInLeft" data-wow-delay="1s">
 					<img src="images/service01.png" width="186" height="186">
-					<h3>網頁設計與開發</h3>
-					<p>網站整體視覺設計<br>FB分享/按讚、Google+，網路行銷最大化<br>Google網站流量分析，剖析網站大數據<br>SEO優化 ，提升網站知名度</p>
+					<h3 itemprop="name">網頁設計與開發</h3>
+					<p itemprop="description">網站整體視覺設計<br>FB分享/按讚、Google+，網路行銷最大化<br>Google網站流量分析，剖析網站大數據<br>SEO優化 ，提升網站知名度</p>
 				</div>
 				<div class="col-sm-4 col-xs-12 wow fadeInLeft" data-wow-delay="1.5s">
 					<img src="images/service02.png" width="186" height="186">
-					<h3>響應式網頁</h3>
-					<p>網站整體視覺設計<br>行動版網頁專屬的操作體驗<br>跨平台完美支援</p>
+					<h3 itemprop="name">響應式網頁</h3>
+					<p itemprop="description">網站整體視覺設計<br>行動版網頁專屬的操作體驗<br>跨平台完美支援</p>
 				</div>
 				<div class="col-sm-4 col-xs-12 wow fadeInLeft" data-wow-delay="2s">
 					<img src="images/service03.png"  width="211" height="186">
-					<h3>App介面設計</h3>
-					<p>使用者介面流程規劃，流暢操作<br>介面設計，簡潔風格<br>符合iOS&Android介面切圖規範<br>切圖文件標記，提供工程師快速套版</p>
+					<h3 itemprop="name">App介面設計</h3>
+					<p itemprop="description">使用者介面流程規劃，流暢操作<br>介面設計，簡潔風格<br>符合iOS&Android介面切圖規範<br>切圖文件標記，提供工程師快速套版</p>
 				</div>
 			</div>
 		</div>
@@ -120,9 +124,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 section-heading text-center">
-					<h2 class="wow fadeInUp" data-wow-delay=".5s">Web Design</h2>
+					<h2 class="wow fadeInUp" data-wow-delay=".5s" itemprop="name">Web Design</h2>
 				</div>
-				<div class="col-md-8 col-md-offset-2 description">
+				<div class="col-md-8 col-md-offset-2 description" itemprop="description">
 					視覺設計 | 網頁設計&開發 | 響應式網頁
 				</div>
 			</div>
@@ -531,9 +535,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 section-heading">
-					<h2 class="wow fadeInUp" data-wow-delay=".5s">App Design</h2>
+					<h2 class="wow fadeInUp" data-wow-delay=".5s" itemprop="name">App Design</h2>
 				</div>
-				<div class="col-md-8 col-md-offset-2 description">
+				<div class="col-md-8 col-md-offset-2 description" itemprop="description">
 					App 流程與介面設計規劃 | 使用者經驗<br>提供友善易懂的操作介面，帶給使用者良好的體驗
 				</div>
 			</div>
@@ -656,7 +660,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 section-heading">
-					<h2 class="wow fadeInUp" data-wow-delay=".5s">UI Design</h2>
+					<h2 class="wow fadeInUp" data-wow-delay=".5s" itemprop="name">UI Design</h2>
 				</div>
 			</div>
 			<div class="row">
@@ -740,26 +744,26 @@
 				<div class="col-md-12 section-heading">
 					<h2 class="wow fadeInUp" data-wow-delay=".5s">About</h2>
 				</div>
-				<div class="col-md-8 col-md-offset-2 description">
+				<div class="col-md-8 col-md-offset-2 description" itemprop="description">
 					網頁設計&開發 | App 流程與介面設計 | 使用者經驗<br>兼職接案者。4+年工作經驗。融入使用者經驗設計思維，提供友善易懂的操作介面，帶給使用者良好的體驗
 				</div>
 			</div>
 			
 			<div class="row">
 				<div class="col-sm-4 col-xs-12 wow fadeIn" data-wow-delay="1s">
-					<div class="circle wow bounceIn" data-wow-delay="2.5s"><i class="icon-feather"></i><p>Visual Design</p></div>
-					<h3>Visual Design</h3>
-					<p>Illustrator、Photoshop<br>網頁與介面設計</p>
+					<div class="circle wow bounceIn" data-wow-delay="2.5s" itemprop="name"><i class="icon-feather"></i><p>Visual Design</p></div>
+					<h3 itemprop="description">Visual Design</h3>
+					<p itemprop="description">Illustrator、Photoshop<br>網頁與介面設計</p>
 				</div>
 				<div class="col-sm-4 col-xs-12 wow fadeIn" data-wow-delay="1.5s">
-					<div class="circle wow bounceIn" data-wow-delay="2.5s"><i class="icon-rwd"></i><p>Web Design</p></div>
-					<h3>Web Design</h3>
-					<p>網頁設計與開發<br>Html、CSS/Sass、jQuery<br>響應式網頁設計</p>
+					<div class="circle wow bounceIn" data-wow-delay="2.5s" itemprop="name"><i class="icon-rwd"></i><p>Web Design</p></div>
+					<h3 itemprop="description">Web Design</h3>
+					<p itemprop="description">網頁設計與開發<br>Html5、CSS3/Scss/Sass、jQuery<br>響應式網頁設計</p>
 				</div>
 				<div class="col-sm-4 col-xs-12 wow fadeIn" data-wow-delay="2s">
-					<div class="circle wow bounceIn" data-wow-delay="2.5s"><i class="icon-mobile"></i><p>App Design</p></div>
-					<h3>App Design</h3>
-					<p>iOS & Android UI/UX Design<br>
+					<div class="circle wow bounceIn" data-wow-delay="2.5s" itemprop="name"><i class="icon-mobile"></i><p>App Design</p></div>
+					<h3 itemprop="description">App Design</h3>
+					<p itemprop="description">iOS & Android UI/UX Design<br>
 					  以使用者為中心的設計<br>
 					  使用者介面操作流程規劃
 					</p>
@@ -777,7 +781,7 @@
 			</div>
 			<div class="row wow fadeIn" data-wow-delay="1.5s">
 				<div class="col-md-12 col-sm-12">
-				<div class="col-md-12"><p>從事網頁與App設計，包含UI/UX設計及前端開發，若你有興趣跟我合作，歡迎來信↓</p></div>
+				<div class="col-md-12"><p itemprop="description">從事網頁與App設計，包含UI/UX設計及前端開發，若你有興趣跟我合作，歡迎來信↓</p></div>
                     <form action="https://formspree.io/woodstonedesign2016@gmail.com" method="POST">
                         <div class="col-md-6">
                             <input type="text" name="name" id="name" placeholder="如何稱呼您?" required/>
@@ -799,11 +803,12 @@
 			</div>
 			<div class="col-md-12 footer">
             		&copy; 2016 WoodStone Design
-            		<i class="icon-feather"></i><a href="mailto:woodstonedesign2016@gmail.com" class="icon">woodstonedesign2016@gmail.com</a>
+            		<i class="icon-feather"></i><a href="mailto:woodstonedesign2016@gmail.com" class="icon" itemprop="url">woodstonedesign2016@gmail.com</a>
 			</div>
 		</div>
 	</section>
 
+</div><!-- itemscope -->
 
 
 
@@ -831,15 +836,6 @@
 	  ga('send', 'pageview');
 
 	</script>
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "Organization",
-        "url": "http://woodstonedesign.github.io",
-        "logo": "http://woodstonedesign.github.io/images/Icon@2.png"
-    }
-    </script>
 
 </body>
 
