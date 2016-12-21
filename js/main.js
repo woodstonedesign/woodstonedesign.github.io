@@ -1,5 +1,16 @@
 $(document).ready(function() {
 
+    var movementStrength = 10;
+    var height = movementStrength / $(window).height();
+    var width = movementStrength / $(window).width();
+    $("#home").mousemove(function(e){
+        var pageX = e.pageX - ($(window).width() / 2);
+        var pageY = e.pageY - ($(window).height() / 2);
+        var newvalueX = width * pageX;
+        var newvalueY = height * pageY ;
+        $('#home').css("background-position", newvalueX+"px"+newvalueY+"px");
+    });
+
     //fancybox
     $(function() {
         if ($(window).width() > 1000) {
