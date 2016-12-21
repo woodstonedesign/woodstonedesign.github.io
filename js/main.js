@@ -8,7 +8,7 @@ $(document).ready(function() {
         var pageY = e.pageY - ($(window).height() / 2);
         var newvalueX = width * pageX;
         var newvalueY = height * pageY ;
-        $('#home').css("background-position", newvalueX+"px"+newvalueY+"px");
+        $('#home').css("background-position", newvalueX+"px     "+newvalueY+"px");
     });
 
     //fancybox
