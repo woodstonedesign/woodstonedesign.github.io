@@ -6175,176 +6175,176 @@ input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:ac
   }
 
   /* line 559, ../sass/style.sass */
+  .row {
+    margin: 0;
+  }
+
+  /* line 561, ../sass/style.sass */
   header {
     background: transparent;
     color: #fff;
   }
-  /* line 562, ../sass/style.sass */
+  /* line 564, ../sass/style.sass */
   header .navbar-default .navbar-brand {
     width: 100%;
     text-align: center;
     margin-bottom: 20px;
   }
-  /* line 566, ../sass/style.sass */
+  /* line 568, ../sass/style.sass */
   header.navbar-fixed-top {
     background: rgba(29, 29, 29, 0.9);
   }
 
-  /* line 568, ../sass/style.sass */
+  /* line 570, ../sass/style.sass */
   .navbar-header {
     float: none;
   }
 
-  /* line 570, ../sass/style.sass */
+  /* line 572, ../sass/style.sass */
   .navbar-nav > li {
     padding: 0 6px;
   }
 
-  /* line 572, ../sass/style.sass */
+  /* line 574, ../sass/style.sass */
   .navbar-right {
     margin-right: 0;
   }
 
-  /* line 574, ../sass/style.sass */
+  /* line 576, ../sass/style.sass */
   .on #navbar {
     display: block;
   }
 
-  /* line 576, ../sass/style.sass */
+  /* line 578, ../sass/style.sass */
   #home {
     background-position: -175px center;
   }
 
-  /* line 578, ../sass/style.sass */
+  /* line 580, ../sass/style.sass */
   .text-inner h1 {
     font-size: 45px;
     margin: 0 0 10px 0;
   }
 
-  /* line 582, ../sass/style.sass */
+  /* line 584, ../sass/style.sass */
   section .container {
     width: 100%;
     padding-left: 0;
     padding-right: 0;
   }
 
-  /* line 587, ../sass/style.sass */
+  /* line 589, ../sass/style.sass */
   section#about .container, section#contact .container {
     padding-left: 15px;
     padding-right: 15px;
   }
 
-  /* line 590, ../sass/style.sass */
+  /* line 592, ../sass/style.sass */
   .section-heading {
     margin: 50px 0;
   }
-  /* line 592, ../sass/style.sass */
+  /* line 594, ../sass/style.sass */
   .section-heading h2 {
     font-size: 30px;
     font-weight: bold;
     line-height: 2;
   }
 
-  /* line 596, ../sass/style.sass */
+  /* line 598, ../sass/style.sass */
   .content .row {
     margin: 0px 0 60px;
   }
-  /* line 598, ../sass/style.sass */
+  /* line 600, ../sass/style.sass */
   .content .row .col-sm-5 {
     text-align: right;
   }
 
-  /* line 601, ../sass/style.sass */
+  /* line 603, ../sass/style.sass */
   .circle {
     float: none;
     margin-right: -16px;
     background: #F7F6F6;
   }
 
-  /* line 606, ../sass/style.sass */
+  /* line 608, ../sass/style.sass */
   #about .section-heading {
     margin: 50px 0 50px;
   }
-  /* line 608, ../sass/style.sass */
+  /* line 610, ../sass/style.sass */
   #about .circle {
     margin: 0 5% 0;
     background: transparent;
     float: none;
     display: block;
   }
-  /* line 613, ../sass/style.sass */
+  /* line 615, ../sass/style.sass */
   #about .col-sm-12 {
     height: 120px;
   }
 
-  /* line 615, ../sass/style.sass */
+  /* line 617, ../sass/style.sass */
   .description {
     margin-top: -30px;
   }
 
-  /* line 618, ../sass/style.sass */
+  /* line 620, ../sass/style.sass */
   #projects .description {
     margin-top: -75px;
   }
-  /* line 620, ../sass/style.sass */
+  /* line 622, ../sass/style.sass */
   #projects .section-heading {
     margin: 50px 0 80px;
   }
 
-  /* line 622, ../sass/style.sass */
+  /* line 624, ../sass/style.sass */
   #app .col-sm-4 {
     padding: 0;
   }
 
-  /* line 625, ../sass/style.sass */
+  /* line 627, ../sass/style.sass */
   #dailyui .col-sm-6, #app .col-sm-6 {
     padding: 0;
   }
-  /* line 627, ../sass/style.sass */
+  /* line 629, ../sass/style.sass */
   #dailyui .project-item, #app .project-item {
     margin-bottom: 0;
   }
-  /* line 629, ../sass/style.sass */
+  /* line 631, ../sass/style.sass */
   #dailyui button.more, #app button.more {
     margin: 30px 50% 30px calc( 50% - 60px );
     min-width: 30%;
   }
 
-  /* line 633, ../sass/style.sass */
+  /* line 635, ../sass/style.sass */
   .footer {
     text-align: center;
     margin-top: 30px;
   }
 
-  /* line 636, ../sass/style.sass */
+  /* line 638, ../sass/style.sass */
   input[type="submit"], input[type="reset"], input[type="button"], .button, button {
     min-width: 100%;
   }
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) and (max-width: 480px) {
-  /* line 640, ../sass/style.sass */
+  /* line 642, ../sass/style.sass */
   body {
     overflow-x: hidden;
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 645, ../sass/style.sass */
+  /* line 647, ../sass/style.sass */
   body {
-    overflow-x: hidden !important;
+    overflow-x: hidden;
   }
 
-  /* line 647, ../sass/style.sass */
+  /* line 649, ../sass/style.sass */
   #home {
     height: 700px;
     overflow-x: hidden;
     background-image: url(../images/bg-banner-m.jpg);
     background-size: 100%;
     background-position: center;
-    display: none;
-  }
-
-  /* line 654, ../sass/style.sass */
-  #services, #projects, #app {
     display: none;
   }
 
@@ -6461,41 +6461,35 @@ input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:ac
   }
 
   /* line 721, ../sass/style.sass */
-  #projects .col-md-2, #projects .col-md-3, #app .col-sm-4, #dailyui .col-sm-6 {
-    padding: 0 15px;
-    overflow: hidden;
-  }
-
-  /* line 724, ../sass/style.sass */
   .content .row .col-sm-5 {
     text-align: left;
   }
 
-  /* line 728, ../sass/style.sass */
+  /* line 725, ../sass/style.sass */
   #dailyui .section-heading {
     margin: 50px 0;
   }
-  /* line 730, ../sass/style.sass */
+  /* line 727, ../sass/style.sass */
   #dailyui .project-item {
     margin-bottom: 0;
   }
 
-  /* line 733, ../sass/style.sass */
+  /* line 730, ../sass/style.sass */
   #about .circle {
     float: left;
   }
-  /* line 735, ../sass/style.sass */
+  /* line 732, ../sass/style.sass */
   #about p {
     margin: 0 0 25px;
   }
 
-  /* line 737, ../sass/style.sass */
+  /* line 734, ../sass/style.sass */
   button.more {
     margin-bottom: 30px;
   }
 }
 @media screen and (max-width: 320px) {
-  /* line 741, ../sass/style.sass */
+  /* line 738, ../sass/style.sass */
   .circle {
     margin-right: -25px;
   }
