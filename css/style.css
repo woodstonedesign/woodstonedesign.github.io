@@ -6335,7 +6335,7 @@ input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:ac
 @media screen and (max-width: 480px) {
   /* line 647, ../sass/style.sass */
   body {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
   }
 
   /* line 649, ../sass/style.sass */
@@ -6461,40 +6461,35 @@ input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:ac
   }
 
   /* line 721, ../sass/style.sass */
-  #projects .col-sm-6, #projects .col-sm-6, #app .col-sm-6, #dailyui .col-sm-6 {
-    padding: 0 15px;
-  }
-
-  /* line 723, ../sass/style.sass */
   .content .row .col-sm-5 {
     text-align: left;
   }
 
-  /* line 727, ../sass/style.sass */
+  /* line 725, ../sass/style.sass */
   #dailyui .section-heading {
     margin: 50px 0;
   }
-  /* line 729, ../sass/style.sass */
+  /* line 727, ../sass/style.sass */
   #dailyui .project-item {
     margin-bottom: 0;
   }
 
-  /* line 732, ../sass/style.sass */
+  /* line 730, ../sass/style.sass */
   #about .circle {
     float: left;
   }
-  /* line 734, ../sass/style.sass */
+  /* line 732, ../sass/style.sass */
   #about p {
     margin: 0 0 25px;
   }
 
-  /* line 736, ../sass/style.sass */
+  /* line 734, ../sass/style.sass */
   button.more {
     margin-bottom: 30px;
   }
 }
 @media screen and (max-width: 320px) {
-  /* line 740, ../sass/style.sass */
+  /* line 738, ../sass/style.sass */
   .circle {
     margin-right: -25px;
   }
