@@ -6344,7 +6344,7 @@ input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:ac
   }
 
   /* line 654, ../sass/style.sass */
-  #services, #projects, #app, #dailyui, #about {
+  #services, #projects, #app, #dailyui {
     display: none;
   }
 
