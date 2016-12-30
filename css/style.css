@@ -6330,7 +6330,7 @@ input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:ac
 @media screen and (max-width: 480px) {
   /* line 645, ../sass/style.sass */
   body {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
   }
 
   /* line 647, ../sass/style.sass */
