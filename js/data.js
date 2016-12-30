@@ -62,20 +62,6 @@ var data={
         },
         {
             year: 2016,
-            name: "北大醫療腦健康",
-            subname: "Brain Health",
-            url: "http://weixin.pkucarenjk.com",
-            url_text: "weixin.pkucarenjk.com",
-            description: "北大醫療腦健康為一兒童量表型測驗網站，透過簡單的量表測驗帶你輕鬆認識腦健康。以水彩風格為設計，讓醫療不再是冰冷感受，充滿活潑、童趣、陪伴的體驗。",
-            rwd: true,
-            development: true,
-            design: false,
-            img_thumbs: "brainhealth.jpg",
-            img_default: "brainhealth-banner",
-            demo: ["brainhealth-1.jpg"]
-        },
-        {
-            year: 2016,
             name: "寶貝來寵愛媽咪好孕福袋",
             subname: "Love mommy,love baby.",
             url: "https://bbcomes.com/mamifun",
