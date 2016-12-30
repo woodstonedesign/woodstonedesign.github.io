@@ -42,10 +42,11 @@
     
 </head>
 
-<body>
+<body id="allprojects">
 	<div id="gotop" class="animated bounceInUp"></div>
-<div itemscope itemtype="http://schema.org/Product">
-
+	<div itemscope itemtype="http://schema.org/Product">
+	
+	<!-- Start of Header -->
    <header>
    		<div class="container">
 		    <nav class="navbar-default">
@@ -71,10 +72,10 @@
 		    </nav>
 		  </div>
    </header>
+   <!-- End of Header -->
 
-
-
-   <section id="home" data-section="home" style="background-image: url(images/bg-banner.jpg);" data-stellar-background-ratio="0.5">
+ 	<!-- Start of Banner -->
+    <section id="home" data-section="home" style="background-image: url(images/bg-banner.jpg);" data-stellar-background-ratio="0.5">
 		<div class="gradient"></div>
 		<div class="container">
 			<div class="text-wrap">
@@ -85,13 +86,14 @@
 							<h1 class="wow fadeInDown" data-wow-delay=".5s" itemprop="name">Web Design Ｘ APP Design</h1>
 							<h2 class="wow fadeInUp" data-wow-delay=".5s"  itemprop="brand">WoodStone Design</h2> 
 						</div>
-					</div>
 				</div>
 			</div>
 		</div>
 		<a href="#services" data-nav-section="services"><div class="mouse"><div class="scroll"></div></div></a>
 	</section>
+	<!-- End of Banner -->
 
+	<!-- Start of services -->
 	<section id="services" data-section="services">
 		<div class="container">
 			<div class="row">
@@ -119,7 +121,9 @@
 			</div>
 		</div>
 	</section>
-
+	<!-- End of services -->
+	
+	<!-- Start of Web Projects -->
 	<section id="projects" class="pink-gradient" data-section="projects">
 		<div class="container">
 			<div class="row">
@@ -132,405 +136,64 @@
 			</div>
 		</div>
 
-			<div class="row wow fadeIn" data-wow-delay="0.5s">
-				
-				<div class="col-md-3 col-sm-6 col-xs-12">
-					<a href="#project014" class="project-item fancybox to-animate" rel="gallery1">
-						<img data-default-src="images/thumbs/2016/07.jpg" class="img-responsive" alt="雲智慧">
-						<div class="text">
-							<h2>雲智慧</h2>
-							<span>Maxnerva Website</span>
-						</div>
-					</a>
-					<div class="content" id="project014">
-						<div class="cover"><img data-default-src="images/fulls/2016/07-1.jpg" data-xs-src="images/fulls/2016/07-m.jpg" alt="雲智慧"></div>
-						<div class="row">
-							<div class="col-md-5 col-sm-5 col-md-offset-1">
-								<div class="circle"><div class="icon-rwd"></div><p>響應式網頁</p></div>
-								<div class="circle"><i class="icon-codeopen"></i><p>Development</p></div>
-								<div class="circle"><i class="icon-feather"></i><p>Co-Design</p></div>
-							</div>
-							<div class="col-md-5 col-sm-7 col-xs-12">
-								<h2>雲智慧</h2>
-								<p><i class="icon-monitor"></i><i class="icon-mobile"></i><a href="http://www.maxnerva.com/" target="_blank">www.maxnerva.com</a></p>
-								<p>雲智慧為一家科技公司，以藍色調帶出專業科技感，傳遞專業與科技服務理念。</p>
-							</div>
-						</div>
-						<img data-default-src="images/fulls/2016/07.jpg" class="img-responsive" alt="雲智慧"><br>
-						<img data-default-src="images/fulls/2016/07-2.jpg" class="img-responsive" alt="雲智慧">
+		<div class="row wow fadeIn" data-wow-delay="0.5s">
+			
+			<div class="col-md-3 col-sm-6 col-xs-12" v-for="(id,web) in weblist" v-if="id<4">
+				<a href="#web{{id+1}}" class="project-item fancybox to-animate" rel="gallery1">
+					<img data-default-src="images/thumbs/{{web.year}}/{{web.img_thumbs}}" class="img-responsive" alt="{{web.name}}">
+					<div class="text">
+						<h2>{{web.name}}</h2>
+						<span>{{web.subname}}</span>
 					</div>
+				</a>
+				<div class="content" id="web{{id+1}}">
+					<div class="cover"><img data-default-src="images/fulls/{{web.year}}/{{web.img_default}}.jpg" data-xs-src="images/fulls/{{web.year}}/{{web.img_default}}-m.jpg" alt="{{web.name}}"></div>
+					<div class="row">
+						<div class="col-md-5 col-sm-5 col-md-offset-1">
+							<div class="circle" v-if="web.rwd"><div class="icon-rwd"></div><p>響應式網頁</p></div>
+							<div class="circle" v-if="web.development"><i class="icon-codeopen"></i><p>Development</p></div>
+							<div class="circle" v-if="web.design"><i class="icon-feather"></i><p>{{web.designtype}}</p></div>
+						</div>
+						<div class="col-md-5 col-sm-7 col-xs-12">
+							<h2>{{web.name}}</h2>
+							<p><i class="icon-monitor"></i><i class="icon-mobile" v-if="web.rwd"></i><a href="{{web.url}}" target="_blank">{{web.url_text}}</a></p>
+							<p>{{web.description}}</p>
+						</div>
+					</div>
+					<img data-default-src="images/fulls/{{web.year}}/{{demo_item}}" class="img-responsive" alt="{{web.name}}" v-for="demo_item in web.demo">
 				</div>
+			</div>
 
-				<div class="col-md-3 col-sm-6 col-xs-12">
-					<a href="#project001" class="project-item fancybox to-animate" rel="gallery1">
-						<img data-default-src="images/thumbs/2016/05.jpg" class="img-responsive" alt="寶貝來交朋友">
-						<div class="text">
-							<h2>寶貝來交朋友</h2>
-							<span>BBcomes's invitation</span>
-						</div>
-					</a>
-					<div class="content" id="project001">
-						<div class="cover"><img data-default-src="images/thumbs/2016/05.jpg" alt="寶貝來交朋友"></div>
-						<div class="row">
-							<div class="col-md-5 col-sm-5 col-md-offset-1">
-								<div class="circle"><div class="icon-rwd"></div><p>響應式網頁</p></div>
-								<div class="circle"><i class="icon-codeopen"></i><p>Development</p></div>
-								<div class="circle"><i class="icon-feather"></i><p>Design</p></div>
-							</div>
-							<div class="col-md-5 col-sm-7 col-xs-12">
-								<h2>寶貝來交朋友</h2>
-								<p><i class="icon-monitor"></i><i class="icon-mobile"></i><a href="https://bbcomes.com/inviteFriends" target="_blank">bbcomes.com/inviteFriends</a></p>
-								<p>寶貝來了解新世代父母親的焦慮與無助，我們期望能和新世代的父母一起用最剛好的溫度丶最適宜的態度，以及育兒專家丶醫護等專業建議，幫助您一同解開小小人兒的成長秘密。</p>
-							</div>
-						</div>
-						<img data-default-src="images/fulls/2016/05.jpg" class="img-responsive" alt="寶貝來交朋友">
+			<div class="col-md-2 col-sm-6 col-xs-12" v-for="(id,web) in weblist" v-if="id>3">
+				<a href="#web{{id+1}}" class="project-item fancybox to-animate" rel="gallery1">
+					<img data-default-src="images/thumbs/{{web.year}}/{{web.img_thumbs}}" class="img-responsive" alt="{{web.name}}">
+					<div class="text">
+						<h2>{{web.name}}</h2>
+						<span>{{web.subname}}</span>
 					</div>
-				</div>
-
-				<div class="col-md-3 col-sm-6 col-xs-12">
-					<a href="#project015" class="project-item fancybox to-animate" rel="gallery1">
-						<img data-default-src="images/thumbs/2016/09.jpg" class="img-responsive" alt="雲智匯Maxnerva">
-						<div class="text">
-							<h2 itemprop="brand">木石設計</h2>
-							<span itemprop="brand">WoodStone Website</span>
+				</a>
+				<div class="content" id="web{{id+1}}">
+					<div class="cover"><img data-default-src="images/fulls/{{web.year}}/{{web.img_default}}.jpg" data-xs-src="images/fulls/{{web.year}}/{{web.img_default}}-m.jpg" alt="{{web.name}}"></div>
+					<div class="row">
+						<div class="col-md-5 col-sm-5 col-md-offset-1">
+							<div class="circle" v-if="web.rwd"><div class="icon-rwd"></div><p>響應式網頁</p></div>
+							<div class="circle" v-if="web.development"><i class="icon-codeopen"></i><p>Development</p></div>
+							<div class="circle" v-if="web.design"><i class="icon-feather"></i><p>{{web.designtype}}</p></div>
 						</div>
-					</a>
-					<div class="content" id="project015">
-						<div class="cover"><img data-default-src="images/fulls/2016/08-1.jpg" data-xs-src="images/fulls/2016/08-m.jpg" alt="木石設計WoodStone"></div>
-						<div class="row">
-							<div class="col-md-5 col-sm-5 col-md-offset-1">
-								<div class="circle"><div class="icon-rwd"></div><p>響應式網頁</p></div>
-								<div class="circle"><i class="icon-codeopen"></i><p>Development</p></div>
-								<div class="circle"><i class="icon-feather"></i><p>Design</p></div>
-							</div>
-							<div class="col-md-5 col-sm-7 col-xs-12">
-								<h2 itemprop="brand">木石設計XWoodStone</h2>
-								<p><i class="icon-monitor"></i><i class="icon-mobile"></i><a href="http://karentsai2016.github.io" target="_blank" itemprop="url">karentsai2016.github.io</a></p>
-								<p itemprop="description">木石設計提供網頁設計&開發、App流程與介面設計、使用者經驗服務。融入使用者經驗設計思維，提供友善易懂的操作介面，帶給使用者良好的體驗</p>
-							</div>
+						<div class="col-md-5 col-sm-7 col-xs-12">
+							<h2>{{web.name}}</h2>
+							<p><i class="icon-monitor"></i><i class="icon-mobile" v-if="web.rwd"></i><a href="{{web.url}}" target="_blank">{{web.url_text}}</a></p>
+							<p>{{web.description}}</p>
 						</div>
-						<img data-default-src="images/fulls/2016/08.jpg" class="img-responsive" alt="木石設計WoodStone">
-						<img data-default-src="images/fulls/2016/08-2.jpg" class="img-responsive" alt="雲智匯Maxnerva">
 					</div>
+					<img data-default-src="images/fulls/{{web.year}}/{{demo_item}}" class="img-responsive" alt="{{web.name}}" v-for="demo_item in web.demo">
 				</div>
-
-				<div class="col-md-3 col-sm-6 col-xs-12">
-					<a href="#project003" class="project-item fancybox" rel="gallery1">
-						<img data-default-src="images/thumbs/2016/03.jpg" class="img-responsive" alt="淨土藝術">
-						<div class="text">
-							<h2>淨土藝術</h2>
-							<span>Art of Rangniang</span>
-						</div>
-					</a>
-					<div class="content" id="project003">
-						<div class="cover"><img data-default-src="images/fulls/2016/03-1.jpg" data-xs-src="images/fulls/2016/03-m.jpg"alt="淨土藝術"></div>
-						<div class="row">
-							<div class="col-md-5 col-sm-5 col-xs-12 col-md-offset-1">
-								<div class="circle"><div class="icon-rwd"></div><p>響應式網頁</p></div>
-								<div class="circle"><i class="icon-codeopen"></i><p>Development</p></div>
-								<div class="circle"><i class="icon-feather"></i><p>Co-Design</p></div>
-							</div>
-							<div class="col-md-5 col-sm-7 col-xs-12">
-								<h2>淨土藝術</h2>
-								<p><i class="icon-monitor"></i><i class="icon-mobile"></i><a href="http://rangniang.com.cn" target="_blank">rangniang.com.cn</a></p>
-								<p>淨土藝術為讓娘寺的官方網站，讓娘寺全名為「讓娘彭措帖慶林」，意謂「讓娘圓滿大乘洲」，位於青海省玉樹州玉樹市以北60公里處。淨土藝術網站以集資為目標，期望透過募資方式重建因地震而倒塌的建築，祈求儘快實現教學樓及餐飲問題，愛心人士的捐助，讓這些弱小的朋友擁有一個教學樓。</p>
-							</div>
-						</div>
-						<img data-default-src="images/fulls/2016/03.jpg" class="img-responsive" alt="淨土藝術">
-					</div>
-				</div>
-
-				<div class="col-md-2 col-sm-6 col-xs-12">
-					<a href="#project004" class="project-item fancybox" rel="gallery1">
-						<img data-default-src="images/thumbs/2016/01.jpg" class="img-responsive" alt="北大醫療腦健康">
-						<div class="text">
-							<h2>北大醫療腦健康</h2>
-							<span>Brain Health</span>
-						</div>
-					</a>
-					<div class="content" id="project004">
-						<div class="cover"><img data-default-src="images/fulls/2016/01-1.jpg" data-xs-src="images/fulls/2016/01-m.jpg" alt="北大醫療腦健康"></div>
-						<div class="row">
-							<div class="col-md-5 col-sm-5 col-xs-12 col-md-offset-1">
-								<div class="circle"><div class="icon-rwd"></div><p>響應式網頁</p></div>
-								<div class="circle"><i class="icon-codeopen"></i><p>Development</p></div>
-							</div>
-							<div class="col-md-5 col-sm-7 col-xs-12">
-								<h2>北大醫療腦健康</h2>
-								<p><i class="icon-monitor"></i><i class="icon-mobile"></i><a href="http://weixin.pkucarenjk.com/" target="_blank">weixin.pkucarenjk.com</a></p>
-								<p>北大醫療腦健康為一兒童量表型測驗網站，透過簡單的量表測驗帶你輕鬆認識腦健康。以水彩風格為設計，讓醫療不再是冰冷感受，充滿活潑、童趣、陪伴的體驗。</p>
-							</div>
-						</div>
-						<img data-default-src="images/fulls/2016/01.jpg" class="img-responsive" alt="北大醫療腦健康">
-					</div>
-				</div>
-
-				<div class="col-md-2 col-sm-6 col-xs-12">
-					<a href="#project002" class="project-item fancybox to-animate" rel="gallery1">
-						<img data-default-src="images/thumbs/2016/04.jpg" class="img-responsive" alt="寶貝來寵愛媽咪好孕福袋">
-						<div class="text">
-							<h2>寶貝來寵愛媽咪好孕福袋</h2>
-							<span>Love mommy,love baby.</span>
-						</div>
-					</a>
-					<div class="content" id="project002">
-						<div class="cover"><img data-default-src="images/fulls/2016/04-1.jpg" data-xs-src="images/fulls/2016/04-m.jpg" alt="寶貝來寵愛媽咪好孕福袋"></div>
-						<div class="row">
-							<div class="col-md-5 col-sm-5 col-xs-12 col-md-offset-1">
-								<div class="circle"><div class="icon-rwd"></div><p>響應式網頁</p></div>
-								<div class="circle"><i class="icon-codeopen"></i><p>Development</p></div>
-								<div class="circle"><i class="icon-feather"></i><p>Design</p></div>
-							</div>
-							<div class="col-md-5 col-sm-7 col-xs-12">
-								<h2>寶貝來寵愛媽咪好孕福袋</h2>
-								<p><i class="icon-monitor"></i><i class="icon-mobile"></i><a href="https://bbcomes.com/mamifun" target="_blank">bbcomes.com/mamifun</a></p>
-								<p>寶貝來了解新世代父母親的焦慮與無助，我們期望能和新世代的父母一起用最剛好的溫度丶最適宜的態度，以及育兒專家丶醫護等專業建議，幫助您一同解開小小人兒的成長秘密。</p>
-							</div>
-						</div>
-						<img data-default-src="images/fulls/2016/04.jpg" class="img-responsive" alt="寶貝來寵愛媽咪好孕福袋">
-					</div>
-				</div>
-
-				<div class="col-md-2 col-sm-6 col-xs-12">
-					<a href="#project005" class="project-item fancybox" rel="gallery1">
-						<img data-default-src="images/thumbs/2016/02.jpg" class="img-responsive" alt="寶貝來BBcomes">
-						<div class="text">
-							<h2>寶貝來BBcomes</h2>
-							<span>Hello!Baby.Hello!World.</span>
-						</div>
-					</a>
-					<div class="content" id="project005">
-						<div class="cover"><img data-default-src="images/fulls/2016/02-1.jpg" data-xs-src="images/thumbs/2016/02.jpg" alt="寶貝來BBcomes"></div>
-						<div class="row">
-							<div class="col-md-5 col-sm-5 col-xs-12 col-md-offset-1">
-								<div class="circle"><div class="icon-rwd"></div><p>響應式網頁</p></div>
-								<div class="circle"><i class="icon-codeopen"></i><p>Development</p></div>
-								<div class="circle"><i class="icon-feather"></i><p>Co-Design</p></div>
-							</div>
-							<div class="col-md-5 col-sm-7 col-xs-12">
-								<h2>寶貝來BBcomes</h2>
-								<p><i class="icon-monitor"></i><i class="icon-mobile"></i><a href="https://bbcomes.com/" target="_blank">bbcomes.com</a></p>
-								<p>寶貝來了解新世代父母親的焦慮與無助，我們期望能和新世代的父母一起用最剛好的溫度丶最適宜的態度，以及育兒專家丶醫護等專業建議，幫助您一同解開小小人兒的成長秘密。</p>
-							</div>
-						</div>
-						<img data-default-src="images/fulls/2016/02.jpg" class="img-responsive" alt="北大醫療腦健康">
-					</div>
-				</div>
-				
-				<div class="col-md-2 col-sm-6 col-xs-12">
-					<a href="#project006" class="project-item fancybox" rel="gallery1">
-						<img data-default-src="images/thumbs/2015/03.jpg" class="img-responsive" alt="【夏日暖爸季】我家爸爸超級暖">
-						<div class="text">
-							<h2>【夏日暖爸季】我家爸爸超級暖</h2>
-							<span>Hello!Babay.Hello!World.</span>
-						</div>
-					</a>
-					<div class="content" id="project006">
-						<div class="cover"><img data-default-src="images/fulls/2015/03-1.jpg" data-xs-src="images/thumbs/2015/03.jpg" alt="【夏日暖爸季】我家爸爸超級暖"></div>
-						<div class="row">
-							<div class="col-md-5 col-sm-5 col-xs-12 col-md-offset-1">
-								<div class="circle"><div class="icon-rwd"></div><p>響應式網頁</p></div>
-								<div class="circle"><i class="icon-codeopen"></i><p>Development</p></div>
-								<div class="circle"><i class="icon-feather"></i><p>Design</p></div>
-							</div>
-							<div class="col-md-5 col-sm-7 col-xs-12">
-								<h2>【夏日暖爸季】<br>我家爸爸超級暖</h2>
-								<p><i class="icon-monitor"></i><i class="icon-mobile"></i><a href="https://bbcomes.com/activity/summerdad" target="_blank">bbcomes.com/activity/summerdad</a></p>
-								<p>全天下辛苦的爸爸們，父親節快樂！你家有個願意陪孩子玩到滿身大汗、氣喘吁吁的爸爸嗎？寶貝來父親節活動網站以「我的爸爸是超人，爸爸願意為你做牛做馬」為設計理念。</p>
-							</div>
-						</div>
-						<img data-default-src="images/fulls/2015/03.jpg" class="img-responsive" alt="【夏日暖爸季】我家爸爸超級暖">
-					</div>
-				</div>
-
-				<div class="col-md-2 col-sm-6 col-xs-12">
-					<a href="#project007" class="project-item fancybox" rel="gallery1">
-						<img data-default-src="images/thumbs/2015/01.jpg" class="img-responsive" alt="手滑漫畫">
-						<div class="text">
-							<h2>手滑漫畫</h2>
-							<span>TapTapToon</span>
-						</div>
-					</a>
-					<div class="content" id="project007">
-						<div class="cover"><img data-default-src="images/fulls/2015/01-1.jpg" data-xs-src="images/thumbs/2015/01.jpg" alt="手滑漫畫"></div>
-						<div class="row">
-							<div class="col-md-5 col-sm-5 col-xs-12 col-md-offset-1">
-								<div class="circle"><i class="icon-codeopen"></i><p>Development</p></div>
-							</div>
-							<div class="col-md-5 col-sm-7 col-xs-12">
-								<h2>手滑漫畫</h2>
-								<p><i class="icon-monitor"></i><a href="http://www.comm-ez.com/taptapcomic" target="_blank">www.comm-ez.com/taptapcomic</a></p>
-								<p>玩漫畫。看漫畫。盡在手滑漫畫。此為手滑漫畫App的推廣網頁，以漫畫風格介紹行銷app。</p>
-							</div>
-						</div>
-						<img data-default-src="images/fulls/2015/01-a.png" class="img-responsive" alt="手滑漫畫">
-						<img data-default-src="images/fulls/2015/01.jpg" class="img-responsive" alt="手滑漫畫">
-					</div>
-				</div>
-
-				<div class="col-md-2 col-sm-6 col-xs-12">
-					<a href="#project008" class="project-item fancybox" rel="gallery1">
-						<img data-default-src="images/thumbs/2015/02.jpg" class="img-responsive" alt="陽朔旅遊網">
-						<div class="text">
-							<h2>陽朔旅遊網</h2>
-							<span>Travel around Yangshuo.</span>
-						</div>
-					</a>
-					<div class="content" id="project008">
-						<div class="cover"><img data-default-src="images/fulls/2015/02-1.jpg" data-xs-src="images/thumbs/2015/02.jpg" alt="陽朔旅遊網"></div>
-						<div class="row">
-							<div class="col-md-5 col-sm-5 col-xs-12 col-md-offset-1">
-								<div class="circle"><i class="icon-feather"></i><p>Design</p></div>
-							</div>
-							<div class="col-md-5 col-sm-7 col-xs-12">
-								<h2>陽朔旅遊網</h2>
-								<p><i class="icon-monitor"></i></p>
-								<p>旅遊網網頁設計提案</p>
-							</div>
-						</div>
-						<img data-default-src="images/fulls/2015/02.png" class="img-responsive" alt="陽朔旅遊網">
-					</div>
-				</div>
-				
-				<div class="col-md-2 col-sm-6 col-xs-12">
-					<a href="#project009" class="project-item fancybox" rel="gallery1">
-						<img data-default-src="images/thumbs/2014/05.jpg" class="img-responsive" alt="和熹生活">
-						<div class="text">
-							<h2>和熹生活</h2>
-							<span>The Life of Hexi.</span>
-						</div>
-					</a>
-					<div class="content" id="project009">
-						<div class="cover"><img data-default-src="images/fulls/2014/05-1.jpg" data-xs-src="images/fulls/2014/05-m.jpg" alt="和熹生活"></div>
-						<div class="row">
-							<div class="col-md-5 col-sm-5 col-xs-12 col-md-offset-1">
-								<div class="circle"><i class="icon-codeopen"></i><p>Development</p></div>
-							</div>
-							<div class="col-md-5 col-sm-7 col-xs-12">
-								<h2>和熹生活</h2>
-								<p><i class="icon-monitor"></i></p>
-								<p>和熹生活為一個老年人社群網站，專注於分享健康知識、大小活動與個人健康管理。以企業代表色-紅色為設計，傳遞熱情、活躍，期許能有安享幸福晚年的生活</p>
-							</div>
-						</div>
-						<img data-default-src="images/fulls/2014/05.jpg" class="img-responsive" alt="和熹生活">
-					</div>
-				</div>
-					
-				<div class="col-md-2 col-sm-6 col-xs-12">
-					<a href="#project010" class="project-item fancybox" rel="gallery1">
-						<img data-default-src="images/thumbs/2014/02.jpg" class="img-responsive" alt="DoEZ">
-						<div class="text">
-							<h2>DoEZ</h2>
-							<span>EZ Chat.EZ Talk.</span>
-						</div>
-					</a>
-					<div class="content" id="project010">
-						<div class="cover"><img data-default-src="images/fulls/2014/02-1.jpg" data-xs-src="images/fulls/2014/02-m.jpg" alt="DoEZ"></div>
-						<div class="row">
-							<div class="col-md-5 col-sm-5 col-xs-12 col-md-offset-1">
-								<div class="circle"><i class="icon-codeopen"></i><p>Development</p></div>
-							</div>
-							<div class="col-md-5 col-sm-7 col-xs-12">
-								<h2>DoEZ</h2>
-								<p><i class="icon-monitor"></i><a href="http://www.comm-ez.com/doez" target="_blank">www.comm-ez.com/doez</a></p>
-								<p>都易[Do-EZ]是您生活上最麻吉的好幫手，我們把大家最常用的免費即時通訊，結合了生活上的邀約與邀請，可以讓您一邊聊天，一邊把聊天記錄迅速建立起來成為一個提醒事項，或把聊天內容傳送給對方，邀請對方加入這個活動。</p>
-							</div>
-						</div>
-						<img data-default-src="images/fulls/2014/02.jpg" class="img-responsive" alt="DoEZ">
-					</div>
-				</div>
-
-
-				<div class="col-md-2 col-sm-6 col-xs-12">
-					<a href="#project011" class="project-item fancybox" rel="gallery1">
-						<img data-default-src="images/thumbs/2014/01.jpg" class="img-responsive" alt="追跡者冷鏈網站">
-						<div class="text">
-							<h2>追跡者</h2>
-							<span>Safe.Easy.Tracking.</span>
-						</div>
-					</a>
-					<div class="content" id="project011">
-						<div class="cover"><img data-default-src="images/fulls/2014/01-1.jpg" data-xs-src="images/fulls/2014/01-m.jpg"alt="追跡者"></div>
-						<div class="row">
-							<div class="col-md-5 col-sm-5 col-xs-12 col-md-offset-1">
-								<div class="circle"><i class="icon-codeopen"></i><p>Development</p></div>
-								<div class="circle"><i class="icon-feather"></i><p>Design</p></div>
-							</div>
-							<div class="col-md-5 col-sm-7 col-xs-12">
-								<h2>追跡者</h2>
-								<i class="icon-monitor"></i>
-								<p>安全，簡單，追跡。追跡者，您的安全運輸專家。</p>
-							</div>
-						</div>
-						<img data-default-src="images/fulls/2014/01.jpg" class="img-responsive" alt="追跡者">
-					</div>
-				</div>
-
-				<div class="col-md-2 col-sm-6 col-xs-12">
-					<a href="#project012" class="project-item fancybox" rel="gallery1">
-						<img data-default-src="images/thumbs/2014/03.jpg" class="img-responsive" alt="eHR 登入">
-						<div class="text">
-							<h2>eHR 登入</h2>
-							<span>Register & Login</span>
-						</div>
-					</a>
-					<div class="content" id="project012">
-						<div class="cover"><img data-default-src="images/fulls/2014/03-1.jpg" data-xs-src="images/thumbs/2014/03.jpg" alt="eHR 登入"></div>
-						<div class="row">
-							<div class="col-md-5 col-sm-5 col-xs-12 col-md-offset-1">
-								<div class="circle"><i class="icon-codeopen"></i><p>Development</p></div>
-								<div class="circle"><i class="icon-feather"></i><p>Design</p></div>
-							</div>
-							<div class="col-md-5 col-sm-7 col-xs-12">
-								<h2>eHR 登入</h2>
-								<i class="icon-monitor"></i>
-								<p>系統後台登入頁</p>
-							</div>
-						</div>
-						<img data-default-src="images/fulls/2014/03-a.png" data-xs-src="images/fulls/2014/03-a-m.png" class="img-responsive"  alt="eHR 登入">
-						<img data-default-src="images/fulls/2014/03.jpg" class="img-responsive" alt="eHR 登入">
-					</div>
-				</div>
-
-				<div class="col-md-2 col-sm-6 col-xs-12">
-					<a href="#project013" class="project-item fancybox" rel="gallery1">
-						<img data-default-src="images/thumbs/2014/06.jpg" alt="Image" class="img-responsive" alt="WISE Lab">
-						<div class="text">
-							<h2>WISE Lab</h2>
-							<span>Wireless Innovative System EM-Applied</span>
-						</div>
-					</a>
-					<div class="content" id="project013">
-						<div class="cover"><img data-default-src="images/fulls/2014/06-1.jpg" data-xs-src="images/fulls/2014/06-m.jpg" alt="WISE Lab"></div>
-						<div class="row">
-							<div class="col-md-5 col-sm-5 col-xs-12 col-md-offset-1">
-								<div class="circle"><i class="icon-codeopen"></i><p>Development</p></div>
-								<div class="circle"><i class="icon-feather"></i><p>Design</p></div>
-							</div>
-							<div class="col-md-5 col-sm-7 col-xs-12">
-								<h2>WISE Lab</h2>
-								<p><i class="icon-monitor"></i><a href="http://wisbal.ee.ncku.edu.tw" target="_blank">wisbal.ee.ncku.edu.tw</a></p>	
-								<p>國立成功大學電機系無線創新系統電磁應用實驗室(WISE Laboratory)網站，目前僅有電腦版本，尚未落實響應式網頁
-								。</p>
-							</div>
-						</div>
-						<img data-default-src="images/fulls/2014/06-a.jpg" class="img-responsive" alt="WISE Lab">
-						<img data-default-src="images/fulls/2014/06.jpg" class="img-responsive" alt="WISE Lab">
-					</div>
-				</div>
-
-				<div class="col-md-2 col-sm-6 col-xs-12">
-					<a href="#" class="project-item">
-						<img data-default-src="images/thumbs/2016/08.jpg" class="img-responsive" alt="CloubPrinting">
-						<div class="text">
-							<h2>雲列印</h2>
-							<span>Easy Printing.</span>
-						</div>	
-					</a>				
-				</div>
+			</div>
 
 	</section>
+	<!-- End of Web Projects -->
 
+	<!-- Start of App Projects -->
 	<section id="app" data-section="app" class="pink-gradient" >
 		<div class="container">
 			<div class="row">
@@ -544,118 +207,37 @@
 			
 			<div class="row">
 
-				 <div class="col-md-3 col-sm-6 col-xs-12">
-					<a href="#app004" class="project-item fancybox" rel="gallery2">
-						<img data-default-src="images/thumbs/2016/06.jpg" alt="Image" class="img-responsive" alt="SAMENU">
-						<div class="text">
-							<h2>SAMENU</h2>
-							<span>EZ Order.EZ Track.</span>
-						</div>
-					</a>
-					<div class="content" id="app004">
-						<div class="cover"><img data-default-src="images/fulls/2016/06-1.jpg" data-xs-src="images/fulls/2016/06-m.jpg" alt="SAMENU"></div>
-						<div class="row">
-							<div class="col-md-5 col-sm-5 col-xs-12 col-md-offset-1">
-								<div class="circle"><i class="icon-mobile"></i><p>Development</p></div>
-								<div class="circle"><i class="icon-apple"></i><p>iOS</p></div>
-								<div class="circle"><i class="icon-feather"></i><p>Design</p></div>
-							</div>
-							<div class="col-md-5 col-sm-7 col-xs-12">
-								<h2>SAMENU</h2>
-								<i class="icon-apple"></i><i class="icon-android"></i>
-								<p>為幫助顧客減少訂餐、等待餐點時間，SAMENU提供顧客與店家雙向服務，app囊括多家商店，提供顧客快速訂、取餐服務，隨時查看目前叫號狀態。店家可透過app管理訂單進度，讓顧客享有便利與快速的購餐服務。</p>
-							</div>
-						</div>
-						<img data-default-src="images/fulls/2016/06.jpg" class="img-responsive" alt="SAMENU">
+				<div class="col-md-3 col-sm-6 col-xs-12" v-for="(id,app) in applist">
+				<a href="#app{{id+1}}" class="project-item fancybox to-animate" rel="gallery2">
+					<img data-default-src="images/thumbs/{{app.year}}/{{app.img_thumbs}}" class="img-responsive" alt="{{app.name}}">
+					<div class="text">
+						<h2>{{app.name}}</h2>
+						<span>{{app.subname}}</span>
 					</div>
-				</div> 
-
-				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="0.5s">
-					<a href="#app001" class="project-item fancybox" rel="gallery2">
-						<img data-default-src="images/thumbs/2015/04.jpg" class="img-responsive" alt="手滑漫畫">
-						<div class="text">
-							<h2>手滑漫畫</h2>
-							<span>TapTapToon</span>
+				</a>
+				<div class="content" id="app{{id+1}}">
+					<div class="cover"><img data-default-src="images/fulls/{{app.year}}/{{app.img_default}}.jpg" data-xs-src="images/fulls/{{app.year}}/{{app.img_default}}-m.jpg" alt="{{app.name}}"></div>
+					<div class="row">
+						<div class="col-md-5 col-sm-5 col-xs-12 col-md-offset-1">
+							<div class="circle" v-if="app.android"><i class="icon-android"></i><p>Android</p></div>
+							<div class="circle" v-if="app.ios"><i class="icon-apple"></i><p>Android</p></div>
+							<div class="circle" v-if="app.design"><i class="icon-feather"></i><p>Design</p></div>
 						</div>
-					</a>
-					<div class="content" id="app001">
-						<div class="cover"><img data-default-src="images/fulls/2015/01-1.jpg" data-xs-src="images/thumbs/2015/01.jpg" alt="手滑漫畫"></div>
-						<div class="row">
-							<div class="col-md-5 col-sm-5 col-xs-12 col-md-offset-1">
-								<div class="circle"><i class="icon-android"></i><p>Android</p></div>
-								<div class="circle"><i class="icon-apple"></i><p>iOS</p></div>
-								<div class="circle"><i class="icon-feather"></i><p>Design</p></div>
-							</div>
-							<div class="col-md-5 col-sm-7 col-xs-12">
-								<h2>手滑漫畫</h2>
-								<i class="icon-apple"></i><i class="icon-android"></i>
-								<p>玩漫畫。看漫畫。盡在手滑漫畫。你有許多不吐不快的話嗎?你有滿腦子好笑的話題想要給朋友知道嗎?用單純的文字來表達太落伍了，用漫畫吧，讓你想說的話更生動活潑有趣。</p>
-							</div>
+						<div class="col-md-5 col-sm-7 col-xs-12">
+							<h2>{{app.name}}</h2>
+							<p><i class="icon-android" v-if="app.android"></i><i class="icon-apple" v-if="app.ios"></i></p>
+							<p>{{app.description}}</p>
 						</div>
-						<img data-default-src="images/fulls/2015/04.png" class="img-responsive" alt="手滑漫畫">
 					</div>
+					<img data-default-src="images/fulls/{{app.year}}/{{demo_item}}" class="img-responsive" alt="{{app.name}}" v-for="demo_item in app.demo">
 				</div>
-
-				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="1s">
-					<a href="#app002" class="project-item fancybox" rel="gallery2">
-						<img data-default-src="images/thumbs/2014/04.jpg" class="img-responsive" alt="活動票卷app">
-						<div class="text">
-							<h2>活動票卷</h2>
-							<span>EZ Tickets.</span>
-						</div>
-					</a>
-					<div class="content" id="app002">
-						<div class="cover"><img data-default-src="images/fulls/2014/04-1.jpg" data-xs-src="images/thumbs/2014/04.jpg" alt="活動票卷app"></div>
-						<div class="row">
-							<div class="col-md-5 col-sm-5 col-xs-12 col-md-offset-1">
-								<div class="circle"><i class="icon-android"></i><p>Android</p></div>
-								<div class="circle"><i class="icon-apple"></i><p>iOS</p></div>
-								<div class="circle"><i class="icon-feather"></i><p>Design</p></div>
-							</div>
-							<div class="col-md-5 col-sm-7 col-xs-12">
-								<h2>活動票卷</h2>
-								<i class="icon-apple"></i><i class="icon-android"></i>
-								<p>便捷、快速取票與驗票app</p>
-							</div>
-						</div>
-						<img data-default-src="images/fulls/2014/04.jpg" class="img-responsive" alt="活動票卷app">
-					</div>
-				</div>
-
-				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="1.5s">
-					<a href="#app003" class="project-item fancybox" rel="gallery2">
-						<img data-default-src="images/thumbs/2014/07.jpg" class="img-responsive" alt="HealthCare-健康管理app">
-						<div class="text">
-							<h2>HealthCare</h2>
-							<span>Health is wealth.</span>
-						</div>
-					</a>
-					<div class="content" id="app003">
-						<div class="cover"><img data-default-src="images/fulls/2014/07-1.jpg" data-xs-src="images/thumbs/2014/07.jpg" alt="HealthCare-健康管理app"></div>
-						<div class="row">
-							<div class="col-md-5 col-sm-5 col-xs-12 col-md-offset-1">
-								<div class="circle"><i class="icon-android"></i><p>Android</p></div>
-								<div class="circle"><i class="icon-apple"></i><p>iOS</p></div>
-								<div class="circle"><i class="icon-feather"></i><p>Design</p></div>
-							</div>
-							<div class="col-md-5 col-sm-7 col-xs-12">
-								<h2>HealthCare</h2>
-								<i class="icon-apple"></i><i class="icon-android"></i>
-								<p>HealthCare為一個自我健康管理app，擁有健康報告、健康管理、運動紀錄、行事曆、健康資訊、預約健檢六大功能。</p>
-							</div>
-						</div>
-						<img data-default-src="images/fulls/2014/07-a.jpg" class="img-responsive" alt="HealthCare-健康管理app">
-						<br><br>
-						<img data-default-src="images/fulls/2014/07-b.png" class="img-responsive" alt="HealthCare-健康管理 UI Flow">
-						<br><br>
-						<img data-default-src="images/fulls/2014/07-c.jpg" class="img-responsive" alt="HealthCare-健康管理app">
-					</div>
-				</div>
-
 			</div>
+
 		</div>
 	</section>
+	<!-- End of App Projects -->
 
+	<!-- Start of UI Projects -->
 	<section id="dailyui" class="pink-gradient" data-section="dailyui">
 		<div class="container">
 			<div class="row">
@@ -664,70 +246,14 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="0.5s">
-					<a href="dailyui/index.html" class="project-item">
-						<img data-default-src="dailyui/images/day17.jpg" class="img-responsive" alt="Leaderboard">
+				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" v-for="(id,ui) in uilist">
+					<a class="fancybox project-item" rel="gallery3" href="dailyui/images/{{ui.img_default}}.jpg" title="{{ui.name}}">
+						<img src="dailyui/images/{{ui.img_default}}.jpg" class="img-responsive" alt="{{ui.name}}" />
 						<div class="text">
-							<h2>Leaderboard</h2>
+							<h2>{{ui.name}}</h2>
 						</div>
 					</a>
-				</div>	
-				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="1s">
-					<a href="dailyui/index.html" class="project-item">
-						<img data-default-src="dailyui/images/day4.jpg" class="img-responsive" alt="Profile">
-						<div class="text">
-							<h2>Profile</h2>
-						</div>
-					</a>
-				</div>	
-				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="1.5s">
-					<a href="dailyui/index.html" class="project-item">
-						<img data-default-src="dailyui/images/day6.jpg" class="img-responsive" alt="Music Player">
-						<div class="text">
-							<h2>Music Player</h2>
-						</div>
-					</a>
-				</div>	
-				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="2s">
-					<a href="dailyui/index.html" class="project-item">
-						<img data-default-src="dailyui/images/day8.jpg" class="img-responsive" alt="404 Page">
-						<div class="text">
-							<h2>404 Page</h2>
-						</div>
-					</a>
-				</div>	
-				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="0.5s">
-					<a href="dailyui/index.html" class="project-item">
-						<img data-default-src="dailyui/images/day15.jpg" class="img-responsive" alt="Email check">
-						<div class="text">
-							<h2>Email check</h2>
-						</div>
-					</a>
-				</div>	
-				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="1s">
-					<a href="dailyui/index.html" class="project-item">
-						<img data-default-src="dailyui/images/day16.jpg" class="img-responsive" alt="Sport Chart">
-						<div class="text">
-							<h2>Sport Chart</h2>
-						</div>
-					</a>
-				</div>	
-				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="1.5s">
-					<a href="dailyui/index.html" class="project-item">
-						<img data-default-src="dailyui/images/day13.jpg"class="img-responsive" alt="Night Mode">
-						<div class="text">
-							<h2>Night Mode</h2>
-						</div>
-					</a>
-				</div>	
-				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="2s">
-					<a href="dailyui/index.html" class="project-item">
-						<img data-default-src="dailyui/images/day10.jpg" class="img-responsive" alt="Shopping">
-						<div class="text">
-							<h2>Shopping</h2>
-						</div>
-					</a>
-				</div>	
+				</div>
 			</div>
 
 				<div class="row">	
@@ -736,7 +262,9 @@
 			</div>
 		</div>
 	</section>
+	<!-- End of UI Projects -->
 
+	<!-- Start of About -->
 	<section id="about" data-section="about">
 		<div class="gradient"></div>
 		<div class="container">
@@ -771,7 +299,9 @@
 			</div>
 		</div>
 	</section>
+	<!-- End of About -->
 
+	<!-- Start of Contact -->
 	<section id="contact" data-section="contact">
 		<div class="container">
 			<div class="row">
@@ -807,6 +337,7 @@
 			</div>
 		</div>
 	</section>
+	<!-- End of Contact -->
 
 </div><!-- itemscope -->
 
@@ -818,6 +349,9 @@
 	<script src="js/jquery.easing.1.3.js"></script>
 	<!-- Bootstrap -->
 	<script src="js/bootstrap.min.js"></script>
+	<!-- Vue.js -->
+	<script src='js/vue.js'></script>
+    <script src="js/data.js"></script>
 	<!-- Stellar Parallax -->
 	<script src="js/jquery.stellar.min.js"></script>
 	<script src="js/wow.min.js"></script>	
