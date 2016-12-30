@@ -6461,35 +6461,40 @@ input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:ac
   }
 
   /* line 721, ../sass/style.sass */
+  #projects .col-sm-6, #projects .col-sm-6, #app .col-sm-6, #dailyui .col-sm-6 {
+    padding: 0 15px;
+  }
+
+  /* line 723, ../sass/style.sass */
   .content .row .col-sm-5 {
     text-align: left;
   }
 
-  /* line 725, ../sass/style.sass */
+  /* line 727, ../sass/style.sass */
   #dailyui .section-heading {
     margin: 50px 0;
   }
-  /* line 727, ../sass/style.sass */
+  /* line 729, ../sass/style.sass */
   #dailyui .project-item {
     margin-bottom: 0;
   }
 
-  /* line 730, ../sass/style.sass */
+  /* line 732, ../sass/style.sass */
   #about .circle {
     float: left;
   }
-  /* line 732, ../sass/style.sass */
+  /* line 734, ../sass/style.sass */
   #about p {
     margin: 0 0 25px;
   }
 
-  /* line 734, ../sass/style.sass */
+  /* line 736, ../sass/style.sass */
   button.more {
     margin-bottom: 30px;
   }
 }
 @media screen and (max-width: 320px) {
-  /* line 738, ../sass/style.sass */
+  /* line 740, ../sass/style.sass */
   .circle {
     margin-right: -25px;
   }
