@@ -1,14 +1,25 @@
 $(document).ready(function() {
 
-    var movementStrength = 10;
-    var height = movementStrength / $(window).height();
-    var width = movementStrength / $(window).width();
-    $("#home").mousemove(function(e){
-        var pageX = e.pageX - ($(window).width() / 2);
-        var pageY = e.pageY - ($(window).height() / 2);
-        var newvalueX = width * pageX;
-        var newvalueY = height * pageY ;
-        $('#home').css("background-position", newvalueX+"px     "+newvalueY+"px");
+    //Banner Mouse Move
+    // var movementStrength = 10;
+    // var height = movementStrength / $(window).height();
+    // var width = movementStrength / $(window).width();
+    // $("#home").mousemove(function(e){
+    //     var pageX = e.pageX - ($(window).width() / 2);
+    //     var pageY = e.pageY - ($(window).height() / 2);
+    //     var newvalueX = width * pageX;
+    //     var newvalueY = height * pageY ;
+    //     $('#home').css("background-position", newvalueX+"px     "+newvalueY+"px");
+    // });
+    
+    //Slider
+    $('#slider').juicyslider({
+        mask: 'strip',
+        autoplay: 8000,
+        show: {effect: 'puff', duration: 5000},
+        hide: {effect: 'puff', duration: 2000},
+        width: null,
+        height: null,
     });
 
     //fancybox
