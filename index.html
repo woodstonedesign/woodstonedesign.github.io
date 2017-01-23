@@ -34,6 +34,9 @@
     <!-- Fancybox -->
     <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css">
     <link rel="stylesheet" type="text/css" href="css/fonts/css/fontello.css">
+	<!-- slider -->
+    <link rel="stylesheet" href="js/slider/juicyslider.css" type="text/css" />
+    
     <!-- IE8 support -->
     <!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -77,18 +80,53 @@
  	<!-- Start of Banner -->
     <section id="home" data-section="home">
 		<div class="gradient"></div>
-		<div class="container">
-			<div class="text-wrap">
-				<div class="text-inner">
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0">
-							<img src="images/logo-white-128.png" height="100" width="100" alt="WoodStone Design木石設計" class="wow bounceIn" data-wow-delay=".5s" style="margin-bottom:10px" itemprop="logo">
-							<h1 class="wow fadeInDown" data-wow-delay=".5s" itemprop="name">Web Design Ｘ APP Design</h1>
-							<h2 class="wow fadeInUp" data-wow-delay=".5s"  itemprop="brand">WoodStone Design</h2> 
+		<div id="slider" class="juicyslider">
+            <ul>
+                <li><img src="images/slider/bg01.jpg">
+					<div class="container">
+								<div class="text-wrap">
+									<div class="text-inner">
+										<div class="row">
+											<div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0">
+												<img src="images/logo-white-128.png" height="100" width="100" alt="WoodStone Design木石設計" class="wow bounceIn" data-wow-delay=".5s" style="margin-bottom:10px;position: initial; width:100px; " itemprop="logo"><br>
+												<h1 class="wow fadeInDown" data-wow-delay=".5s" itemprop="name">Web Design Ｘ APP Design</h1>
+												<h2 class="wow fadeInUp" data-wow-delay=".5s"  itemprop="brand">WoodStone Design</h2> 
+											</div>
+									</div>
+								</div>
+							</div>
+
+                </li>
+                <li><img src="images/slider/bg04.jpg">
+                	<div class="container">
+						<div class="text-wrap">
+							<div class="text-inner">
+								<div class="row">
+									<div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0">
+										<h1 class="wow fadeInDown">無限創意 Ｘ 照亮無限可能</h1>
+										<h2 class="wow fadeInUp"  itemprop="brand">WoodStone Design</h2> 
+									</div>
+							</div>
 						</div>
-				</div>
-			</div>
-		</div>
+					</div>
+                </li>
+                <li><img src="images/slider/bg05.jpg">
+                	<div class="container">
+						<div class="text-wrap">
+							<div class="text-inner">
+								<div class="row">
+									<div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0">
+										<h1 class="wow fadeInDown">響應式網頁 Ｘ 跨平台體驗</h1>
+										<h2 class="wow fadeInUp"  itemprop="brand">WoodStone Design</h2> 
+									</div>
+							</div>
+						</div>
+					</div>
+                </li>
+            </ul>
+            <div class="nav next"></div>
+        </div>
+		
 		<a href="#services" data-nav-section="services"><div class="mouse"><div class="scroll"></div></div></a>
 	</section>
 	<!-- End of Banner -->
@@ -357,7 +395,10 @@
 	<script src="js/wow.min.js"></script>	
 	<!-- Fancybox -->
     <script src="js/fancybox/jquery.fancybox.js?v=2.1.5"></script>
-    <!-- Fancybox -->
+    <!-- Slider -->
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/slider/juicyslider.min.js"></script>
+    <!-- Main -->
     <script src="js/main.js"></script>
     <!-- Google Analytics -->
     <script>
