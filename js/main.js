@@ -10,7 +10,7 @@ $(document).ready(function() {
     //     var newvalueX = width * pageX;
     //     var newvalueY = height * pageY ;
     //     $('#home').css("background-position", newvalueX+"px     "+newvalueY+"px");
-    // });
+    // }); 
     
     //Slider
     $('#slider').juicyslider({
