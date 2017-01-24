@@ -80,7 +80,7 @@ html, body {
     z-index: 100;
 }
 
-.juicyslider img.maxw {
+img.maxw {
     width: 100%;
     height: auto;
     max-height: none;
@@ -88,7 +88,7 @@ html, body {
     filter:inherit;     /* for ie8 to inherit parent opacity */
 }
 
-.juicyslider img.maxh {
+img.maxh {
     width: auto;
     max-width: none;
     height: 100%;
