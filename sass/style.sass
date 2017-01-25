@@ -3,11 +3,10 @@
 @import compass/reset
 @import _varibles.sass
 @import _bootstrap.scss
-@import 'https://fonts.googleapis.com/css?family=Tangerine'
 @import 'https://fonts.googleapis.com/css?family=Niconne'
 
 body
-	font-family: "Helvetica Neue","微軟正黑體","helvetica", "Arial", "Heiti TC",  "Microsoft JhengHei", sans-serif !important 
+	font-family: "Helvetica Neue","微軟正黑體","helvetica", "Arial", sans-serif !important 
 
 
 /*******************  Gotop  ************************/
@@ -58,27 +57,28 @@ body
 /*******************  Custom scrollbar  ************************/
 
 ::-webkit-scrollbar
-	width: 10px
-	height: 10px
+	width: 8px
+	height: 8px
 
 ::-webkit-scrollbar-button
 	width: 0
 	height: 0
 
 ::-webkit-scrollbar-thumb
-	background: #C5C4C4
+	background: #BF996E
 	border: 0px none #fff
 	border-radius: 60px
 	behavior: url(css/PIE.htc)
 
 ::-webkit-scrollbar-thumb:hover
-	background: #B4B4B4
+	background: #BF996E
 
 ::-webkit-scrollbar-track
-	background: $primary-color
+	background: #ddd
 	border: 0px none #fff
 	border-radius: 0
 	behavior: url(css/PIE.htc)
+
 
 
 /*******************  Header  ************************/
@@ -91,7 +91,7 @@ header
 		color: #fff
 		font-size: 38px
 		&:hover, &:focus
-			color: $primary-color
+			color: #fff
 	#navbar
 		li
 			a
@@ -111,37 +111,46 @@ header
 						left: 0
 						bottom: 0
 						visibility: hidden
-						@include transition(all 0.3s ease-in-out 0s)
-						@include transform(scaleX(0))
+						+transition(all 0.3s ease-in-out 0s)
+						+transform(scaleX(0))
 				&:hover
 					span:before
 						visibility: visible
-						@include transform(scaleX(1))
+						+transform(scaleX(1))
 	.navbar-brand
 		font-family: 'Niconne', cursive,"微軟正黑體"
 		float: left
 		display: block
 		padding-left: 0
 		color: #fff
+		margin-top: -20px
 		span
 			font-weight: normal
 			font-size: 16px
 			padding-left: 5px
+		img
+			display: inline-block
+		.logo
+			background: url('../images/logo-white.png') no-repeat
+			width: 40px
+			height: 40px
+			background-size: 100%
+			display: inline-block
+			margin-right: 5px
+			vertical-align: bottom
+			
 
 	&.navbar-fixed-top 
 		position: fixed!important
 		background: rgba(29,29,29, .9)
-		-webkit-box-shadow: 0 0 9px 0 rgba(0,0,0,.1)
-		-moz-box-shadow: 0 0 9px 0 rgba(0,0,0,.1)
-		-ms-box-shadow: 0 0 9px 0 rgba(0,0,0,.1)
-		box-shadow: 0 0 9px 0 rgba(0,0,0,.1)
+		+box-shadow(0 0 9px 0 rgba(0,0,0,.1))
 		margin-top: 0
 		top: 0
 		#navbar
 			li 
 				a
-					color: rgba(255,255,255,.5)
-					@include transition(.3s)
+					color: rgba(255,255,255,.8)
+					+transition(.3s)
 					&:hover 
 						color: $primary-color
 				&.active
@@ -152,13 +161,23 @@ header
 						span
 							&:before
 								visibility: visible
-								-webkit-transform: scaleX(1)
-								transform: scaleX(1)
+								+transform(scaleX(1))
 								background-color: $primary-color
+		.logo
+			background: url('../images/logo.png') no-repeat
+			width: 35px
+			height: 35px
+			background-size: 100%
+		.navbar-brand
+			margin-top: -7px
+			color: $primary-color
+			&:hover, &:focus
+				color: $primary-color
+
 	.navbar-default
 		border: transparent
 		background: transparent
-		@include border-radius(0px)
+		+border-radius(0px)
 		@media screen and (max-width: $screen-sm)
 			margin-top: 0
 			padding-right: 0
@@ -172,7 +191,7 @@ header
 				color: $primary-color
 				font-style: normal
 		a
-			@include transition(.0s)
+			+transition(.0s)
 
 // Menu bar Animate
 .header-animated 
@@ -192,31 +211,48 @@ header
 	display: none
 	&.on
 		.one 
-			@include transform(rotate(45deg) translate(7px, 7px))
+			+transform(rotate(45deg) translate(7px, 7px))
 		.two
 			opacity: 0
 		.three
-			@include transform (rotate(-45deg) translate(7px, -7px))
+			+transform (rotate(-45deg) translate(7px, -7px))
 
 .one,.two,.three
 	width: 100%
 	height: 4px
-	background: #c24d67
+	background: $primary-color
 	margin: 6px auto
 	backface-visibility: hidden
-	@include transition-duration(0.3s)
+	+transition-duration(0.3s)
 	+border-radius(2px)
 
 
 
 /*******************  Home  ************************/
 #home
+	// background-image: url(../images/bg-banner.jpg)
 	width: 100%
 	height: 100vh
 	background-size: cover
 	background-attachment: fixed
 	position: relative
 	overflow: hidden
+	top: 0
+
+#home .container
+	position: absolute
+	z-index: 99
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+
+#slider
+	z-index: 1
+
+// @media screen and (-webkit-min-device-pixel-ratio:0)
+// 	#home,.text-wrap
+// 		height: 950px
 
 .gradient
 	background: rgba(0,0,0,.2)
@@ -230,7 +266,7 @@ header
 	&:after
 		content: ""
 		width: 100%
-		height: 100vh
+		height: 100%
 		background: url(../images/bg_plus.png)
 		z-index: 9
 		position: absolute
@@ -239,7 +275,7 @@ header
 .text-wrap
 	display: table
 	width: 100%
-	height: 100vh
+	height: 100%
 	position: relative
 	z-index: 4
 
@@ -251,7 +287,7 @@ header
 	h1
 		font-size: 50px
 		color: #fff
-		margin: 0 0 20px 0
+		margin: 0 0 15px 0
 		+text-shadow(2px 1px rgba(0,0,0,.8))
 	h2
 		font-family: 'Niconne', cursive
@@ -261,10 +297,13 @@ header
 		+text-shadow(1px 1px rgba(0,0,0,.3))
 		margin: 0
 
+.text-inner img.maxh
+	position: inherit
 
 // Services
 section
 	padding-bottom: 100px
+	background: #f2f2f2
 
 .section-heading
 	margin: 50px 0 100px
@@ -273,13 +312,14 @@ section
 	h2
 		font-size: 50px
 		font-weight: bold
+		color: #fff
 	&:after
 		content: ""
 		position: absolute
 		display: block
 		width: 80px
 		height: 2px
-		background: #c24d67
+		background: $primary-color
 		left: 50%
 		margin-left: -40px
 		bottom: 0
@@ -291,10 +331,12 @@ section
 	p
 		text-align: center
 		padding: 0 8%
+	.section-heading h2
+		color: #333
 
 
 .pink-gradient
-	background: #ebebe8
+	background: #212023
 
 /*******************  Project Item  ************************/
 #projects 
@@ -315,7 +357,7 @@ section#projects,section#app
 	background: #fff
 	overflow: hidden
 	z-index: 9
-	@include transition(.3s)
+	+transition(.3s)
 	&:before
 		position: absolute
 		top: 10px
@@ -324,7 +366,7 @@ section#projects,section#app
 		right: 10px
 		bottom: 100%
 		content: ''
-		background-color: rgba(194,77,103, 0.9)
+		background-color: rgba(#333, 0.6)
 		-webkit-transition: all 0.25s ease
 		transition: all 0.25s ease
 		-webkit-transition-delay: 0.25s
@@ -332,7 +374,7 @@ section#projects,section#app
 	img
 		z-index: 8
 		opacity: 1
-		@include transition(.3s)
+		+transition(.3s)
 	.text 
 		opacity: 0
 		position: absolute
@@ -356,11 +398,7 @@ section#projects,section#app
 			font-size: 12px
 			font-weight: 400
 	&:hover, &:focus
-		-webkit-box-shadow: 7px 14px 42px 3px rgba(0, 0, 0, 0.4)
-		-moz-box-shadow: 7px 14px 42px 3px rgba(0, 0, 0, 0.4)
-		-ms-box-shadow: 7px 14px 42px 3px rgba(0, 0, 0, 0.4)
-		-o-box-shadow: 7px 14px 42px 3px rgba(0, 0, 0, 0.4)
-		box-shadow: 7px 14px 42px 3px rgba(0, 0, 0, 0.4)
+		+box-shadow(7px 14px 42px 3px rgba(0, 0, 0, 0.4))
 		text-decoration: none
 		top: -10px
 		h2, span
@@ -395,8 +433,7 @@ section#projects,section#app
 		width: 100%
 
 .circle
-	width: 100px
-	height: 100px
+	+circle(100px)
 	border-radius: 50%
 	float: right
 	border: 0.2rem solid #404040
@@ -433,8 +470,8 @@ section#projects,section#app
 		margin-bottom: 30px
 		
 button.more
-	border: 2px solid #c24d67
-	color: #c24d67
+	border: 2px solid $primary-color
+	color: $primary-color
 
 /*******************  About  ************************/
 #about
@@ -450,6 +487,7 @@ button.more
 		background: rgba(44,45,48, 1)
 		&:after
 			background: none
+			height: 100%
 	.circle
 		float: left
 		p
@@ -459,7 +497,12 @@ button.more
 	margin-top: -75px
 	margin-bottom: 50px
 	text-align: center
+	color: #fff
 
+/*******************  uidesign  ************************/
+#uidesign
+	.section-heading
+		margin: 50px 0
 
 /*******************  Contact  ************************/
 input[type="text"], input[type="password"], input[type="email"], select, textarea
@@ -467,7 +510,7 @@ input[type="text"], input[type="password"], input[type="email"], select, textare
 	-webkit-appearance: none
 	-ms-appearance: none
 	appearance: none
-	background: #f7f7f7
+	background: rgba(255,255,255,.8)
 	border-radius: 0.35em
 	border: solid 2px transparent
 	color: inherit
@@ -497,11 +540,11 @@ input[type="submit"], input[type="reset"], input[type="button"], .button,button
 	-webkit-appearance: none
 	-ms-appearance: none
 	appearance: none
-	@include transition(background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out)
+	+transition(background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out)
 	background-color: transparent
 	border-radius: 0.35em
-	border: solid 3px #efefef
-	color: #787878 !important
+	border: solid 3px #fff
+	color: #fff !important
 	cursor: pointer
 	display: inline-block
 	font-weight: 400
@@ -522,25 +565,44 @@ input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:ac
 	border-color: $primary-color
 	color: $primary-color !important
 
+#contact input[type="submit"]
+	color: #333 !important
+	border: solid 3px #333
+	display: block
+
+#contact
+	position: relative
+	background: url(../images/contact-bg.jpg)
+	background-size: cover
+	background-attachment: fixed
+	color: #333
+	.section-heading h2
+		color: #333
+	.container
+		position: relative
+		z-index: 9
 /*******************  footer  ************************/
 .footer
 	text-align: right
 	font-size: 14px
-	color: #ccc
+	color: #333
 	margin-top: -30px
 	a,i
-		color: #c24d67
+		color: #333
 
 /*******************  Responsive  ************************/
 @media screen and (max-width: 780px)
 	body 
 		overflow-x: hidden
+	.row
+		margin: 0
 	header
 		background: transparent
 		color: #fff
 		.navbar-default .navbar-brand
 			width: 100%
 			text-align: center
+			margin-bottom: 20px
 		&.navbar-fixed-top
 			background: rgba(29,29,29,.9)
 	.navbar-header
@@ -571,9 +633,11 @@ input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:ac
 			font-size: 30px
 			font-weight: bold
 			line-height: 2
+			color: #fff
 	.content .row 
 		margin: 0px 0 60px
-
+		.col-sm-5
+			text-align: right
 	.circle
 		float: none
 		margin-right: -16px
@@ -597,13 +661,14 @@ input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:ac
 			margin: 50px 0 80px
 	#app .col-sm-4
 		padding: 0
-	#dailyui 
+	#dailyui,#app 
 		.col-sm-6
 			padding: 0
 		.project-item
 			margin-bottom: 0
 		button.more
-			margin-top: 30px
+			margin: 30px 50% 30px calc( 50% - 60px )
+			min-width: 30%
 	.footer
 		text-align: center
 		margin-top: 30px
@@ -612,6 +677,16 @@ input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:ac
 
 
 @media screen and (max-width: 480px)
+	body 
+		overflow-x: hidden !important
+	#home
+		height: 100vh
+		background-image: url(../images/bg-banner-m.jpg)
+		background-position: center
+		background-attachment: initial
+	#projects,#app,#dailyui
+		width: 100%
+		overflow: hidden
 	header
 		background: rgba(50, 56, 62, 0.9)
 		margin-top: 0
@@ -620,11 +695,18 @@ input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:ac
 		box-shadow: 0 0 9px 0 rgba(0,0,0,.1)
 		&.navbar-fixed-top
 			background: rgba(50,56,62,.9)
+			.navbar-brand
+				color: #fff
+			.logo
+				background: url('../images/logo-white.png') no-repeat
+				width: 20px
+				height: 20px
+				background-size: 100%
 		#navbar
 			li
 				a 
 					color: #fff!important
-					@include transition(.3s)
+					+transition(.3s)
 					&:hover
 						color: $primary-color!important
 					span
@@ -638,11 +720,23 @@ input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:ac
 							span 
 								&:before
 									visibility: visible
-									@include transform(scaleX(1))
+									+transform(scaleX(1))
 		.navbar-default .navbar-brand
 			width: auto
 			text-align: left
-			font-size: 30px
+			font-size: 20px
+			margin-top: -4px
+			margin-bottom: 5px
+			.logo
+				width: 30px
+				height: 30px
+	.text-inner 
+		h1
+			font-size: 28px
+			margin: 10px 0
+		h2
+			font-size: 26px
+
 	section
 		padding-bottom: 0
 	.cover img
@@ -657,18 +751,25 @@ input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:ac
 		right: 13px
 		bottom: 25px
 	#services p
-		padding: 0px 15% 20px
-	#projects .col-md-2, #projects .col-md-3,#app .col-sm-4,#dailyui .col-sm-6
-		padding: 0 15px
+		padding: 0px 11% 20px
+	.content .row .col-sm-5
+		text-align: left
+
 	#dailyui 
 		.section-heading
 			margin: 50px 0
 		.project-item
 			margin-bottom: 0
 	#about
+		background-attachment: initial
 		.circle
 			float: left
+			margin-bottom: 30px
 		p
 			margin: 0 0 25px
 	button.more
 		margin-bottom: 30px
+
+@media screen and (max-width: 320px)
+	.circle
+		margin-right: -25px

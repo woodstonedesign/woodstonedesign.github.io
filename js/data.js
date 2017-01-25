@@ -208,22 +208,7 @@ var data={
             img_default: "wiselab-banner",
             demo: ["wiselab-1.jpg","wiselab-2.jpg"]
         }
-        // ,
-        // {
-        //     year: 2014,
-        //     name: "雲列印",
-        //     subname: "Easy Printing.",
-        //     url: "",
-        //     url_text: "",
-        //     description: "雲列印 Easy Printing.",
-        //     rwd: false,
-        //     development: false,
-        //     design: true,
-        //     designtype: "Design",
-        //     img_thumbs: "printing.jpg",
-        //     img_default: "printing-banner",
-        //     demo: ["printing-1.jpg","printing-2.jpg"]
-        // }
+        
     ],
     applist:[
         {
