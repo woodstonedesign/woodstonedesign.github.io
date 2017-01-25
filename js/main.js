@@ -76,7 +76,7 @@ $(document).ready(function() {
 
     };
 
-        navigationSection();
+    navigationSection();
 
     // Window Scroll
     var gotop = "#gotop";
