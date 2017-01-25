@@ -11,9 +11,9 @@ var data={
             development: false,
             design: true,
             designtype: "Design",
-            img_thumbs: "happiness_miaoli.jpg",
-            img_default: "happiness_miaoli-banner",
-            demo: ["happiness_miaoli-1.jpg","happiness_miaoli-2.jpg","happiness_miaoli-3.jpg","happiness_miaoli-4.jpg"]
+            img_thumbs: "miaoli.jpg",
+            img_default: "miaoli-banner",
+            demo: ["miaoli-1.jpg","miaoli-2.jpg","miaoli-3.jpg","miaoli-4.jpg"]
         },
         {
             year: 2016,
