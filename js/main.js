@@ -15,7 +15,7 @@ $(document).ready(function() {
     //Slider
     $('#slider').juicyslider({
         mask: 'strip',
-        autoplay: 58000,
+        autoplay: 8000,
         show: {effect: 'puff', duration: 5000},
         hide: {effect: 'puff', duration: 2000},
         width: null,
