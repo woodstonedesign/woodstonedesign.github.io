@@ -2,6 +2,21 @@ var data={
     weblist:[
         {
             year: 2017,
+            name: "永盛豐企業有限公司::門的專家",
+            subname: "YCF",
+            url: "http://woodstonedemo.byethost24.com/YCF",
+            url_text: "Demo：http://woodstonedemo.byethost24.com/YCF",
+            description: "永盛豐企業有限公司主要經銷防火門、玄關門，產品適用於各式裝修案場、集合式住宅、商辦大樓等。團隊成員於門的產業平均有10年以上的資歷，針對大小案件從規劃設計、製造、安裝施工到維修服務皆全程參與，提供最專業完善的服務。",
+            rwd: true,
+            development: true,
+            design: true,
+            designtype: "Design",
+            img_thumbs: "ycf.jpg",
+            img_default: "ycf-banner",
+            demo: ["ycf-1.jpg","ycf-2.jpg"]
+        },
+        {
+            year: 2017,
             name: "豪山廚具購物網",
             subname: "Hosun Kitchenware",
             url: "http://woodstonedemo.byethost24.com/kitchen",
@@ -224,21 +239,21 @@ var data={
             img_default: "tracking-banner",
             demo: ["tracking-1.jpg"]
         },
-        {
-            year: 2014,
-            name: "eHR 登入",
-            subname: "Register & Login",
-            url: "",
-            url_text: "",
-            description: "系統後台登入頁。",
-            rwd: false,
-            development: true,
-            design: true,
-            designtype: "Design",
-            img_thumbs: "eHR.jpg",
-            img_default: "eHR-banner",
-            demo: ["eHR-1.png","eHR-2.jpg"]
-        },
+        // {
+        //     year: 2014,
+        //     name: "eHR 登入",
+        //     subname: "Register & Login",
+        //     url: "",
+        //     url_text: "",
+        //     description: "系統後台登入頁。",
+        //     rwd: false,
+        //     development: true,
+        //     design: true,
+        //     designtype: "Design",
+        //     img_thumbs: "eHR.jpg",
+        //     img_default: "eHR-banner",
+        //     demo: ["eHR-1.png","eHR-2.jpg"]
+        // },
         {
             year: 2014,
             name: "WISE Lab",
