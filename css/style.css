@@ -4810,7 +4810,6 @@ header .navbar-default a {
 
 section {
   padding-bottom: 100px;
-  background: #f2f2f2;
 }
 
 .section-heading {
@@ -4835,16 +4834,21 @@ section {
   bottom: 0;
 }
 
+#services {
+  background: #333;
+}
 #services .row {
   text-align: center;
   padding: 0 5px;
 }
+#services h3 {
+  font-weight: bold;
+  color: #BF996E;
+}
 #services p {
   text-align: center;
   padding: 0 8%;
-}
-#services .section-heading h2 {
-  color: #333;
+  color: #ddd;
 }
 
 .pink-gradient {
