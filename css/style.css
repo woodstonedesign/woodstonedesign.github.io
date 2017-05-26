@@ -4841,6 +4841,11 @@ section {
   text-align: center;
   padding: 0 5px;
 }
+#services .row .col-sm-4:hover .bg-circle {
+  margin-top: -20px;
+  background: #BF996E;
+  border: 2px solid #BF996E;
+}
 #services h3 {
   font-weight: bold;
   color: #BF996E;
@@ -4849,6 +4854,30 @@ section {
   text-align: center;
   padding: 0 8%;
   color: #ddd;
+}
+
+.bg-circle {
+  width: 130px;
+  height: 130px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin: 0 auto 5px;
+  -webkit-transition: all 0.8s ease-out;
+  -o-transition: all 0.8s ease-out;
+  transition: all 0.8s ease-out;
+}
+.bg-circle img {
+  -moz-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  -webkit-transform: translateY(50%);
+  transform: translateY(50%);
+}
+.bg-circle:hover {
+  margin-top: -20px;
+  background: #BF996E;
+  border: 2px solid #BF996E;
 }
 
 .pink-gradient {
@@ -5032,6 +5061,7 @@ button.more {
   background-size: cover;
   background-attachment: fixed;
   color: #fff;
+  padding-bottom: 80px;
 }
 #about .container {
   position: relative;
@@ -5121,10 +5151,10 @@ input[type="submit"], input[type="reset"], input[type="button"], .button, button
   -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
   -o-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-  background-color: transparent;
+  background: transparent;
   border-radius: 0.35em;
-  border: solid 3px #fff;
-  color: #fff !important;
+  color: #4e4e4e !important;
+  border: solid 3px #4e4e4e;
   cursor: pointer;
   display: inline-block;
   font-weight: 400;
@@ -5140,18 +5170,8 @@ input[type="submit"], input[type="reset"], input[type="button"], .button, button
 
 input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover, .button:hover, button:hover {
   border-color: #BF996E;
-  color: #BF996E !important;
-}
-
-input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:active, .button:active, button:hover {
-  border-color: #BF996E;
-  color: #BF996E !important;
-}
-
-#contact input[type="submit"] {
-  color: #333 !important;
-  border: solid 3px #333;
-  display: block;
+  color: #fff !important;
+  background: #BF996E;
 }
 
 /*******************  footer  *********************** */
