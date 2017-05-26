@@ -4721,9 +4721,9 @@ header .navbar-default a {
 
 .one, .two, .three {
   width: 100%;
-  height: 4px;
+  height: 2px;
   background: #BF996E;
-  margin: 6px auto;
+  margin: 8px auto;
   backface-visibility: hidden;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
