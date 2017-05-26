@@ -5324,6 +5324,10 @@ input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hove
     overflow-x: hidden !important;
   }
 
+  #slider {
+    height: 100vh !important;
+  }
+
   #home {
     height: 100vh;
     background: #333;
