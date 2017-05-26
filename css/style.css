@@ -5330,7 +5330,7 @@ input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hove
 
   #home {
     height: 100vh;
-    background: #333;
+    background: #000;
   }
 
   #projects, #app, #dailyui {
