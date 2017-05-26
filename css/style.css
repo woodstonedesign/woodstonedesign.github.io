@@ -5267,6 +5267,10 @@ input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hove
     background: #F7F6F6;
   }
 
+  #services h3 {
+    font-weight: normal;
+  }
+
   #about .section-heading {
     margin: 50px 0 50px;
   }
