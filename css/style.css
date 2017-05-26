@@ -5326,9 +5326,7 @@ input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hove
 
   #home {
     height: 100vh;
-    background-image: url(../images/bg-banner-m.jpg);
-    background-position: center;
-    background-attachment: initial;
+    background: #333;
   }
 
   #projects, #app, #dailyui {
