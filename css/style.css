@@ -4869,6 +4869,7 @@ section {
   transition: all 0.8s ease-out;
 }
 .bg-circle img {
+  height: 60px;
   -moz-transform: translateY(50%);
   -ms-transform: translateY(50%);
   -webkit-transform: translateY(50%);
@@ -5433,6 +5434,17 @@ input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hove
     padding: 0px 9% 20px;
   }
 
+  .bg-circle {
+    width: 100px;
+    height: 100px;
+  }
+  .bg-circle img {
+    height: 40px;
+    -moz-transform: translateY(69%);
+    -ms-transform: translateY(69%);
+    -webkit-transform: translateY(69%);
+    transform: translateY(69%);
+  }
   .bg-circle:hover {
     margin-top: -10px;
   }
