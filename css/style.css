@@ -5435,6 +5435,10 @@ input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hove
     margin-bottom: 0;
   }
 
+  #uidesign {
+    display: none;
+  }
+
   #about {
     background-attachment: initial;
   }
