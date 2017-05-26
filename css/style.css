@@ -5289,7 +5289,7 @@ input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hove
   }
 
   #projects .description {
-    margin-top: -75px;
+    margin-top: -60px;
   }
   #projects .section-heading {
     margin: 50px 0 80px;
@@ -5426,8 +5426,15 @@ input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hove
     bottom: 25px;
   }
 
+  #services .col-sm-4:hover .bg-circle {
+    margin-top: -10px;
+  }
   #services p {
-    padding: 0px 11% 20px;
+    padding: 0px 9% 20px;
+  }
+
+  .bg-circle:hover {
+    margin-top: -10px;
   }
 
   .content .row .col-sm-5 {
