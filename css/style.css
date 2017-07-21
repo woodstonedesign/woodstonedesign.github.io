@@ -5052,7 +5052,7 @@ section#projects, section#app {
 
 button.more {
   border: 2px solid #BF996E;
-  color: #BF996E;
+  color: #BF996E !important;
 }
 
 /*******************  About  *********************** */
