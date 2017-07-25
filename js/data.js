@@ -75,21 +75,21 @@ var data={
             img_default: "pet-banner",
             demo: ["pet-1.jpg","pet-2.jpg"]
         },
-        {
-            year: 2016,
-            name: "淨土藝術",
-            subname: "Art of Rangniang",
-            url: "http://www.rangniang.org",
-            url_text: "www.rangniang.org",
-            description: "淨土藝術為讓娘寺的官方網站，讓娘寺全名為「讓娘彭措帖慶林」，意謂「讓娘圓滿大乘洲」，位於青海省玉樹州玉樹市以北60公里處。淨土藝術網站以集資為目標，期望透過募資方式重建因地震而倒塌的建築，祈求儘快實現教學樓及餐飲問題，愛心人士的捐助，讓這些弱小的朋友擁有一個教學樓。",
-            rwd: true,
-            development: true,
-            design: true,
-            designtype: "Co-Design",
-            img_thumbs: "rangniang-b.jpg",
-            img_default: "rangniang-banner",
-            demo: ["rangniang-1.jpg"]
-        },
+        // {
+        //     year: 2016,
+        //     name: "淨土藝術",
+        //     subname: "Art of Rangniang",
+        //     url: "http://www.rangniang.org",
+        //     url_text: "www.rangniang.org",
+        //     description: "淨土藝術為讓娘寺的官方網站，讓娘寺全名為「讓娘彭措帖慶林」，意謂「讓娘圓滿大乘洲」，位於青海省玉樹州玉樹市以北60公里處。淨土藝術網站以集資為目標，期望透過募資方式重建因地震而倒塌的建築，祈求儘快實現教學樓及餐飲問題，愛心人士的捐助，讓這些弱小的朋友擁有一個教學樓。",
+        //     rwd: true,
+        //     development: true,
+        //     design: true,
+        //     designtype: "Co-Design",
+        //     img_thumbs: "rangniang-b.jpg",
+        //     img_default: "rangniang-banner",
+        //     demo: ["rangniang-1.jpg"]
+        // },
         {
             year: 2016,
             name: "木石設計",
@@ -181,21 +181,21 @@ var data={
         //     img_default: "taptapcomic-banner",
         //     demo: ["taptapcomic-1.png","taptapcomic-2.jpg"]
         // },
-        {
-            year: 2015,
-            name: "陽朔旅遊網",
-            subname: "Travel around Yangshuo.",
-            url: "#",
-            url_text: "",
-            description: "旅遊網網頁設計提案",
-            rwd: false,
-            development: false,
-            design: true,
-            designtype: "Design",
-            img_thumbs: "yangshuo.jpg",
-            img_default: "yangshuo-banner",
-            demo: ["yangshuo-1.png"]
-        },
+        // {
+        //     year: 2015,
+        //     name: "陽朔旅遊網",
+        //     subname: "Travel around Yangshuo.",
+        //     url: "#",
+        //     url_text: "",
+        //     description: "旅遊網網頁設計提案",
+        //     rwd: false,
+        //     development: false,
+        //     design: true,
+        //     designtype: "Design",
+        //     img_thumbs: "yangshuo.jpg",
+        //     img_default: "yangshuo-banner",
+        //     demo: ["yangshuo-1.png"]
+        // },
         // {
         //     year: 2014,
         //     name: "和熹生活",
@@ -224,21 +224,21 @@ var data={
         //     img_default: "doez-banner",
         //     demo: ["doez-1.jpg"]
         // },
-        {
-            year: 2014,
-            name: "追跡者",
-            subname: "EZ Chat.EZ Talk.",
-            url: "",
-            url_text: "",
-            description: "安全，簡單，追跡。追跡者，您的安全運輸專家。",
-            rwd: false,
-            development: true,
-            design: true,
-            designtype: "Design",
-            img_thumbs: "tracking.jpg",
-            img_default: "tracking-banner",
-            demo: ["tracking-1.jpg"]
-        },
+        // {
+        //     year: 2014,
+        //     name: "追跡者",
+        //     subname: "EZ Chat.EZ Talk.",
+        //     url: "",
+        //     url_text: "",
+        //     description: "安全，簡單，追跡。追跡者，您的安全運輸專家。",
+        //     rwd: false,
+        //     development: true,
+        //     design: true,
+        //     designtype: "Design",
+        //     img_thumbs: "tracking.jpg",
+        //     img_default: "tracking-banner",
+        //     demo: ["tracking-1.jpg"]
+        // },
         // {
         //     year: 2014,
         //     name: "eHR 登入",
@@ -284,42 +284,42 @@ var data={
             img_default: "SAMENU-banner",
             demo: ["SAMENU-1.jpg"]
         },
-        {
-            year: 2015,
-            name: "手滑漫畫",
-            subname: "TapTapToon",
-            description: "玩漫畫。看漫畫。盡在手滑漫畫。你有許多不吐不快的話嗎?你有滿腦子好笑的話題想要給朋友知道嗎?用單純的文字來表達太落伍了，用漫畫吧，讓你想說的話更生動活潑有趣。",
-            android: true,
-            ios: true,
-            design: true,
-            img_thumbs: "TapTapToon.jpg",
-            img_default: "taptapcomic-banner",
-            demo: ["TapTapToon-1.png"]
-        },
-        {
-            year: 2014,
-            name: "活動票卷app",
-            subname: "EZ Tickets.",
-            description: "便捷、快速取票與驗票app。",
-            android: true,
-            ios: true,
-            design: true,
-            img_thumbs: "tickets.jpg",
-            img_default: "tickets-banner",
-            demo: ["tickets-1.jpg"]
-        },
-        {
-            year: 2014,
-            name: "HealthCare-健康管理",
-            subname: "Health is wealth.",
-            description: "HealthCare為一個自我健康管理app，擁有健康報告、健康管理、運動紀錄、行事曆、健康資訊、預約健檢六大功能。",
-            android: true,
-            ios: true,
-            design: true,
-            img_thumbs: "HealthCare.jpg",
-            img_default: "HealthCare-banner",
-            demo: ["HealthCare-1.jpg","HealthCare-2.png","HealthCare-3.jpg"]
-        }
+        // {
+        //     year: 2015,
+        //     name: "手滑漫畫",
+        //     subname: "TapTapToon",
+        //     description: "玩漫畫。看漫畫。盡在手滑漫畫。你有許多不吐不快的話嗎?你有滿腦子好笑的話題想要給朋友知道嗎?用單純的文字來表達太落伍了，用漫畫吧，讓你想說的話更生動活潑有趣。",
+        //     android: true,
+        //     ios: true,
+        //     design: true,
+        //     img_thumbs: "TapTapToon.jpg",
+        //     img_default: "taptapcomic-banner",
+        //     demo: ["TapTapToon-1.png"]
+        // },
+        // {
+        //     year: 2014,
+        //     name: "活動票卷app",
+        //     subname: "EZ Tickets.",
+        //     description: "便捷、快速取票與驗票app。",
+        //     android: true,
+        //     ios: true,
+        //     design: true,
+        //     img_thumbs: "tickets.jpg",
+        //     img_default: "tickets-banner",
+        //     demo: ["tickets-1.jpg"]
+        // },
+        // {
+        //     year: 2014,
+        //     name: "HealthCare-健康管理",
+        //     subname: "Health is wealth.",
+        //     description: "HealthCare為一個自我健康管理app，擁有健康報告、健康管理、運動紀錄、行事曆、健康資訊、預約健檢六大功能。",
+        //     android: true,
+        //     ios: true,
+        //     design: true,
+        //     img_thumbs: "HealthCare.jpg",
+        //     img_default: "HealthCare-banner",
+        //     demo: ["HealthCare-1.jpg","HealthCare-2.png","HealthCare-3.jpg"]
+        // }
     ],
     uilist:[
         {
