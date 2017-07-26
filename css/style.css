@@ -4380,6 +4380,7 @@ input[type="button"].btn-block {
 
 body {
   font-family: "Helvetica Neue", "微軟正黑體", "helvetica", "Arial", sans-serif !important;
+  font-size: 15px;
 }
 
 /*******************  Gotop  *********************** */
@@ -4695,10 +4696,10 @@ header .navbar-default a {
 }
 
 .menu-toggle {
-  width: 30px;
+  width: 22px;
   height: 30px;
   position: absolute;
-  top: 7px;
+  top: 11px;
   right: 17px;
   cursor: pointer;
   display: none;
@@ -4713,17 +4714,17 @@ header .navbar-default a {
   opacity: 0;
 }
 .menu-toggle.on .three {
-  -moz-transform: rotate(-45deg) translate(7px, -7px);
-  -ms-transform: rotate(-45deg) translate(7px, -7px);
-  -webkit-transform: rotate(-45deg) translate(7px, -7px);
-  transform: rotate(-45deg) translate(7px, -7px);
+  -moz-transform: rotate(-45deg) translate(5px, -5px);
+  -ms-transform: rotate(-45deg) translate(5px, -5px);
+  -webkit-transform: rotate(-45deg) translate(5px, -5px);
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 .one, .two, .three {
   width: 100%;
   height: 2px;
   background: #BF996E;
-  margin: 8px auto;
+  margin: 6px auto;
   backface-visibility: hidden;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
@@ -4883,6 +4884,46 @@ section {
 
 .pink-gradient {
   background: #333;
+}
+
+/*******************  Counter  *********************** */
+section#counter {
+  padding-bottom: 0;
+}
+
+.counter {
+  padding: 20px 0;
+  display: inline-block;
+  color: #fff;
+  margin-top: 40px;
+  text-align: center;
+}
+.counter h2 {
+  display: inline-block;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.count-title {
+  font-size: 40px;
+  font-weight: normal;
+  margin-top: 10px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.count-text {
+  font-size: 15px;
+  font-weight: normal;
+  margin-top: 10px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.small-txt {
+  font-size: 14px;
+  display: inline-block;
+  padding: 0 3px;
 }
 
 /*******************  Project Item  *********************** */
@@ -5083,6 +5124,7 @@ button.more {
 }
 
 .description {
+  font-size: 15px;
   margin-top: -75px;
   margin-bottom: 50px;
   text-align: center;
@@ -5325,6 +5367,10 @@ input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hove
     overflow-x: hidden !important;
   }
 
+  .hidden-xs {
+    display: none;
+  }
+
   #slider {
     height: 100vh !important;
   }
@@ -5363,6 +5409,8 @@ input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hove
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
+    padding: 20px 15px;
+    text-align: center;
   }
   header #navbar li a:hover {
     color: #BF996E !important;
