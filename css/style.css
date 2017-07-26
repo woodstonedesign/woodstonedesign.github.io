@@ -4887,10 +4887,6 @@ section {
 }
 
 /*******************  Counter  *********************** */
-section#counter {
-  padding-bottom: 0;
-}
-
 .counter {
   padding: 20px 0;
   display: inline-block;
