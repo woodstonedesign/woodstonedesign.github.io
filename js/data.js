@@ -6,7 +6,7 @@ var data={
             subname: "YCF",
             url: "http://www.reliable-ycf.com.tw",
             url_text: "www.reliable-ycf.com.tw",
-            description: "永盛豐企業有限公司主要經銷防火門、玄關門，產品適用於各式裝修案場、集合式住宅、商辦大樓等。團隊成員於門的產業平均有10年以上的資歷，針對大小案件從規劃設計、製造、安裝施工到維修服務皆全程參與，提供最專業完善的服務。",
+            description: "永盛豐企業有限公司主要經銷防火門、玄關門，產品適用於各式裝修案場、集合式住宅、商辦大樓等。以企業Logo黃土色與鐵灰色為主軸，白色為基底，運用材質紋理，呈現門與家的氛圍。",
             rwd: true,
             development: true,
             design: true,
