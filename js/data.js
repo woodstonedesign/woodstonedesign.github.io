@@ -224,21 +224,21 @@ var data={
         //     img_default: "doez-banner",
         //     demo: ["doez-1.jpg"]
         // },
-        // {
-        //     year: 2014,
-        //     name: "追跡者",
-        //     subname: "EZ Chat.EZ Talk.",
-        //     url: "",
-        //     url_text: "",
-        //     description: "安全，簡單，追跡。追跡者，您的安全運輸專家。",
-        //     rwd: false,
-        //     development: true,
-        //     design: true,
-        //     designtype: "Design",
-        //     img_thumbs: "tracking.jpg",
-        //     img_default: "tracking-banner",
-        //     demo: ["tracking-1.jpg"]
-        // },
+        {
+            year: 2014,
+            name: "追跡者",
+            subname: "EZ Chat.EZ Talk.",
+            url: "",
+            url_text: "",
+            description: "安全，簡單，追跡。追跡者，您的安全運輸專家。",
+            rwd: false,
+            development: true,
+            design: true,
+            designtype: "Design",
+            img_thumbs: "tracking.jpg",
+            img_default: "tracking-banner",
+            demo: ["tracking-1.jpg"]
+        },
         // {
         //     year: 2014,
         //     name: "eHR 登入",
@@ -308,18 +308,18 @@ var data={
         //     img_default: "tickets-banner",
         //     demo: ["tickets-1.jpg"]
         // },
-        // {
-        //     year: 2014,
-        //     name: "HealthCare-健康管理",
-        //     subname: "Health is wealth.",
-        //     description: "HealthCare為一個自我健康管理app，擁有健康報告、健康管理、運動紀錄、行事曆、健康資訊、預約健檢六大功能。",
-        //     android: true,
-        //     ios: true,
-        //     design: true,
-        //     img_thumbs: "HealthCare.jpg",
-        //     img_default: "HealthCare-banner",
-        //     demo: ["HealthCare-1.jpg","HealthCare-2.png","HealthCare-3.jpg"]
-        // }
+        {
+            year: 2014,
+            name: "HealthCare-健康管理",
+            subname: "Health is wealth.",
+            description: "HealthCare為一個自我健康管理app，擁有健康報告、健康管理、運動紀錄、行事曆、健康資訊、預約健檢六大功能。",
+            android: true,
+            ios: true,
+            design: true,
+            img_thumbs: "HealthCare.jpg",
+            img_default: "HealthCare-banner",
+            demo: ["HealthCare-1.jpg","HealthCare-2.png","HealthCare-3.jpg"]
+        }
     ],
     uilist:[
         {
