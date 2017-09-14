@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
     <title>Download</title>
     <script type="text/javascript" src="js/isMobile.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
     <script>
     $(function() {
         var interval = null;
@@ -17,7 +18,7 @@
         alert(device);
     });
     </script>
-    
+
     <script type="text/javascript">
     window.onload = function() {
         if (isWeiXin()) {
@@ -30,8 +31,10 @@
         var ua = window.navigator.userAgent.toLowerCase();
         if (ua.match(/MicroMessenger/i) == 'micromessenger') {
             return true;
+            alert("true");
         } else {
             return false;
+            alert("false");
         }
     }
     </script>
