@@ -45,7 +45,7 @@
 			right: 27px;
 		}
 		.btn{
-			margin-top: 30px;
+			margin-top: 110px;
 		    display: block;
 		}
     </style>
@@ -65,7 +65,10 @@
         var ua = window.navigator.userAgent.toLowerCase();
         if (ua.match(/MicroMessenger/i) == 'micromessenger') {
         	$('.wechat').css('display', 'block');
-        	$('a.btn').css('display', 'block');
+        	$('a.btn').css({
+        		display: 'block',
+        		marginTop: '20px'
+        	});
             return true;
         } else {
         	$('.wechat').css('display', 'block');
