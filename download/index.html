@@ -37,8 +37,8 @@
 		}
 		.people{
 			background: url(images/img_people.png) center bottom no-repeat;
-			width: 310px;
-		    height: 356px;
+			width: 280px;
+		    height: 328px;
 			background-size: 100%;
 			position: fixed;
 			bottom: 0;
@@ -49,28 +49,9 @@
 		    display: block;
 		}
     </style>
-    <script>
-    // $(function() {
-    //     var interval = null;
-    //     var device = '';
-    //     if (isMobile.apple.device) {
-    //         device = 'ios';
-    //         $('.text').innerHTML('ios');
-    //     } else {
-    //         device = 'android';
-    //         $('.text').innerHTML('android');
-    //     }
-    //     alert(device);
-    // });
-    </script>
 
     <script type="text/javascript">
     window.onload = function() {
-        // if (isWeiXin()) {
-        //     var p = document.getElementsByTagName('p');
-        //     p[0].innerHTML = window.navigator.userAgent;
-        // }
-        // 
         var interval = null;
         var device = '';
         if (isMobile.apple.device) {
@@ -84,24 +65,17 @@
         var ua = window.navigator.userAgent.toLowerCase();
         if (ua.match(/MicroMessenger/i) == 'micromessenger') {
         	$('.wechat').css('display', 'block');
-        	$('a.btn').css('display', 'none');
+        	$('a.btn').css('display', 'block');
             return true;
         } else {
-        	$('.wechat').css('display', 'none');
+        	$('.wechat').css('display', 'block');
             return false;
         }
        
 
     }
 
-    // function isWeiXin() {
-    //     var ua = window.navigator.userAgent.toLowerCase();
-    //     if (ua.match(/MicroMessenger/i) == 'micromessenger') {
-    //         return true;
-    //     } else {
-    //         return false;
-    //     }
-    // }
+
     </script>
 </head>
 
