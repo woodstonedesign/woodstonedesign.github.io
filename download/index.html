@@ -3,47 +3,116 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Download</title>
+
+    <link href="css/style.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/isMobile.min.js"></script>
-    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <style type="text/css">
+		body{
+			width: 100%;
+			height: 100%;
+			background: #f0f0f0;
+			font-family: '微軟正黑體','helvetica', 'Arial', sans-serif;
+		}
+		.container{
+			width: 95%;
+			text-align: center;
+		}
+		.wechat{
+			display: none;
+		}
+		.arrow{
+			position: absolute;
+		    right: 10px;
+		    top: 8px;
+		}
+		.arrow img{
+			width: 70px;
+		}
+		p{
+			color: #0989FE;
+			margin-top: 100px;
+		}
+		.people{
+			background: url(images/img_people.png) center bottom no-repeat;
+			width: 310px;
+		    height: 356px;
+			background-size: 100%;
+			position: fixed;
+			bottom: 0;
+			right: 27px;
+		}
+		.btn{
+			margin-top: 30px;
+		    display: block;
+		}
+    </style>
     <script>
-    $(function() {
-        var interval = null;
-        var device = '';
-        if (isMobile.apple.device) {
-            device = 'ios';
-            $('.text').innerHTML('ios');
-        } else {
-            device = 'android';
-            $('.text').innerHTML('android');
-        }
-        alert(device);
-    });
+    // $(function() {
+    //     var interval = null;
+    //     var device = '';
+    //     if (isMobile.apple.device) {
+    //         device = 'ios';
+    //         $('.text').innerHTML('ios');
+    //     } else {
+    //         device = 'android';
+    //         $('.text').innerHTML('android');
+    //     }
+    //     alert(device);
+    // });
     </script>
 
     <script type="text/javascript">
     window.onload = function() {
-        if (isWeiXin()) {
-            var p = document.getElementsByTagName('p');
-            p[0].innerHTML = window.navigator.userAgent;
+    	var interval = null;
+        var device = '';
+        if (isMobile.apple.device) {
+            device = 'ios';
+            
+        } else {
+            device = 'android';
+            
         }
-    }
-
-    function isWeiXin() {
+        alert(device);
+        // if (isWeiXin()) {
+        //     var p = document.getElementsByTagName('p');
+        //     p[0].innerHTML = window.navigator.userAgent;
+        // }
         var ua = window.navigator.userAgent.toLowerCase();
         if (ua.match(/MicroMessenger/i) == 'micromessenger') {
-            return true;
-            $('.text').innerHTML('wechat');
+        	$('.wechat').css('display', 'block');
+             return true;
         } else {
+        	$('.wechat').css('display', 'none');
             return false;
-            alert("false");
         }
+
     }
+
+    // function isWeiXin() {
+    //     var ua = window.navigator.userAgent.toLowerCase();
+    //     if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+    //         return true;
+    //     } else {
+    //         return false;
+    //     }
+    // }
     </script>
 </head>
 
 <body>
-	11<p class="text"></p>
+
+	<div class="container">
+		<div class="wechat">
+			<div class="arrow"><img src="images/img_arrow.png"></div>
+			<p>您用微信工具打开此页面可能无法正常下载，<br>请点击上方选单选择[在浏览器中打开]</p>
+		</div>
+		<a href="" class="btn"><img src="images/img_download.png" width="170"></a>
+		<div class="people"></div>
+	</div>
+	
 </body>
 
 </html>
