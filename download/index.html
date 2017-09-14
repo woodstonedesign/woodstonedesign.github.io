@@ -12,8 +12,10 @@
         var device = '';
         if (isMobile.apple.device) {
             device = 'ios';
+            $('.text').innerHTML('ios');
         } else {
             device = 'android';
+            $('.text').innerHTML('android');
         }
         alert(device);
     });
@@ -31,7 +33,7 @@
         var ua = window.navigator.userAgent.toLowerCase();
         if (ua.match(/MicroMessenger/i) == 'micromessenger') {
             return true;
-            alert("true");
+            $('.text').innerHTML('wechat');
         } else {
             return false;
             alert("false");
@@ -41,6 +43,7 @@
 </head>
 
 <body>
+	<p class="text"></p>
 </body>
 
 </html>
