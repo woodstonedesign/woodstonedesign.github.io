@@ -66,15 +66,6 @@
 
     <script type="text/javascript">
     window.onload = function() {
-    	var interval = null;
-        var device = '';
-        if (isMobile.apple.device) {
-            device = 'ios';       
-        } else {
-            device = 'android';
-            // $('a.btn').attr('#', 'apk/TapTapComicV1.0.0.apk');
-        }
-        alert(device);
         // if (isWeiXin()) {
         //     var p = document.getElementsByTagName('p');
         //     p[0].innerHTML = window.navigator.userAgent;
@@ -82,11 +73,21 @@
         var ua = window.navigator.userAgent.toLowerCase();
         if (ua.match(/MicroMessenger/i) == 'micromessenger') {
         	$('.wechat').css('display', 'block');
-             return true;
+        	$('a.btn').css('display', 'none');
+            return true;
         } else {
         	$('.wechat').css('display', 'none');
             return false;
         }
+        var interval = null;
+        var device = '';
+        if (isMobile.apple.device) {
+            device = 'ios';       
+        } else {
+            device = 'android';
+            $('a.btn').attr('href', 'apk/TapTapComicV1.0.0.apk');
+        }
+        alert(device);
 
     }
 
