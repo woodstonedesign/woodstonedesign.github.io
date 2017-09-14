@@ -69,11 +69,10 @@
     	var interval = null;
         var device = '';
         if (isMobile.apple.device) {
-            device = 'ios';
-            
+            device = 'ios';       
         } else {
             device = 'android';
-            
+            $('a.btn').attr('#', 'apk/TapTapComicV1.0.0.apk');
         }
         alert(device);
         // if (isWeiXin()) {
@@ -109,7 +108,7 @@
 			<div class="arrow"><img src="images/img_arrow.png"></div>
 			<p>您用微信工具打开此页面可能无法正常下载，<br>请点击上方选单选择[在浏览器中打开]</p>
 		</div>
-		<a href="" class="btn"><img src="images/img_download.png" width="170"></a>
+		<a href="itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/tc0yvkd1fz3ab5c/manifest.plist" class="btn" target="_blank"><img src="images/img_download.png" width="170"></a>
 		<div class="people"></div>
 	</div>
 	
