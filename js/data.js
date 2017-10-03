@@ -4,7 +4,7 @@ var data={
             year: 2017,
             name: "[進行中]福利講堂::英文線上學習平台",
             subname: "Fuli Forum",
-            url: "",
+            url: "http://woodstonedemo.byethost24.com/Fuli/web/",
             url_text: "",
             description: "菁英國際所屬之福利講堂(Fuli Forum)。團隊致力於開發線上課程及多元化的教學環境，希望有學習需求者能透過數位學習的方式達到有效的學習效果。",
             rwd: true,
