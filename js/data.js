@@ -50,7 +50,7 @@ var data={
             name: "康活美妝購物網",
             subname: "Kof Beauty",
             url: "http://www.kof.com.tw",
-            url_text: "http://www.kof.com.tw",
+            url_text: "www.kof.com.tw",
             description: "【保養。女。花朵】以花、粉彩風格凸顯女性溫柔。象徵勤於保養女人也能向花一樣美麗綻放。",
             rwd: true,
             development: true,
