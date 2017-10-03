@@ -2,6 +2,21 @@ var data={
     weblist:[
         {
             year: 2017,
+            name: "[進行中]福利講堂::英文線上學習平台",
+            subname: "Fuli Forum",
+            url: "",
+            url_text: "",
+            description: "菁英國際所屬之福利講堂(Fuli Forum)。團隊致力於開發線上課程及多元化的教學環境，希望有學習需求者能透過數位學習的方式達到有效的學習效果。",
+            rwd: true,
+            development: true,
+            design: true,
+            designtype: "Design",
+            img_thumbs: "fuli.jpg",
+            img_default: "fuli-banner",
+            demo: ["fuli-1.jpg","fuli-2.jpg","fuli-3.jpg","fuli-4.jpg","fuli-5.jpg"]
+        },
+        {
+            year: 2017,
             name: "永盛豐企業有限公司::門的專家",
             subname: "YCF",
             url: "http://www.reliable-ycf.com.tw",
@@ -34,7 +49,7 @@ var data={
             year: 2017,
             name: "康活美妝購物網",
             subname: "Kof Beauty",
-            url: "http://woodstonedemo.byethost24.com/kof",
+            url: "http://www.kof.com.tw",
             url_text: "Demo：http://woodstonedemo.byethost24.com/kof",
             description: "【保養。女。花朵】以花、粉彩風格凸顯女性溫柔。象徵勤於保養女人也能向花一樣美麗綻放。",
             rwd: true,
@@ -75,36 +90,36 @@ var data={
             img_default: "pet-banner",
             demo: ["pet-1.jpg","pet-2.jpg"]
         },
-        // {
-        //     year: 2016,
-        //     name: "淨土藝術",
-        //     subname: "Art of Rangniang",
-        //     url: "http://www.rangniang.org",
-        //     url_text: "www.rangniang.org",
-        //     description: "淨土藝術為讓娘寺的官方網站，讓娘寺全名為「讓娘彭措帖慶林」，意謂「讓娘圓滿大乘洲」，位於青海省玉樹州玉樹市以北60公里處。淨土藝術網站以集資為目標，期望透過募資方式重建因地震而倒塌的建築，祈求儘快實現教學樓及餐飲問題，愛心人士的捐助，讓這些弱小的朋友擁有一個教學樓。",
-        //     rwd: true,
-        //     development: true,
-        //     design: true,
-        //     designtype: "Co-Design",
-        //     img_thumbs: "rangniang-b.jpg",
-        //     img_default: "rangniang-banner",
-        //     demo: ["rangniang-1.jpg"]
-        // },
         {
             year: 2016,
-            name: "木石設計",
-            subname: "WoodStone Website",
-            url: "http://woodstonedesign.github.io",
-            url_text: "woodstonedesign.github.io",
-            description: "木石設計提供網頁設計&開發、App流程與介面設計、使用者經驗服務。融入使用者經驗設計思維，提供友善易懂的操作介面，帶給使用者良好的體驗。",
+            name: "淨土藝術",
+            subname: "Art of Rangniang",
+            url: "http://www.rangniang.org",
+            url_text: "www.rangniang.org",
+            description: "淨土藝術為讓娘寺的官方網站，讓娘寺全名為「讓娘彭措帖慶林」，意謂「讓娘圓滿大乘洲」，位於青海省玉樹州玉樹市以北60公里處。淨土藝術網站以集資為目標，期望透過募資方式重建因地震而倒塌的建築，祈求儘快實現教學樓及餐飲問題，愛心人士的捐助，讓這些弱小的朋友擁有一個教學樓。",
             rwd: true,
             development: true,
             design: true,
-            designtype: "Design",
-            img_thumbs: "woodstone.jpg",
-            img_default: "woodstone-banner",
-            demo: ["woodstone-1.jpg","woodstone-2.jpg"]
+            designtype: "Co-Design",
+            img_thumbs: "rangniang-b.jpg",
+            img_default: "rangniang-banner",
+            demo: ["rangniang-1.jpg"]
         },
+        // {
+        //     year: 2016,
+        //     name: "木石設計",
+        //     subname: "WoodStone Website",
+        //     url: "http://woodstonedesign.github.io",
+        //     url_text: "woodstonedesign.github.io",
+        //     description: "木石設計提供網頁設計&開發、App流程與介面設計、使用者經驗服務。融入使用者經驗設計思維，提供友善易懂的操作介面，帶給使用者良好的體驗。",
+        //     rwd: true,
+        //     development: true,
+        //     design: true,
+        //     designtype: "Design",
+        //     img_thumbs: "woodstone.jpg",
+        //     img_default: "woodstone-banner",
+        //     demo: ["woodstone-1.jpg","woodstone-2.jpg"]
+        // },
          
         // {
         //     year: 2016,
@@ -296,18 +311,18 @@ var data={
         //     img_default: "taptapcomic-banner",
         //     demo: ["TapTapToon-1.png"]
         // },
-        // {
-        //     year: 2014,
-        //     name: "活動票卷app",
-        //     subname: "EZ Tickets.",
-        //     description: "便捷、快速取票與驗票app。",
-        //     android: true,
-        //     ios: true,
-        //     design: true,
-        //     img_thumbs: "tickets.jpg",
-        //     img_default: "tickets-banner",
-        //     demo: ["tickets-1.jpg"]
-        // },
+        {
+            year: 2014,
+            name: "活動票卷app",
+            subname: "EZ Tickets.",
+            description: "便捷、快速取票與驗票app。",
+            android: true,
+            ios: true,
+            design: true,
+            img_thumbs: "tickets.jpg",
+            img_default: "tickets-banner",
+            demo: ["tickets-1.jpg"]
+        },
         {
             year: 2014,
             name: "HealthCare-健康管理",
