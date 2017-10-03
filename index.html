@@ -3,91 +3,450 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>木石設計 X WoodStone Design | Web Design X App Design</title>
+    <meta name="description" content="木石設計 X WoodStone Design|提供網頁設計&開發、App 流程與介面設計、使用者經驗，
+融入使用者經驗設計思維，提供友善易懂的操作介面，帶給使用者良好的體驗。">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Download</title>
+    <meta http-equiv="Content-Language" content="zh-TW">
+    <meta name="keywords" content="木石設計,網頁設計,響應式網頁設計,App設計,web page,website design,RWD,App design,UI,UX">
+    <meta name="author" content="Woodstone Design X Karen">
+    <meta name="robots" content="all" />
+    <!-- FB meta tag -->
+    <meta name="og:description" content="木石設計|提供網頁設計&開發、使用者經驗，融入使用者經驗設計思維，提供友善易懂的操作介面，帶給使用者良好的體驗。" />
+    <meta property="og:title" content="WoodStone Design X 木石設計 | Web Design X App Design X User Experience" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://woodstonedesign.github.io" />
+    <meta property="og:image" content="https://woodstonedesign.github.io/images/fbcover_new.jpg" />
+    <meta property="og:site_name" content="木石設計 X WoodStone Design | Web Design X App Design X User Experience" />
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="https://woodstonedesign.github.io/images/Icon.png">
+    <link rel="apple-touch-icon" sizes="72×72" href="https://woodstonedesign.github.io/images/Icon-72.png">
+    <link rel="apple-touch-icon" sizes="114×114" href="https://woodstonedesign.github.io/images/Icon@2x.png">
 
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/isMobile.min.js"></script>
-    <style type="text/css">
-		body{
-			width: 100%;
-			height: 100%;
-			background: #f0f0f0;
-			font-family: '微軟正黑體','helvetica', 'Arial', sans-serif;
-			overflow-x: hidden;
-		}
-		.container{
-			width: 95%;
-			text-align: center;
-		}
-		.wechat{
-			display: none;
-		}
-		.arrow{
-			position: absolute;
-		    right: 10px;
-		    top: 8px;
-		}
-		.arrow img{
-			width: 56px;
-		}
-		p{
-			color: #0989FE;
-			margin-top: 80px;
-		}
-		.people{
-			background: url(images/img_people.png) center bottom no-repeat;
-			width: 280px;
-		    height: 328px;
-			background-size: 100%;
-			position: fixed;
-			bottom: 0;
-			right: 27px;
-		}
-		.btn{
-			margin-top: 110px;
-		    display: block;
-		}
-    </style>
-
-    <script type="text/javascript">
-    window.onload = function() {
-        var interval = null;
-        var device = '';
-        if (isMobile.apple.device) {
-            device = 'ios';       
-        } else {
-            device = 'android';
-            $('a').attr('href', 'apk/TapTapComicV1.0.0.apk');
-        }
-        // alert(device);
-
-        var ua = window.navigator.userAgent.toLowerCase();
-        if (ua.match(/MicroMessenger/i) == 'micromessenger') {
-        	$('.wechat').css('display', 'block');
-        	$('a.btn').css({
-        		display: 'block',
-        		marginTop: '20px'
-        	});
-            return true;
-        } else {
-            return false;
-        }
-    }
-    </script>
+    <link rel="bookmark" href="https://woodstonedesign.github.io/images/faviconw.ico" />
+    <link rel="icon" href="https://woodstonedesign.github.io/images/faviconw.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="https://woodstonedesign.github.io/images/faviconw.ico" type="image/x-icon" />
+    <!-- Style -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Animate -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts/css/fontello.css">
+	<!-- slider -->
+    <link rel="stylesheet" href="js/slider/juicyslider.css" type="text/css" />
+    
+    <!-- IE8 support -->
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
 </head>
 
-<body>
-
-	<div class="container">
-		<div class="wechat">
-			<div class="arrow"><img src="images/img_arrow.png"></div>
-			<p>您用微信工具打开此页面可能无法正常下载，<br>请点击上方选单选择[在浏览器中打开]</p>
-		</div>
-		<a href="itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/tc0yvkd1fz3ab5c/manifest.plist" class="btn" target="_blank"><img src="images/img_download.png" width="170"></a>
-		<div class="people"></div>
-	</div>
+<body id="allprojects">
+	<div id="gotop" class="animated bounceInUp"></div>
+	<div itemscope itemtype="http://schema.org/Product">
 	
+	<!-- Start of Header -->
+   <header>
+   		<div class="container">
+		    <nav class="navbar-default">
+		        <div class="navbar-header">
+					<div class="menu-toggle">
+					    <div class="one"></div>
+					    <div class="two"></div>
+					    <div class="three"></div>
+					</div>
+		         <a class="navbar-brand" href="https://woodstonedesign.github.io" itemprop="url"><div class="logo"></div>WoodStone<span itemprop="brand">木石設計</span></a> 
+		        </div>
+		        <div id="navbar">
+		          <ul class="nav navbar-nav navbar-right">
+		            <li class="active"><a href="#" data-nav-section="home"><span>Home</span></a></li>
+		            <li><a href="#services" data-nav-section="services"><span>Services</span></a></li>
+		            <li><a href="#projects" data-nav-section="projects"><span itemprop="name">Web Design</span></a></li>
+		            <li><a href="#app" data-nav-section="app"><span itemprop="name">App Design</span></a></li>
+		            <li><a href="#uidesign" data-nav-section="uidesign"><span itemprop="name">UI Design</span></a></li>
+		            <li><a href="#about" data-nav-section="about"><span>About</span></a></li>
+		            <li><a href="#contact" data-nav-section="contact"><span>Contact</span></a></li>
+		          </ul>
+		        </div>
+		    </nav>
+		  </div>
+   </header>
+   <!-- End of Header -->
+
+ 	<!-- Start of Banner -->
+    <section id="home" data-section="home">
+		<div class="gradient"></div>
+		<div id="slider" class="juicyslider">
+            <ul>
+                <li><img src="images/slider/bg01.jpg">
+					<div class="container">
+						<div class="text-wrap">
+							<div class="text-inner">
+								<div class="row">
+									<div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0">
+										<img src="images/logo-white-128.png" height="100" width="100" alt="WoodStone Design木石設計" class="wow bounceIn" data-wow-delay=".5s" style="margin-bottom:10px; position: inherit; width:100px; " itemprop="logo"><br>
+										<h1 class="wow fadeInDown" data-wow-delay=".5s" itemprop="name">Web Design Ｘ APP Design</h1>
+										<h2 class="wow fadeInUp" data-wow-delay=".5s"  itemprop="brand">WoodStone Design</h2> 
+									</div>
+							</div>
+						</div>
+					</div>
+
+                </li>
+                <li><img src="images/slider/bg04.jpg">
+                	<div class="container">
+						<div class="text-wrap">
+							<div class="text-inner">
+								<div class="row">
+									<div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0">
+										<h1 class="wow fadeInDown">無限創意 Ｘ 照亮無限可能</h1>
+										<h2 class="wow fadeInUp"  itemprop="brand">WoodStone Design</h2> 
+									</div>
+							</div>
+						</div>
+					</div>
+                </li>
+                <li><img src="images/slider/bg02.jpg">
+                	<div class="container">
+						<div class="text-wrap">
+							<div class="text-inner">
+								<div class="row">
+									<div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0">
+										<h1 class="wow fadeInDown">精心規劃 Ｘ 體驗至上</h1>
+										<h2 class="wow fadeInUp"  itemprop="brand">WoodStone Design</h2> 
+									</div>
+							</div>
+						</div>
+					</div>
+                </li>
+                <li><img src="images/slider/bg05.jpg">
+                	<div class="container">
+						<div class="text-wrap">
+							<div class="text-inner">
+								<div class="row">
+									<div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0">
+										<h1 class="wow fadeInDown">響應式網頁 Ｘ 跨平台體驗</h1>
+										<h2 class="wow fadeInUp"  itemprop="brand">WoodStone Design</h2> 
+									</div>
+							</div>
+						</div>
+					</div>
+                </li>
+            </ul>
+            <div class="nav next"></div>
+        </div>
+		
+		<a href="#services" data-nav-section="services"><div class="mouse"><div class="scroll"></div></div></a>
+	</section>
+	<!-- End of Banner -->
+
+	<!-- Start of services -->
+	<section id="services" data-section="services">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading">
+					<h2 class="wow fadeInUp" data-wow-delay=".5s">Services</h2>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-4 col-xs-12 wow fadeInLeft" data-wow-delay="1s">
+					<div class="bg-circle wow bounceIn" data-wow-delay="1.5s"><img src="images/web.svg" alt="網頁設計與開發"></div>
+					<h3 itemprop="name">網頁設計與開發</h3>
+					<p itemprop="description">網站整體視覺設計<br>FB分享/按讚、Google+，網路行銷最大化<br>Google網站流量分析，剖析網站大數據<br>SEO優化 ，提升網站知名度</p>
+				</div>
+				<div class="col-sm-4 col-xs-12 wow fadeInLeft" data-wow-delay="1.5s">
+					<div class="bg-circle wow bounceIn" data-wow-delay="2s"><img src="images/responsive.svg" alt="響應式網頁"></div>
+					<h3 itemprop="name">響應式網頁</h3>
+					<p itemprop="description">網站整體視覺設計<br>行動版網頁專屬的操作體驗<br>跨平台完美支援</p>
+				</div>
+				<div class="col-sm-4 col-xs-12 wow fadeInLeft" data-wow-delay="2s">
+					<div class="bg-circle wow bounceIn" data-wow-delay="2.5s"><img src="images/mobile.svg" alt="App介面設計"></div>
+					<h3 itemprop="name">App介面設計</h3>
+					<p itemprop="description">使用者介面流程規劃，流暢操作<br>介面設計，簡潔風格<br>符合iOS&Android介面切圖規範<br>切圖文件標記，提供工程師快速套版</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End of services -->
+	
+	<!-- Start of Web Projects -->
+	<section id="projects" class="pink-gradient" data-section="projects">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="wow fadeInUp" data-wow-delay=".5s" itemprop="name">Web Design</h2>
+				</div>
+				<div class="col-md-8 col-md-offset-2 description" itemprop="description">
+					視覺設計 | 網頁設計&開發 | 響應式網頁
+				</div>
+			</div>
+		</div>
+
+		<div class="row wow fadeIn" data-wow-delay="0.5s">
+			
+			<div class="col-md-3 col-sm-6 col-xs-12" v-for="(id,web) in weblist" v-if="id<4">
+				<a href="#web{{id+1}}" class="project-item fancybox to-animate" rel="gallery1">
+					<img data-default-src="images/thumbs/{{web.year}}/{{web.img_thumbs}}" class="img-responsive" alt="{{web.name}}">
+					<div class="text">
+						<h2>{{web.name}}</h2>
+						<span>{{web.subname}}</span>
+					</div>
+				</a>
+				<div class="content" id="web{{id+1}}">
+					<div class="cover"><img data-default-src="images/fulls/{{web.year}}/{{web.img_default}}.jpg" data-xs-src="images/fulls/{{web.year}}/{{web.img_default}}-m.jpg" alt="{{web.name}}"></div>
+					<div class="row">
+						<div class="col-md-5 col-sm-5 col-md-offset-1">
+							<div class="circle" v-if="web.rwd"><div class="icon-rwd"></div><p>響應式網頁</p></div>
+							<div class="circle" v-if="web.development"><i class="icon-codeopen"></i><p>Development</p></div>
+							<div class="circle" v-if="web.design"><i class="icon-feather"></i><p>{{web.designtype}}</p></div>
+						</div>
+						<div class="col-md-5 col-sm-7 col-xs-12">
+							<h2>{{web.name}}</h2>
+							<p><i class="icon-monitor"></i><i class="icon-mobile" v-if="web.rwd"></i><a href="{{web.url}}" target="_blank">{{web.url_text}}</a></p>
+							<p>{{web.description}}</p>
+						</div>
+					</div>
+					<img data-default-src="images/fulls/{{web.year}}/{{demo_item}}" class="img-responsive" alt="{{web.name}}" v-for="demo_item in web.demo">
+				</div>
+			</div>
+
+			<div class="col-md-2 col-sm-6 col-xs-12" v-for="(id,web) in weblist" v-if="id>3">
+				<a href="#web{{id+1}}" class="project-item fancybox to-animate" rel="gallery1">
+					<img data-default-src="images/thumbs/{{web.year}}/{{web.img_thumbs}}" class="img-responsive" alt="{{web.name}}">
+					<div class="text">
+						<h2>{{web.name}}</h2>
+						<span>{{web.subname}}</span>
+					</div>
+				</a>
+				<div class="content" id="web{{id+1}}">
+					<div class="cover"><img data-default-src="images/fulls/{{web.year}}/{{web.img_default}}.jpg" data-xs-src="images/fulls/{{web.year}}/{{web.img_default}}-m.jpg" alt="{{web.name}}"></div>
+					<div class="row">
+						<div class="col-md-5 col-sm-5 col-md-offset-1">
+							<div class="circle" v-if="web.rwd"><div class="icon-rwd"></div><p>響應式網頁</p></div>
+							<div class="circle" v-if="web.development"><i class="icon-codeopen"></i><p>Development</p></div>
+							<div class="circle" v-if="web.design"><i class="icon-feather"></i><p>{{web.designtype}}</p></div>
+						</div>
+						<div class="col-md-5 col-sm-7 col-xs-12">
+							<h2>{{web.name}}</h2>
+							<p><i class="icon-monitor"></i><i class="icon-mobile" v-if="web.rwd"></i><a href="{{web.url}}" target="_blank">{{web.url_text}}</a></p>
+							<p>{{web.description}}</p>
+						</div>
+					</div>
+					<img data-default-src="images/fulls/{{web.year}}/{{demo_item}}" class="img-responsive" alt="{{web.name}}" v-for="demo_item in web.demo">
+				</div>
+			</div>
+
+	</section>
+	<!-- End of Web Projects -->
+
+	<!-- Start of App Projects -->
+	<section id="app" data-section="app" class="pink-gradient" >
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading">
+					<h2 class="wow fadeInUp" data-wow-delay=".5s" itemprop="name">App Design</h2>
+				</div>
+				<div class="col-md-8 col-md-offset-2 description" itemprop="description">
+					App 流程與介面設計規劃 | 使用者經驗<br>提供友善易懂的操作介面，帶給使用者良好的體驗
+				</div>
+			</div>
+			
+			<div class="row wow fadeIn" data-wow-delay="0.5s">
+
+				<div class="col-md-3 col-sm-6 col-xs-12" v-for="(id,app) in applist">
+				<a href="#app{{id+1}}" class="project-item fancybox to-animate" rel="gallery2">
+					<img data-default-src="images/thumbs/{{app.year}}/{{app.img_thumbs}}" class="img-responsive" alt="{{app.name}}">
+					<div class="text">
+						<h2>{{app.name}}</h2>
+						<span>{{app.subname}}</span>
+					</div>
+				</a>
+				<div class="content" id="app{{id+1}}">
+					<div class="cover"><img data-default-src="images/fulls/{{app.year}}/{{app.img_default}}.jpg" data-xs-src="images/fulls/{{app.year}}/{{app.img_default}}-m.jpg" alt="{{app.name}}"></div>
+					<div class="row">
+						<div class="col-md-5 col-sm-5 col-xs-12 col-md-offset-1">
+							<div class="circle" v-if="app.android"><i class="icon-android"></i><p>Android</p></div>
+							<div class="circle" v-if="app.ios"><i class="icon-apple"></i><p>Android</p></div>
+							<div class="circle" v-if="app.design"><i class="icon-feather"></i><p>Design</p></div>
+						</div>
+						<div class="col-md-5 col-sm-7 col-xs-12">
+							<h2>{{app.name}}</h2>
+							<p><i class="icon-android" v-if="app.android"></i><i class="icon-apple" v-if="app.ios"></i></p>
+							<p>{{app.description}}</p>
+						</div>
+					</div>
+					<img data-default-src="images/fulls/{{app.year}}/{{demo_item}}" class="img-responsive" alt="{{app.name}}" v-for="demo_item in app.demo">
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<!-- End of App Projects -->
+
+	<!-- Start of UI Projects -->
+	<section id="uidesign" class="pink-gradient" data-section="uidesign">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading">
+					<h2 class="wow fadeInUp" data-wow-delay=".5s" itemprop="name">UI Design</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" v-for="(id,ui) in uilist">
+					<a class="fancybox project-item" rel="gallery3" href="dailyui/images/{{ui.img_default}}.jpg" title="{{ui.name}}">
+						<img src="dailyui/images/{{ui.img_default}}.jpg" class="img-responsive" alt="{{ui.name}}" />
+						<div class="text">
+							<h2>{{ui.name}}</h2>
+						</div>
+					</a>
+				</div>
+			</div>
+			<br>
+				<div class="row">	
+					<div class="col-md-6 col-md-offset-5 col-sm-12"><button class="more" onclick="javascript:location.href='dailyui/'" target="_blank">More</button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End of UI Projects -->
+
+	<!-- Start of About -->
+	<section id="about" data-section="about">
+		<div class="gradient"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading">
+					<h2 class="wow fadeInUp" data-wow-delay=".5s">About</h2>
+				</div>
+				<div class="col-md-12 description" itemprop="description">
+					網頁設計&開發 | App 流程與介面設計 | 使用者經驗<br>個人接案者。5+年工作經驗。融入使用者經驗設計思維，提供友善易懂的操作介面，帶給使用者良好的體驗
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-4 col-xs-12 wow fadeIn" data-wow-delay="1s">
+					<div class="circle wow bounceIn" data-wow-delay="2.5s" itemprop="name"><i class="icon-feather"></i><p>Visual Design</p></div>
+					<h3 itemprop="description">Visual Design</h3>
+					<p itemprop="description">Illustrator、Photoshop<br>網頁與介面設計</p>
+				</div>
+				<div class="col-sm-4 col-xs-12 wow fadeIn" data-wow-delay="1.5s">
+					<div class="circle wow bounceIn" data-wow-delay="2.5s" itemprop="name"><i class="icon-rwd"></i><p>Web Design</p></div>
+					<h3 itemprop="description">Web Design</h3>
+					<p itemprop="description">網頁設計與開發<br>HTML5、CSS3/Sass、jQuery<br>響應式網頁設計</p>
+				</div>
+				<div class="col-sm-4 col-xs-12 wow fadeIn" data-wow-delay="2s">
+					<div class="circle wow bounceIn" data-wow-delay="2.5s" itemprop="name"><i class="icon-mobile"></i><p>App Design</p></div>
+					<h3 itemprop="description">App Design</h3>
+					<p itemprop="description">iOS & Android UI/UX Design<br>
+					  以使用者為中心的設計<br>使用者介面操作流程規劃
+					</p>
+				</div>
+			</div>
+			<div class="row wow fadeIn hidden-xs" data-wow-delay="3s">
+				<div class="counter col-md-3 col-sm-3">
+			      <h2 class="timer count-title count-number" data-to="16" data-speed="19000"></h2><span class="small-txt">個</span>
+			       <p class="count-text ">RWD網站作品</p>
+			    </div>
+
+			    <div class="counter col-md-3 col-sm-3">
+			      <h2 class="timer count-title count-number" data-to="25" data-speed="19000"></h2><span class="small-txt">個</span>
+			      <p class="count-text ">所有網站作品</p>
+			    </div>
+
+			    <div class="counter col-md-3 col-sm-3">
+			      <h2 class="timer count-title count-number" data-to="6" data-speed="19000"></h2><span class="small-txt">個</span>
+			      <p class="count-text ">App 設計</p>
+			    </div>
+
+			    <div class="counter col-md-3 col-sm-3">
+			      <h2 class="timer count-title count-number" data-to="60" data-speed="19000"></h2><span class="small-txt">個月前</span>
+			      <p class="count-text ">開始做網頁設計</p>
+			    </div>
+			</div>
+		</div>
+	</section>
+	<!-- End of About -->
+
+	<!-- Start of Contact -->
+	<section id="contact" data-section="contact">
+		<div class="gradient"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading">
+					<h2 class="wow fadeInUp" data-wow-delay="1s">Contact</h2>
+				</div>
+			</div>
+			<div class="row wow fadeIn" data-wow-delay="1.5s" style="position:relative;z-index:9;">
+				<div class="col-md-12 col-sm-12">
+				<div class="col-md-12"><p itemprop="description">從事網頁與App設計，包含UI/UX設計及前端開發，若你有興趣跟我合作，歡迎來信↓</p></div>
+                    <form action="https://formspree.io/woodstonedesign2016@gmail.com" method="POST">
+                        <div class="col-md-6">
+                            <input type="text" name="name" id="name" placeholder="如何稱呼您?" required/>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="email" name="_replyto" id="email" placeholder="您的Email" required/>
+                        </div>
+                        <div class="col-md-12">
+                        	<input type="text" name="name" id="budget" placeholder="請填寫您的預算" required/>
+                        </div>
+                        <div class="col-md-12">
+                            <textarea id="input_message" rows="4" cols="50" name="comment" maxlength="300" id="message" placeholder="請填寫您想詢問的問題或是製作需求" required></textarea>
+                        </div>
+                         <div class="col-md-12"><input type="submit" id="submit" value="送出訊息" />
+                        <input type="hidden" name="_next" value="https://woodstonedesign.github.io/thanks.html" />
+                        <input type="hidden" name="_cc" value="pobo210397@gmail.com" /></div>
+                    </form>
+	            </div>
+			</div>
+			<div class="col-md-12 footer">
+            		&copy; 2016 WoodStone Design
+            		<i class="icon-feather"></i><a href="mailto:woodstonedesign2016@gmail.com" class="icon" itemprop="url">woodstonedesign2016@gmail.com</a>
+			</div>
+		</div>
+	</section>
+	<!-- End of Contact -->
+
+</div><!-- itemscope -->
+
+
+
+	<!-- JS -->
+    <script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Vue.js -->
+	<script src='js/vue.js'></script>
+    <script src="js/data.js"></script>
+	<!-- Stellar Parallax 
+	<script src="js/jquery.stellar.min.js"></script>-->
+	<script src="js/wow.min.js"></script>	
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Fancybox -->
+    <script src="js/fancybox/jquery.fancybox.js?v=2.1.5"></script>
+    <!-- Slider -->
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/slider/juicyslider.min.js"></script>
+    <!-- Main -->
+    <script src="js/main.js"></script>
+    <!-- Google Analytics -->
+    <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-27418976-8', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+
 </body>
 
 </html>
