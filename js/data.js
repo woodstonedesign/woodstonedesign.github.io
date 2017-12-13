@@ -2,7 +2,7 @@ var data={
     weblist:[
         {
             year: 2017,
-            name: "[進行中]福利講堂::英文線上學習平台",
+            name: "福利講堂::英文線上學習平台",
             subname: "Fuli Forum",
             url: "http://woodstonedemo.byethost24.com/Fuli/web/",
             url_text: "woodstonedemo.byethost24.com/Fuli/web",
