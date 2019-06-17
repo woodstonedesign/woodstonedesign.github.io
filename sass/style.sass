@@ -208,10 +208,10 @@ header
 
 // Burger Menu
 .menu-toggle
-	width: 30px
-	height: 30px
+	width: 25px
+	height: 25px
 	position: absolute
-	top: 7px
+	top: 11px
 	right: 17px
 	cursor: pointer
 	display: none
@@ -221,11 +221,11 @@ header
 		.two
 			opacity: 0
 		.three
-			+transform (rotate(-45deg) translate(7px, -7px))
+			+transform (rotate(-45deg) translate(5px, -5px))
 
 .one,.two,.three
 	width: 100%
-	height: 4px
+	height: 2px
 	background: $primary-color
 	margin: 6px auto
 	backface-visibility: hidden
@@ -638,12 +638,21 @@ input[type="submit"], input[type="reset"], input[type="button"], .button,button
 
 /*******************  footer  ************************/
 .footer
+	position: relative
+	z-index: 9
 	text-align: right
 	font-size: 14px
 	color: #333
 	margin-top: -30px
 	a,i
 		color: #333
+
+.facebook
+	display: inline-block
+	margin-left: 5px
+	img
+		width: 20px
+		vertical-align: middle
 
 /*******************  Responsive  ************************/
 @media screen and (max-width: 780px)
@@ -663,11 +672,13 @@ input[type="submit"], input[type="reset"], input[type="button"], .button,button
 	.navbar-header
 		float: none
 	.navbar-nav > li 
-		padding: 0 6px
+		padding: 5px 6px
 	.navbar-right
 		margin-right: 0
 	.on #navbar
 		display: block
+		text-align: center
+		height: 100vh
 	#home
 		background-position: -175px center
 	.text-inner h1
@@ -807,9 +818,18 @@ input[type="submit"], input[type="reset"], input[type="button"], .button,button
 		bottom: 25px
 	#services p
 		padding: 0px 11% 20px
+	.bg-circle
+		width: 110px
+		height: 110px
+		img
+			height: 50px
 	.content .row .col-sm-5
 		text-align: left
-
+	.circle
+		width: 80px
+		height: 80px
+		i
+			font-size: 28px
 	#dailyui 
 		.section-heading
 			margin: 50px 0
@@ -826,6 +846,8 @@ input[type="submit"], input[type="reset"], input[type="button"], .button,button
 		margin-bottom: 30px
 	.hidden-xs
 		display: none
+	#contact
+		padding-bottom: 30px
 
 @media screen and (max-width: 320px)
 	.circle
