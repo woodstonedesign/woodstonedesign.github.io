@@ -1,7 +1,6 @@
 @charset "UTF-8"
 @import url(https://fonts.googleapis.com/css?family=Inconsolata)
 $font-style: 16px 'Inconsolata',"微軟正黑體","helvetica", "Arial", "Heiti TC",  "Microsoft JhengHei", sans-serif
-$bg:'../images/'
 $primary-color: #BF996E /*brown*/
 $secondary-color: #9f466e
 $link-font-color: $primary-color
@@ -54,3 +53,35 @@ $secondcolor: #f15a24 /*Orange*/
 	opacity: $opacity
 	$opacity-ie: $opacity * 100
 	filter: alpha(opacity=$opacity-ie)//IE8
+
+@mixin border-radius ($radius)
+	border-radius: $radius
+	-webkit-border-radius: $radius
+	-moz-border-radius: $radius
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false)
+	@if $inset
+		-webkit-box-shadow:inset $top $left $blur $color
+		-moz-box-shadow:inset $top $left $blur $color
+		box-shadow:inset $top $left $blur $color
+	@else
+		-webkit-box-shadow: $top $left $blur $color
+		-moz-box-shadow: $top $left $blur $color
+		box-shadow: $top $left $blur $color
+
+@mixin transform($transforms)
+	-moz-transform: $transforms
+	-o-transform: $transforms
+	-ms-transform: $transforms
+	-webkit-transform: $transforms
+	transform: $transforms
+
+@mixin translate ($x, $y)
+	@include transform(translate($x, $y))
+
+@mixin transition($transition)
+	-moz-transition: $transition
+	-o-transition: $transition
+	-ms-transition: $transition
+	-webkit-transition: $transition
+	transition: $transition

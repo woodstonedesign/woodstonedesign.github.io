@@ -1,17 +1,20 @@
 @charset "UTF-8"
-@import compass/css3 
-@import compass/reset
 @import _varibles.sass
 @import _bootstrap.scss
-@import 'https://fonts.googleapis.com/css?family=Niconne'
+@import url(https://fonts.googleapis.com/css?family=Niconne)
+
 
 body
 	font-family: "Helvetica Neue","微軟正黑體","helvetica", "Arial", sans-serif !important 
 
+button
+	outline: none
 
 /*******************  Gotop  ************************/
 #gotop
-	background: url(#{$bg}gototop.png)
+	background: url(../images/gotop.svg)
+	width: 20px
+	height: 20px
 	display: none
 	position: fixed
 	right: 42px
@@ -19,10 +22,11 @@ body
 	padding: 24px
 	cursor: pointer
 	z-index: 999
+	+transition(all .3s ease-out)
 	&:hover
-		background: url(#{$bg}gototop.png)
+		background: url(../images/gotop-active.svg)
 	&:active
-		background: url(#{$bg}gototop.png)
+		background: url(../images/gotop-active.svg)
 
 .mouse
 	position: absolute
@@ -125,6 +129,7 @@ header
 		color: #fff
 		margin-top: -20px
 		span
+			font-family: "微軟正黑體"
 			font-weight: normal
 			font-size: 16px
 			padding-left: 5px
@@ -169,8 +174,9 @@ header
 			height: 35px
 			background-size: 100%
 		.navbar-brand
-			margin-top: -7px
+			margin-top: -8px
 			color: $primary-color
+			font-size: 30px
 			&:hover, &:focus
 				color: $primary-color
 
@@ -288,13 +294,13 @@ header
 		font-size: 50px
 		color: #fff
 		margin: 0 0 15px 0
-		+text-shadow(2px 1px rgba(0,0,0,.8))
+		text-shadow: 2px 1px rgba(0,0,0,.8)
 	h2
 		font-family: 'Niconne', cursive
 		font-size: 32px
 		line-height: 38px
 		color: #fff
-		+text-shadow(1px 1px rgba(0,0,0,.3))
+		text-shadow: 1px 1px rgba(0,0,0,.3)
 		margin: 0
 
 .text-inner img.maxh
@@ -325,18 +331,72 @@ section
 		bottom: 0
     
 #services 
+	background: #333
 	.row
 		text-align: center
 		padding: 0 5px
+	h3 
+		font-weight: bold
+		color: #BF996E
 	p
 		text-align: center
 		padding: 0 8%
-	.section-heading h2
-		color: #333
+		color: #ddd
 
+.bg-circle
+  width: 130px
+  height: 130px
+  +border-radius(50%)
+  border: 2px solid #fff
+  margin: 0 auto 5px
+  +transition(all 0.8s ease-out)
+
+.bg-circle img
+  height: 60px
+  +transform(translateY(50%))
+
+.bg-circle:hover
+  margin-top: -20px
+  background: #BF996E
+  border: 2px solid #BF996E
 
 .pink-gradient
 	background: #212023
+
+/*******************  Counter  *********************** */
+.counter
+  padding: 20px 0
+  display: inline-block
+  color: #fff
+  margin-top: 40px
+  text-align: center
+
+.counter h2
+  display: inline-block
+  font-size: 60px
+  font-weight: bold
+
+
+.count-title 
+  font-size: 40px
+  font-weight: normal
+  margin-top: 10px
+  margin-bottom: 0
+  text-align: center
+
+
+.count-text
+  font-size: 15px
+  font-weight: normal
+  margin-top: 10px
+  margin-bottom: 0
+  text-align: center
+
+.small-txt
+  font-size: 14px
+  display: inline-block
+  padding: 0 3px
+
 
 /*******************  Project Item  ************************/
 #projects 
@@ -346,7 +406,7 @@ section
 	.col-md-2,.col-md-3
 		padding: 0
 
-section#projects,section#app
+section#projects
 	padding-bottom: 0
 
 .project-item
@@ -461,6 +521,9 @@ section#projects,section#app
 	color: #7E7E7E
 	padding-right: 2px
 
+/*******************  App  ************************/
+#app
+	padding-bottom: 100px
 
 /*******************  Dailyui  ************************/
 #dailyui
@@ -555,8 +618,8 @@ input[type="submit"], input[type="reset"], input[type="button"], .button,button
 	+transition(background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out)
 	background-color: transparent
 	border-radius: 0.35em
-	border: solid 3px #fff
-	color: #fff !important
+	border: solid 3px #333
+	color: #333 
 	cursor: pointer
 	display: inline-block
 	font-weight: 400
@@ -568,20 +631,10 @@ input[type="submit"], input[type="reset"], input[type="button"], .button,button
 	text-align: center
 	text-decoration: none
 	white-space: nowrap
-
-input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover, .button:hover,button:hover
-	border-color: $primary-color
-	color: $primary-color !important
-
-input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:active, .button:active,button:hover
-	border-color: $primary-color
-	color: $primary-color !important
-
-#contact input[type="submit"]
-	color: #333 !important
-	border: solid 3px #333
-	display: block
-
+	+transition(all .3s ease-out)
+	&:hover
+		background: #333333
+		color: #fff
 
 /*******************  footer  ************************/
 .footer
@@ -771,6 +824,8 @@ input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:ac
 			margin: 0 0 25px
 	button.more
 		margin-bottom: 30px
+	.hidden-xs
+		display: none
 
 @media screen and (max-width: 320px)
 	.circle
