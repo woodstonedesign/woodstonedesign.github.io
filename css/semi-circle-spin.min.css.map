@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AAMA,UAAU,CAAV,WAAU,CACR,EAAE,CACA,SAAS,CAAE,YAAY,CAEzB,GAAG,CACD,SAAS,CAAE,cAAc,CAE3B,IAAI,CACF,SAAS,CAAE,cAAc,EAI7B,AAAA,iBAAiB,AAAC,CAChB,QAAQ,CAAE,QAAQ,CAClB,KAAK,CAjBA,IAAI,CAkBT,MAAM,CAlBD,IAAI,CAmBT,QAAQ,CAAE,MAAM,CAWjB,AAfD,AAME,iBANe,CAMb,GAAG,AAAC,CACJ,QAAQ,CAAE,QAAQ,CAClB,YAAY,CAAE,GAAG,CACjB,aAAa,CAAE,IAAI,CACnB,SAAS,CAAE,mCAAmC,CAC9C,gBAAgB,CAAE,qEAAoG,CACtH,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,CACb",
+    "sources": [
+        "../dailyui/bower_components/loaders.css/src/animations/semi-circle-spin.scss",
+        "../dailyui/bower_components/loaders.css/src/_variables.scss",
+        "../dailyui/bower_components/loaders.css/src/_mixins.scss"
+    ],
+    "names": [],
+    "file": "semi-circle-spin.min.css"
+}
