@@ -1,6 +1,21 @@
 var data={
     weblist:[
         {
+            year: 2019,
+            name: "EOC 即時警訊系統",
+            subname: "EOC Alert System",
+            url: "http://demoweb.byethost10.com/eoc",
+            url_text: "demoweb.byethost10.com/eoc",
+            description: "國立成功大學工科系計畫委託製作，負責系統 UI/UX 流程設計與整體視覺設計，包含電腦/平板/手機三種網頁前端開發，提供一致性與易懂的操作介面。",
+            rwd: true,
+            development: true,
+            design: true,
+            designtype: "Design",
+            img_thumbs: "eoc.jpg",
+            img_default: "eoc-banner",
+            demo: ["eoc-1.jpg"]
+        },
+        {
             year: 2017,
             name: "福利講堂::英文線上學習平台",
             subname: "Fuli Forum",
@@ -35,7 +50,7 @@ var data={
             name: "豪山廚具購物網",
             subname: "Hosun Kitchenware",
             url: "http://woodstonedemo.byethost24.com/kitchen",
-            url_text: "Demo：http://woodstonedemo.byethost24.com/kitchen",
+            url_text: "Demo：woodstonedemo.byethost24.com/kitchen",
             description: "【現代簡約】廚房是家人聯繫情感的地方，更是展現生活品味的的場所。以壁紙、大理石紋理為背景營造廚房氛圍，廚房全景搭配影片展示，彷彿置身其中做料理。逐步陳列每ㄧ項廚具，美味料理需要好的廚具，讓購物者挑起烹飪衝動與購買動機。豪山廚具是您的廚房好夥伴!",
             rwd: true,
             development: true,
@@ -196,21 +211,21 @@ var data={
         //     img_default: "taptapcomic-banner",
         //     demo: ["taptapcomic-1.png","taptapcomic-2.jpg"]
         // },
-        {
-            year: 2015,
-            name: "陽朔旅遊網",
-            subname: "Travel around Yangshuo.",
-            url: "#",
-            url_text: "",
-            description: "旅遊網網頁設計提案",
-            rwd: false,
-            development: false,
-            design: true,
-            designtype: "Design",
-            img_thumbs: "yangshuo.jpg",
-            img_default: "yangshuo-banner",
-            demo: ["yangshuo-1.png"]
-        },
+        // {
+        //     year: 2015,
+        //     name: "陽朔旅遊網",
+        //     subname: "Travel around Yangshuo.",
+        //     url: "#",
+        //     url_text: "",
+        //     description: "旅遊網網頁設計提案",
+        //     rwd: false,
+        //     development: false,
+        //     design: true,
+        //     designtype: "Design",
+        //     img_thumbs: "yangshuo.jpg",
+        //     img_default: "yangshuo-banner",
+        //     demo: ["yangshuo-1.png"]
+        // },
         // {
         //     year: 2014,
         //     name: "和熹生活",
