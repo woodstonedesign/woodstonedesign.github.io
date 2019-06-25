@@ -6,9 +6,13 @@
 
 body
 	font-family: "Helvetica Neue","微軟正黑體","helvetica", "Arial", sans-serif !important 
+	background: #333
 
 button
 	outline: none
+
+.visible-xs
+	display: none
 
 /*******************  Gotop  ************************/
 #gotop
@@ -331,7 +335,19 @@ section
 		bottom: 0
     
 #services 
-	background: #333
+	background: url('../images/bg_service.jpg')
+	background-size: cover
+	background-attachment: fixed
+	padding-top: 20px
+	position: relative
+	.container
+		position: relative
+		z-index: 9
+	.gradient
+		background: #0e0e0e
+		&:after
+			background: none
+			height: 100%
 	.row
 		text-align: center
 		padding: 0 5px
@@ -360,8 +376,31 @@ section
   background: #BF996E
   border: 2px solid #BF996E
 
-.pink-gradient
+.dark-gradient
 	background: #212023
+
+/*******************  Process  *********************** */
+#process
+	background: #272727
+	padding-top: 20px
+	.block
+		text-align: center
+		color: #fff
+		height: 200px
+		+border-radius(4px)
+		margin-bottom: 60px
+		h3
+			font-size: 18px
+			font-weight: bold
+		p
+			font-size: 14px
+		img
+			height: 80px
+			margin-bottom: 20px
+		&:hover
+			img
+				margin-top: -10px
+				transition: all .3s ease-out
 
 /*******************  Counter  *********************** */
 .counter
@@ -420,10 +459,10 @@ section#projects
 	+transition(.3s)
 	&:before
 		position: absolute
-		top: 10px
-		bottom: 10px
-		left: 10px
-		right: 10px
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
 		bottom: 100%
 		content: ''
 		background-color: rgba(#333, 0.6)
@@ -464,11 +503,12 @@ section#projects
 		h2, span
 			text-decoration: none!important
 	&:hover:before
-		bottom: 10px
+		bottom: 0
 		-webkit-transition-delay: 0s
 		transition-delay: 0s
-	&:hover .text
-		opacity: 1
+	&:hover
+		.text
+			opacity: 1
 
 .img-responsive
 	width: 100%
@@ -561,6 +601,7 @@ button.more
 	margin-bottom: 50px
 	text-align: center
 	color: #fff
+	line-height: 1.6
 
 /*******************  uidesign  ************************/
 #uidesign
@@ -745,6 +786,10 @@ input[type="submit"], input[type="reset"], input[type="button"], .button,button
 @media screen and (max-width: 480px)
 	body 
 		overflow-x: hidden !important
+	.hidden-xs
+		display: none
+	.visible-xs
+		display: block
 	#home
 		height: 100vh
 		background-image: url(../images/bg-banner-m.jpg)
@@ -753,6 +798,7 @@ input[type="submit"], input[type="reset"], input[type="button"], .button,button
 	#projects,#app,#dailyui
 		width: 100%
 		overflow: hidden
+		padding-bottom: 0
 	header
 		background: rgba(50, 56, 62, 0.9)
 		margin-top: 0
@@ -804,7 +850,7 @@ input[type="submit"], input[type="reset"], input[type="button"], .button,button
 			font-size: 26px
 
 	section
-		padding-bottom: 0
+		padding-bottom: 50px
 	.cover img
 		margin-top: -7%
 	#navbar
@@ -830,6 +876,15 @@ input[type="submit"], input[type="reset"], input[type="button"], .button,button
 		height: 80px
 		i
 			font-size: 28px
+	#process
+		height: auto
+		p
+			display: none
+		.block
+			margin-bottom: 0px
+			height: auto
+		.owl-carousel
+			height: 200px
 	#dailyui 
 		.section-heading
 			margin: 50px 0
@@ -837,6 +892,7 @@ input[type="submit"], input[type="reset"], input[type="button"], .button,button
 			margin-bottom: 0
 	#about
 		background-attachment: initial
+		padding-bottom: 50px
 		.circle
 			float: left
 			margin-bottom: 30px
@@ -848,6 +904,7 @@ input[type="submit"], input[type="reset"], input[type="button"], .button,button
 		display: none
 	#contact
 		padding-bottom: 80px
+		text-align: center
 
 @media screen and (max-width: 320px)
 	.circle

@@ -26,15 +26,17 @@
     <link rel="bookmark" href="https://woodstonedesign.github.io/images/faviconw.ico" />
     <link rel="icon" href="https://woodstonedesign.github.io/images/faviconw.ico" type="image/x-icon" />
 	<link rel="shortcut icon" href="https://woodstonedesign.github.io/images/faviconw.ico" type="image/x-icon" />
-    <!-- Style -->
-	<link rel="stylesheet" href="css/style.min.css">
-	<!-- Animate -->
-    <link rel="stylesheet" href="css/animate.css">
+
     <!-- Fancybox -->
     <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css">
     <link rel="stylesheet" type="text/css" href="css/fonts/css/fontello.css">
 	<!-- slider -->
-    <link rel="stylesheet" href="js/slider/juicyslider.css" type="text/css" />
+	<link rel="stylesheet" href="js/slider/juicyslider.css" type="text/css" />
+	<!-- carousel -->
+	<link rel="stylesheet" href="js/OwlCarousel/assets/owl.carousel.css">
+	<!-- Style -->
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="css/animate.css">
     
     <!-- IE8 support -->
     <!--[if lt IE 9]>
@@ -145,13 +147,14 @@
 
 	<!-- Start of services -->
 	<section id="services" data-section="services">
+		<div class="gradient"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 section-heading">
-					<h2 class="wow fadeInUp" data-wow-delay=".5s">超乎專業的服務</h2>
+					<h2 class="wow fadeInDown" data-wow-delay=".5s">超乎專業的服務</h2>
 				</div>
-				<div class="col-md-12 description" itemprop="description">
-					體貼你的需求，站在您的角度思考
+				<div class="col-md-12 description wow fadeInUp" data-wow-delay="1s" itemprop="description">
+					貼近你的需求，站在您的角度思考
 				</div>
 			</div>
 			
@@ -175,15 +178,88 @@
 		</div>
 	</section>
 	<!-- End of services -->
+
+	<section id="process" class="dark-gradient hidden-xs">
+		<div class="container">
+			<div class="col-md-12 section-heading">
+				<h2 class="wow fadeInDown" data-wow-delay=".5s">服務流程</h2>
+			</div>
+			<div class="col-md-12 description wow fadeInUp" data-wow-delay="1s" itemprop="description">
+				打造一個專屬的官網
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-6 wow fadeIn" data-wow-delay="1s"><div class="block"><img src="images/icon/003-data.svg"><h3>了解需求</h3><p>了解此網站需求與功能、特效<br>提出喜好色系、風格、版型</p></div></div>
+			<div class="col-md-3 col-sm-6 col-xs-6 wow fadeIn" data-wow-delay="1s"><div class="block"><img src="images/icon/004-balance.svg"><h3>報價與簽約</h3><p>確認合作時程與費用<br>40%簽約訂金</p></div></div>
+			<div class="col-md-3 col-sm-6 col-xs-6 wow fadeIn" data-wow-delay="1s"><div class="block"><img src="images/icon/006-idea.svg"><h3>設計規劃提案</h3><p>提供首頁與子頁設計<br>確認網站風格</p></div></div>
+			<div class="col-md-3 col-sm-6 col-xs-6 wow fadeIn" data-wow-delay="1s"><div class="block"><img src="images/icon/005-creative.svg"><h3>整體設計</h3><p>與您確認網站風格後<br>將會進行 UI/UX 設計</p></div></div>
+			<div class="col-md-3 col-sm-6 col-xs-6 wow fadeIn" data-wow-delay="1.5s"><div class="block"><img src="images/icon/009-image.svg"><h3>完稿確認</h3><p>交付設計圖確認</p></div></div>
+			<div class="col-md-3 col-sm-6 col-xs-6 wow fadeIn" data-wow-delay="1.5s"><div class="block"><img src="images/icon/011-rocket-launch.svg"><h3>前端網頁開發</h3><p>HTML / RWD / CSS / jQuery <br>進行前端網頁開發</p></div></div>
+			<div class="col-md-3 col-sm-6 col-xs-6 wow fadeIn" data-wow-delay="1.5s"><div class="block"><img src="images/icon/008-responsive.svg"><h3>網頁驗收與調整</h3><p>提供測試網址<br>進行網頁調整</p></div></div>
+			<div class="col-md-3 col-sm-6 col-xs-6 wow fadeIn" data-wow-delay="1.5s"><div class="block"><img src="images/icon/010-handshake.svg"><h3>結案收款</h3><p>結案收付尾款後<br>交附檔案</p></div></div>
+		</div>
+	</section>
+
+	<section id="process" class="dark-gradient visible-xs">
+		<div class="container">
+			<div class="col-md-12 section-heading">
+				<h2 class="wow fadeInDown" data-wow-delay=".5s">服務流程</h2>
+			</div>
+			<div class="col-md-12 description wow fadeInUp" data-wow-delay="1s" itemprop="description">
+				打造一個專屬的官網
+			</div>
+			<div class="owl-carousel owl-theme">
+				<div class="item wow fadeInLeft animated" data-wow-delay="1s">
+					<div class="box-loading">
+						<div class="block"><img src="images/icon/003-data.svg"><h3>了解需求</h3><p>了解此網站需求與功能、特效<br>提出喜好色系、風格、版型</p></div>
+					</div>
+				</div>
+				<div class="item wow fadeInLeft animated" data-wow-delay="1.5s">
+					<div class="box-loading">
+						<div class="block"><img src="images/icon/004-balance.svg"><h3>報價與簽約</h3><p>確認合作時程與費用<br>40%簽約訂金</p></div>
+					</div>
+				</div>
+				<div class="item wow fadeInLeft animated" data-wow-delay="2s">
+					<div class="box-loading">
+						<div class="block"><img src="images/icon/006-idea.svg"><h3>設計規劃提案</h3><p>提供首頁與子頁設計<br>確認網站風格</p></div>
+					</div>
+				</div>
+				<div class="item wow fadeInLeft animated" data-wow-delay="2.5s">
+					<div class="box-loading">
+						<div class="block"><img src="images/icon/005-creative.svg"><h3>整體設計</h3><p>與您確認網站風格後<br>將會進行 UI/UX 設計</p></div>
+					</div>
+				</div>
+				<div class="item wow fadeInLeft animated" data-wow-delay="1s">
+					<div class="box-loading">
+						<div class="block"><img src="images/icon/009-image.svg"><h3>完稿確認</h3><p>交付設計圖確認</p></div>
+					</div>
+				</div>
+				<div class="item wow fadeInLeft animated" data-wow-delay="1.5s">
+					<div class="box-loading">
+						<div class="block"><img src="images/icon/011-rocket-launch.svg"><h3>前端網頁開發</h3><p>HTML / RWD / CSS / jQuery <br>進行前端網頁開發</p></div>
+					</div>
+				</div>
+				<div class="item wow fadeInLeft animated" data-wow-delay="2s">
+					<div class="box-loading">
+						<div class="block"><img src="images/icon/008-responsive.svg"><h3>網頁驗收與調整</h3><p>提供測試網址<br>進行網頁調整</p></div>
+					</div>
+				</div>
+				<div class="item wow fadeInLeft animated" data-wow-delay="2.5s">
+					<div class="box-loading">
+						<div class="block"><img src="images/icon/010-handshake.svg"><h3>結案收款</h3><p>結案收付尾款後<br>交附檔案</p></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End of features -->
 	
 	<!-- Start of Web Projects -->
-	<section id="projects" class="pink-gradient" data-section="projects">
+	<section id="projects" class="dark-gradient" data-section="projects">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 section-heading text-center">
-					<h2 class="wow fadeInUp" data-wow-delay=".5s" itemprop="name">網頁設計</h2>
+					<h2 class="wow fadeInDown" data-wow-delay=".5s" itemprop="name">網頁設計</h2>
 				</div>
-				<div class="col-md-8 col-md-offset-2 description" itemprop="description">
+				<div class="col-md-8 col-md-offset-2 description wow fadeInUp" data-wow-delay="1s" itemprop="description">
 					視覺設計 | 網頁設計&開發 | 響應式網頁
 				</div>
 			</div>
@@ -247,13 +323,13 @@
 	<!-- End of Web Projects -->
 
 	<!-- Start of App Projects -->
-	<section id="app" data-section="app" class="pink-gradient" >
-		<div class="container">
+	<section id="app" data-section="app" class="dark-gradient" >
+		<div class="container wow fadeIn" data-wow-delay="1s">
 			<div class="row">
 				<div class="col-md-12 section-heading">
-					<h2 class="wow fadeInUp" data-wow-delay=".5s" itemprop="name">介面設計</h2>
+					<h2 class="wow fadeInDown" data-wow-delay=".5s" itemprop="name">介面設計</h2>
 				</div>
-				<div class="col-md-8 col-md-offset-2 description" itemprop="description">
+				<div class="col-md-8 col-md-offset-2 description wow fadeInUp" data-wow-delay="1s" itemprop="description">
 					App 流程與介面設計規劃 | 使用者經驗<br>提供友善易懂的操作介面，帶給使用者良好的體驗
 				</div>
 			</div>
@@ -291,7 +367,7 @@
 	<!-- End of App Projects -->
 
 	<!-- Start of UI Projects -->
-	<!-- <section id="uidesign" class="pink-gradient" data-section="uidesign">
+	<!-- <section id="uidesign" class="dark-gradient" data-section="uidesign">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 section-heading">
@@ -320,13 +396,13 @@
 	<!-- Start of About -->
 	<section id="about" data-section="about">
 		<div class="gradient"></div>
-		<div class="container">
+		<div class="container wow fadeIn" data-wow-delay="1s">
 			<div class="row">
 				<div class="col-md-12 section-heading">
-					<h2 class="wow fadeInUp" data-wow-delay=".5s">關於我</h2>
+					<h2 class="wow fadeInDown" data-wow-delay=".5s">關於我</h2>
 				</div>
-				<div class="col-md-12 description" itemprop="description">
-					自2016年成立，幫客戶打造專屬網站<br>體貼你的需求，站在您的角度思考，融入UX貼近使用者角度，帶來良好的瀏覽體驗
+				<div class="col-md-12 description wow fadeInUp" data-wow-delay="1s" itemprop="description">
+					自2016年成立，幫客戶打造專屬網站<br>體貼你的需求，人性上的規劃，追求有溫度的設計，融入UX貼近使用者角度，帶來良好的瀏覽體驗
 				</div>
 			</div>
 			
@@ -377,7 +453,7 @@
 	<!-- Start of Contact -->
 	<section id="contact" data-section="contact">
 		<div class="gradient"></div>
-		<div class="container">
+		<div class="container wow fadeIn" data-wow-delay="1s">
 			<div class="row">
 				<div class="col-md-12 section-heading">
 					<h2 class="wow fadeInUp" data-wow-delay="1s">聯絡詢問</h2>
@@ -385,7 +461,7 @@
 			</div>
 			<div class="row wow fadeIn" data-wow-delay="1.5s" style="position:relative;z-index:9;">
 				<div class="col-md-12 col-sm-12">
-				<div class="col-md-12"><p itemprop="description">如想要進一步了解、詢問，歡迎來信跟我們聯繫</p></div>
+				<div class="col-md-12"><p itemprop="description">如想要進一步了解，歡迎來信跟我們聯繫</p></div>
                     <form action="https://formspree.io/woodstonedesign2016@gmail.com" method="POST">
                         <div class="col-md-6">
                             <input type="text" name="Name" id="name" placeholder="如何稱呼您?*" required/>
@@ -438,7 +514,32 @@
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/slider/juicyslider.min.js"></script>
     <!-- Main -->
-    <script src="js/main.js"></script>
+	<script src="js/main.js"></script>
+	<!-- carousel -->
+	<script src="js/OwlCarousel/owl.carousel.min.js"></script>
+	<script>
+		$('.owl-carousel').owlCarousel({
+			loop:false,
+			margin:0,
+			dots:true,
+			mouseDrag: false,
+			navElement: false,
+			responsive:{
+				0:{
+					items:2,
+					autoplay: true,
+					touchDrag: true,
+				},
+				600:{
+					items:3,
+					autoplay: true,
+					touchDrag: true,
+				},
+			}
+		});
+		
+		
+	</script>
     <!-- Google Analytics -->
     <script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
