@@ -4,8 +4,8 @@ var data={
             year: 2019,
             name: "EOC 即時警訊系統",
             subname: "EOC Alert System",
-            url: "http://demoweb.byethost10.com/eoc",
-            url_text: "demoweb.byethost10.com/eoc",
+            url: "http://woodemo.dx.am/eoc/login.html",
+            url_text: "woodemo.dx.am/eoc",
             description: "國立成功大學工科系計畫委託製作，負責系統 UI/UX 流程設計與整體視覺設計，包含電腦/平板/手機三種網頁前端開發，提供一致性與易懂的操作介面。",
             rwd: true,
             development: true,
@@ -109,8 +109,8 @@ var data={
             year: 2016,
             name: "淨土藝術",
             subname: "Art of Rangniang",
-            url: "http://www.rangniang.org",
-            url_text: "www.rangniang.org",
+            url: "http://rangniang.byethost11.com/cn/rangniang_intro.html",
+            url_text: "rangniang.byethost11.com",
             description: "淨土藝術為讓娘寺的官方網站，讓娘寺全名為「讓娘彭措帖慶林」，意謂「讓娘圓滿大乘洲」，位於青海省玉樹州玉樹市以北60公里處。淨土藝術網站以集資為目標，期望透過募資方式重建因地震而倒塌的建築，祈求儘快實現教學樓及餐飲問題，愛心人士的捐助，讓這些弱小的朋友擁有一個教學樓。",
             rwd: true,
             development: true,
@@ -120,22 +120,6 @@ var data={
             img_default: "rangniang-banner",
             demo: ["rangniang-1.jpg"]
         },
-        // {
-        //     year: 2016,
-        //     name: "木石設計",
-        //     subname: "WoodStone Website",
-        //     url: "http://woodstonedesign.github.io",
-        //     url_text: "woodstonedesign.github.io",
-        //     description: "木石設計提供網頁設計&開發、App流程與介面設計、使用者經驗服務。融入使用者經驗設計思維，提供友善易懂的操作介面，帶給使用者良好的體驗。",
-        //     rwd: true,
-        //     development: true,
-        //     design: true,
-        //     designtype: "Design",
-        //     img_thumbs: "woodstone.jpg",
-        //     img_default: "woodstone-banner",
-        //     demo: ["woodstone-1.jpg","woodstone-2.jpg"]
-        // },
-         
         // {
         //     year: 2016,
         //     name: "雲智慧Maxnerva",
@@ -256,6 +240,21 @@ var data={
         // },
         {
             year: 2014,
+            name: "WISE Lab",
+            subname: "Wireless Innovative System EM-Applied",
+            url: "http://wisbal.ee.ncku.edu.tw",
+            url_text: "wisbal.ee.ncku.edu.tw",
+            description: "國立成功大學電機系無線創新系統電磁應用實驗室(WISE Lab)網站。",
+            rwd: true,
+            development: true,
+            design: true,
+            designtype: "Design",
+            img_thumbs: "wiselab.jpg",
+            img_default: "wiselab-banner",
+            demo: ["wiselab-1.jpg","wiselab-2.jpg"]
+        },
+        {
+            year: 2014,
             name: "追跡者",
             subname: "EZ Chat.EZ Talk.",
             url: "",
@@ -268,7 +267,7 @@ var data={
             img_thumbs: "tracking.jpg",
             img_default: "tracking-banner",
             demo: ["tracking-1.jpg"]
-        },
+        }
         // {
         //     year: 2014,
         //     name: "eHR 登入",
@@ -284,21 +283,7 @@ var data={
         //     img_default: "eHR-banner",
         //     demo: ["eHR-1.png","eHR-2.jpg"]
         // },
-        {
-            year: 2014,
-            name: "WISE Lab",
-            subname: "Wireless Innovative System EM-Applied",
-            url: "http://wisbal.ee.ncku.edu.tw",
-            url_text: "wisbal.ee.ncku.edu.tw",
-            description: "國立成功大學電機系無線創新系統電磁應用實驗室(WISE Lab)網站。",
-            rwd: true,
-            development: true,
-            design: true,
-            designtype: "Design",
-            img_thumbs: "wiselab.jpg",
-            img_default: "wiselab-banner",
-            demo: ["wiselab-1.jpg","wiselab-2.jpg"]
-        }
+        
         
     ],
     applist:[
