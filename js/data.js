@@ -2,6 +2,21 @@ var data={
     weblist:[
         {
             year: 2019,
+            name: "魔術師彭品文官方網站",
+            subname: "PINWINPENG FANTASY & DOVE",
+            url: "http://woodemo.dx.am/magic",
+            url_text: "woodemo.dx.am/magic",
+            description: "以實境照片結合影片一步步帶領使用者進入魔幻世界。彭品文台灣著名的鴿子魔術師，打破一般人對傳統魔術制式化的框架，於中視魔幻達人秀獲得MVP的殊榮，並以獨創的「三鴿幻影」在多項國際魔術比賽中獲得冠軍，更獲得「幻影鴿王」之稱號。",
+            rwd: true,
+            development: true,
+            design: true,
+            designtype: "Design",
+            img_thumbs: "magic.jpg",
+            img_default: "magic-banner",
+            demo: ["magic.jpg"]
+        },
+        {
+            year: 2019,
             name: "EOC 即時警訊系統",
             subname: "EOC Alert System",
             url: "http://woodemo.dx.am/eoc/login.html",
