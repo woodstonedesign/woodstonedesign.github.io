@@ -6,7 +6,7 @@ var data={
             subname: "PINWINPENG FANTASY & DOVE",
             url: "http://woodemo.dx.am/magic",
             url_text: "woodemo.dx.am/magic",
-            description: "以實境照片結合影片一步步帶領使用者進入魔幻世界。彭品文台灣著名的鴿子魔術師，打破一般人對傳統魔術制式化的框架，於中視魔幻達人秀獲得MVP的殊榮，並以獨創的「三鴿幻影」在多項國際魔術比賽中獲得冠軍，更獲得「幻影鴿王」之稱號。",
+            description: "以實境照片結合影片一步步帶領使用者進入魔幻世界。強烈圖像設計，深深吸引客戶的目光，扁平化直覺式的設計，快速方便使用者瀏覽。彭品文台灣著名的鴿子魔術師，於中視魔幻達人秀獲得MVP的殊榮，並以獨創的「三鴿幻影」在多項國際魔術比賽中獲得冠軍，更獲得「幻影鴿王」之稱號。",
             rwd: true,
             development: true,
             design: true,
