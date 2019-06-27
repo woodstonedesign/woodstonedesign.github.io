@@ -210,21 +210,21 @@ var data={
         //     img_default: "taptapcomic-banner",
         //     demo: ["taptapcomic-1.png","taptapcomic-2.jpg"]
         // },
-        // {
-        //     year: 2015,
-        //     name: "陽朔旅遊網",
-        //     subname: "Travel around Yangshuo.",
-        //     url: "#",
-        //     url_text: "",
-        //     description: "旅遊網網頁設計提案",
-        //     rwd: false,
-        //     development: false,
-        //     design: true,
-        //     designtype: "Design",
-        //     img_thumbs: "yangshuo.jpg",
-        //     img_default: "yangshuo-banner",
-        //     demo: ["yangshuo-1.png"]
-        // },
+        {
+            year: 2015,
+            name: "陽朔旅遊網",
+            subname: "Travel around Yangshuo.",
+            url: "#",
+            url_text: "",
+            description: "旅遊網網頁設計提案",
+            rwd: false,
+            development: false,
+            design: true,
+            designtype: "Design",
+            img_thumbs: "yangshuo.jpg",
+            img_default: "yangshuo-banner",
+            demo: ["yangshuo-1.png"]
+        },
         // {
         //     year: 2014,
         //     name: "和熹生活",
