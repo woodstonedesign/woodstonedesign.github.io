@@ -26,10 +26,9 @@
     <link rel="bookmark" href="https://woodstonedesign.github.io/images/faviconw.ico" />
     <link rel="icon" href="https://woodstonedesign.github.io/images/faviconw.ico" type="image/x-icon" />
 	<link rel="shortcut icon" href="https://woodstonedesign.github.io/images/faviconw.ico" type="image/x-icon" />
-
     <!-- Fancybox -->
-    <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css">
-    <link rel="stylesheet" type="text/css" href="css/fonts/css/fontello.css">
+    <link rel="stylesheet" href="js/fancybox/jquery.fancybox.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/fonts/css/fontello.css">
 	<!-- slider -->
 	<link rel="stylesheet" href="js/slider/juicyslider.css" type="text/css" />
 	<!-- carousel -->
@@ -89,7 +88,7 @@
 							<div class="text-inner">
 								<div class="row">
 									<div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0">
-										<img src="images/logo-white-128.png" height="100" width="100" alt="WoodStone Design木石設計" class="wow bounceIn" data-wow-delay=".5s" style="margin-bottom:10px; position: inherit; width:100px; " itemprop="logo"><br>
+										<img src="images/logo-white-128.png" height="100" width="100" alt="木石設計 X WoodStone Design | 網頁設計" class="wow bounceIn" data-wow-delay=".5s" style="margin:0 0 10px 50px; position: inherit; width:100px; " itemprop="logo"><br>
 										<h1 class="wow fadeInDown" data-wow-delay=".5s" itemprop="name">為你打造美麗專業的網站</h1>
 										<h2 class="wow fadeInUp" data-wow-delay=".5s"  itemprop="brand">WoodStone Design</h2> 
 									</div>
@@ -268,7 +267,7 @@
 		<div class="row wow fadeIn" data-wow-delay="0.5s">
 			
 			<div class="col-md-3 col-sm-6 col-xs-12" v-for="(id,web) in weblist" v-if="id<4">
-				<a href="#web{{id+1}}" class="project-item fancybox to-animate" rel="gallery1">
+				<a data-src="#web{{id+1}}"  data-fancybox="images" href="javascript:;" class="project-item fancybox to-animate">
 					<img data-default-src="images/thumbs/{{web.year}}/{{web.img_thumbs}}" class="img-responsive" alt="木石網頁設計-{{web.name}}">
 					<div class="text">
 						<h2>{{web.name}}</h2>
@@ -276,17 +275,18 @@
 					</div>
 				</a>
 				<div class="content" id="web{{id+1}}">
-					<div class="cover"><img data-default-src="images/fulls/{{web.year}}/{{web.img_default}}.jpg" data-xs-src="images/fulls/{{web.year}}/{{web.img_default}}-m.jpg" alt="{{web.name}}"></div>
+					<div class="cover"><img data-default-src="images/fulls/{{web.year}}/{{web.img_default}}.jpg" data-xs-src="images/fulls/{{web.year}}/{{web.img_default}}.jpg" alt="{{web.name}}"></div>
 					<div class="row">
-						<div class="col-md-5 col-sm-5 col-md-offset-1">
+						<div class="col-md-5 visible-md">
 							<div class="circle" v-if="web.rwd"><div class="icon-rwd"></div><p>響應式網頁</p></div>
 							<div class="circle" v-if="web.development"><i class="icon-codeopen"></i><p>Development</p></div>
 							<div class="circle" v-if="web.design"><i class="icon-feather"></i><p>{{web.designtype}}</p></div>
 						</div>
-						<div class="col-md-5 col-sm-7 col-xs-12">
+						<div class="col-md-6 col-sm-12 col-xs-12">
 							<h2>{{web.name}}</h2>
 							<p><i class="icon-monitor"></i><i class="icon-mobile" v-if="web.rwd"></i><a href="{{web.url}}" target="_blank">{{web.url_text}}</a></p>
-							<p>{{web.description}}</p>
+							<p class="project-description">{{web.description}}</p>
+							<div class="col-sm-12 col-xs-12 hidden-lg tag"><span v-if="web.rwd">#響應式網頁</span><span v-if="web.development">#網頁開發</span><span v-if="web.design">#視覺設計</span></div>
 						</div>
 					</div>
 					<img data-default-src="images/fulls/{{web.year}}/{{demo_item}}" class="img-responsive" alt="木石網頁設計-{{web.name}}" v-for="demo_item in web.demo">
@@ -294,7 +294,7 @@
 			</div>
 
 			<div class="col-md-2 col-sm-6 col-xs-12" v-for="(id,web) in weblist" v-if="id>3">
-				<a href="#web{{id+1}}" class="project-item fancybox to-animate" rel="gallery1">
+				<a data-src="#web{{id+1}}" data-fancybox="images" href="javascript:;" class="project-item fancybox to-animate">
 					<img data-default-src="images/thumbs/{{web.year}}/{{web.img_thumbs}}" class="img-responsive" alt="木石網頁設計-{{web.name}}">
 					<div class="text">
 						<h2>{{web.name}}</h2>
@@ -302,17 +302,18 @@
 					</div>
 				</a>
 				<div class="content" id="web{{id+1}}">
-					<div class="cover"><img data-default-src="images/fulls/{{web.year}}/{{web.img_default}}.jpg" data-xs-src="images/fulls/{{web.year}}/{{web.img_default}}-m.jpg" alt="{{web.name}}"></div>
+					<div class="cover"><img data-default-src="images/fulls/{{web.year}}/{{web.img_default}}.jpg" data-xs-src="images/fulls/{{web.year}}/{{web.img_default}}.jpg" alt="{{web.name}}"></div>
 					<div class="row">
-						<div class="col-md-5 col-sm-5 col-md-offset-1">
+						<div class="col-md-5 visible-md">
 							<div class="circle" v-if="web.rwd"><div class="icon-rwd"></div><p>響應式網頁</p></div>
 							<div class="circle" v-if="web.development"><i class="icon-codeopen"></i><p>Development</p></div>
 							<div class="circle" v-if="web.design"><i class="icon-feather"></i><p>{{web.designtype}}</p></div>
 						</div>
-						<div class="col-md-5 col-sm-7 col-xs-12">
+						<div class="col-md-6 col-sm-12 col-xs-12">
 							<h2>{{web.name}}</h2>
 							<p><i class="icon-monitor"></i><i class="icon-mobile" v-if="web.rwd"></i><a href="{{web.url}}" target="_blank">{{web.url_text}}</a></p>
-							<p>{{web.description}}</p>
+							<p class="project-description">{{web.description}}</p>
+							<div class="col-sm-12 col-xs-12 hidden-lg tag"><span v-if="web.rwd">#響應式網頁</span><span v-if="web.development">#網頁開發</span><span v-if="web.design">#視覺設計</span></div>
 						</div>
 					</div>
 					<img data-default-src="images/fulls/{{web.year}}/{{demo_item}}" class="img-responsive" alt="木石網頁設計-{{web.name}}" v-for="demo_item in web.demo">
@@ -337,7 +338,7 @@
 			<div class="row wow fadeIn" data-wow-delay="0.5s">
 
 				<div class="col-md-4 col-sm-4 col-xs-12" v-for="(id,app) in applist">
-				<a href="#app{{id+1}}" class="project-item fancybox to-animate" rel="gallery2">
+				<a data-src="#app{{id+1}}"  data-fancybox="images" href="javascript:;" class="project-item fancybox to-animate" rel="gallery2">
 					<img data-default-src="images/thumbs/{{app.year}}/{{app.img_thumbs}}" class="img-responsive" alt="木石設計-{{app.name}}">
 					<div class="text">
 						<h2>{{app.name}}</h2>
@@ -347,15 +348,15 @@
 				<div class="content" id="app{{id+1}}">
 					<div class="cover"><img data-default-src="images/fulls/{{app.year}}/{{app.img_default}}.jpg" data-xs-src="images/fulls/{{app.year}}/{{app.img_default}}-m.jpg" alt="{{app.name}}"></div>
 					<div class="row">
-						<div class="col-md-5 col-sm-5 col-xs-12 col-md-offset-1">
+						<div class="col-md-5 visible-md">
 							<div class="circle" v-if="app.android"><i class="icon-android"></i><p>Android</p></div>
-							<div class="circle" v-if="app.ios"><i class="icon-apple"></i><p>Android</p></div>
+							<div class="circle" v-if="app.ios"><i class="icon-apple"></i><p>iOS</p></div>
 							<div class="circle" v-if="app.design"><i class="icon-feather"></i><p>Design</p></div>
 						</div>
-						<div class="col-md-5 col-sm-7 col-xs-12">
+						<div class="col-md-6 col-sm-12 col-xs-12">
 							<h2>{{app.name}}</h2>
-							<p><i class="icon-android" v-if="app.android"></i><i class="icon-apple" v-if="app.ios"></i></p>
-							<p>{{app.description}}</p>
+							<p class="project-description">{{app.description}}</p>
+							<div class="col-sm-12 col-xs-12 hidden-lg tag"><span v-if="app.android">#Android</span><span v-if="app.ios">#iOS</span><span v-if="app.design">#介面設計</span></div>
 						</div>
 					</div>
 					<img data-default-src="images/fulls/{{app.year}}/{{demo_item}}" class="img-responsive" alt="木石設計-{{app.name}}" v-for="demo_item in app.demo">
@@ -509,7 +510,10 @@
 	<script src="js/wow.min.js"></script>	
 	<script src="js/jquery.waypoints.min.js"></script>
 	<!-- Fancybox -->
-    <script src="js/fancybox/jquery.fancybox.js?v=2.1.5"></script>
+	<script src="js/fancybox/jquery.fancybox.min.js"></script>
+	<script>
+		$( '[data-fancybox="images"]' ).fancybox({});
+	</script>
     <!-- Slider -->
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/slider/juicyslider.min.js"></script>

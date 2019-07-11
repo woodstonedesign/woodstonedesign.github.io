@@ -16,30 +16,30 @@ $(document).ready(function() {
     $('#slider').juicyslider({
         mask: 'strip',
         autoplay: 5000,
-        show: {effect: 'puff', duration: 5000},
-        hide: {effect: 'puff', duration: 2000},
+        show: {effect: 'fade', duration: 5000},
+        hide: {effect: 'fade', duration: 2000},
         width: null,
         height: null,
     });
 
     //fancybox
-    $(function() {
-        if ($(window).width() > 1000) {
-            $(".fancybox").fancybox({
-                maxWidth: 1000,
-                fitToView: false,
-                width: '100%',
-                height: '100%'
-            });
+    // $(function() {
+    //     if ($(window).width() > 1000) {
+    //         $(".fancybox").fancybox({
+    //             maxWidth: 1000,
+    //             fitToView: false,
+    //             width: '100%',
+    //             height: '100%'
+    //         });
 
-        } else {
-            $(".fancybox").fancybox({
-                fitToView: true,
-                width: '100%',
-                autoCenter: true
-            });
-        }
-    });
+    //     } else {
+    //         $(".fancybox").fancybox({
+    //             fitToView: true,
+    //             width: '100%',
+    //             autoCenter: true
+    //         });
+    //     }
+    // });
 
 
     // Reflect scrolling in navigation
