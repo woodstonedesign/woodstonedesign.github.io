@@ -277,7 +277,7 @@
 				<div class="content" id="web{{id+1}}">
 					<div class="cover"><img data-default-src="images/fulls/{{web.year}}/{{web.img_default}}.jpg" data-xs-src="images/fulls/{{web.year}}/{{web.img_default}}.jpg" alt="{{web.name}}"></div>
 					<div class="row">
-						<div class="col-md-5 visible-md">
+						<div class="col-md-5 hidden-sm hidden-xs">
 							<div class="circle" v-if="web.rwd"><div class="icon-rwd"></div><p>響應式網頁</p></div>
 							<div class="circle" v-if="web.development"><i class="icon-codeopen"></i><p>Development</p></div>
 							<div class="circle" v-if="web.design"><i class="icon-feather"></i><p>{{web.designtype}}</p></div>
@@ -304,7 +304,7 @@
 				<div class="content" id="web{{id+1}}">
 					<div class="cover"><img data-default-src="images/fulls/{{web.year}}/{{web.img_default}}.jpg" data-xs-src="images/fulls/{{web.year}}/{{web.img_default}}.jpg" alt="{{web.name}}"></div>
 					<div class="row">
-						<div class="col-md-5 visible-md">
+						<div class="col-md-5  hidden-sm hidden-xs">
 							<div class="circle" v-if="web.rwd"><div class="icon-rwd"></div><p>響應式網頁</p></div>
 							<div class="circle" v-if="web.development"><i class="icon-codeopen"></i><p>Development</p></div>
 							<div class="circle" v-if="web.design"><i class="icon-feather"></i><p>{{web.designtype}}</p></div>
@@ -348,7 +348,7 @@
 				<div class="content" id="app{{id+1}}">
 					<div class="cover"><img data-default-src="images/fulls/{{app.year}}/{{app.img_default}}.jpg" data-xs-src="images/fulls/{{app.year}}/{{app.img_default}}-m.jpg" alt="{{app.name}}"></div>
 					<div class="row">
-						<div class="col-md-5 visible-md">
+						<div class="col-md-5 hidden-sm hidden-xs">
 							<div class="circle" v-if="app.android"><i class="icon-android"></i><p>Android</p></div>
 							<div class="circle" v-if="app.ios"><i class="icon-apple"></i><p>iOS</p></div>
 							<div class="circle" v-if="app.design"><i class="icon-feather"></i><p>Design</p></div>
